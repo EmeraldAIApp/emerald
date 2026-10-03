@@ -1,0 +1,703 @@
+{
+  "blockscout-address-eip7702-delegated-vitalik": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:54.082Z"
+  },
+  "blockscout-address-eoa-binance14": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0x28C6c06298d514Db089934071355E5743bf21d60",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:53.336Z"
+  },
+  "blockscout-address-error-invalid": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0xnothex",
+    "status": 422,
+    "recordedAt": "2026-09-30T19:53:02.009Z"
+  },
+  "blockscout-address-never-seen-200": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0xa9d31e15beeac5318070d8668a40cc8c1a528e4c",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:08.024Z"
+  },
+  "blockscout-address-scam-inferno-drainer": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0x0000db5c8B030ae20308ac975898E09741e70000",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:58.889Z"
+  },
+  "blockscout-address-scam-poisoner-wbtc": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0xd9A1C3788D81257612E2581A6ea0aDa244853a91",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:59.599Z"
+  },
+  "blockscout-address-unverified-contract": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0x8571C129F335832F6BBC76D49414AD2B8371a422",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:00.416Z"
+  },
+  "blockscout-address-verified-proxy-usdc": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:55.288Z"
+  },
+  "blockscout-address-verified-universal-router": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0x66a9893cC07D91D95644AEDD05D03f95e1dBA8Af",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:58.164Z"
+  },
+  "blockscout-metadata-known-permit2-router-binance-usdc": {
+    "method": "GET",
+    "url": "https://metadata.services.blockscout.com/api/v1/metadata?addresses=0x000000000022D473030F116dDEE9F6B43aC78BA3,0x66a9893cC07D91D95644AEDD05D03f95e1dBA8Af,0x28C6c06298d514Db089934071355E5743bf21d60,0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&chainId=1",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:45.755Z"
+  },
+  "blockscout-metadata-scam-drainer-and-poisoner": {
+    "method": "GET",
+    "url": "https://metadata.services.blockscout.com/api/v1/metadata?addresses=0x0000db5c8B030ae20308ac975898E09741e70000,0xd9A1C3788D81257612E2581A6ea0aDa244853a91&chainId=1",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:44.510Z"
+  },
+  "blockscout-metadata-unknown-empty": {
+    "method": "GET",
+    "url": "https://metadata.services.blockscout.com/api/v1/metadata?addresses=0xa9d31e15beeac5318070d8668a40cc8c1a528e4c&chainId=1",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:46.413Z"
+  },
+  "blockscout-token-fake-dai": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/tokens/0x7362De96703aB797156f3B1e3716323A358D7c76",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:30.734Z"
+  },
+  "blockscout-token-not-a-token-404": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/tokens/0x28C6c06298d514Db089934071355E5743bf21d60",
+    "status": 404,
+    "recordedAt": "2026-09-30T19:53:31.382Z"
+  },
+  "blockscout-token-transfers-never-seen-empty": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0xa9d31e15beeac5318070d8668a40cc8c1a528e4c/token-transfers?type=ERC-20",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:09.036Z"
+  },
+  "blockscout-token-transfers-poisoning-victim-filter-from": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0x1E227979f0b5BC691a70DEAED2e0F39a6F538FD5/token-transfers?type=ERC-20&filter=from",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:29.384Z"
+  },
+  "blockscout-token-transfers-poisoning-victim-page1": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0x1E227979f0b5BC691a70DEAED2e0F39a6F538FD5/token-transfers?type=ERC-20",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:20.282Z"
+  },
+  "blockscout-token-transfers-poisoning-victim-page2": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0x1E227979f0b5BC691a70DEAED2e0F39a6F538FD5/token-transfers?type=ERC-20&index=231&block_number=19782393",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:28.586Z"
+  },
+  "blockscout-token-usdc": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/tokens/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:30.108Z"
+  },
+  "blockscout-transaction-creation-of-unverified-contract": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/transactions/0x5656722550964f095e00a40dc1db4def9e496e1f929c1273a942fa2189578874",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:42.878Z"
+  },
+  "blockscout-transaction-not-found": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/transactions/0x00000000000000000000000000000000000000000000000000000000deadbeef",
+    "status": 404,
+    "recordedAt": "2026-09-30T19:53:32.713Z"
+  },
+  "blockscout-transaction-poisoning-planted-fake-transfer": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/transactions/0x9147d74ef5749b7f27eb2e2528e5a611060b3f609b435f7f50ac87f49e5b957c",
+    "status": 200,
+    "recordedAt": "2026-09-30T20:10:57.597Z"
+  },
+  "blockscout-transaction-wbtc-poisoning-theft": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/transactions/0x3374abc5a9c766ba709651399b6e6162de97ca986abc23f423a9d893c8f5f570",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:32.086Z"
+  },
+  "blockscout-transactions-poisoning-victim-filter-from": {
+    "method": "GET",
+    "url": "https://eth.blockscout.com/api/v2/addresses/0x1E227979f0b5BC691a70DEAED2e0F39a6F538FD5/transactions?filter=from",
+    "status": 200,
+    "recordedAt": "2026-09-30T20:08:44.390Z"
+  },
+  "goplus-address-security-clean-eoa-binance14": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/address_security/0x28C6c06298d514Db089934071355E5743bf21d60?chain_id=1",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:54:22.248Z"
+  },
+  "goplus-address-security-contract-permit2": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/address_security/0x000000000022D473030F116dDEE9F6B43aC78BA3?chain_id=1",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:54:27.107Z"
+  },
+  "goplus-address-security-inferno-drainer-flagged": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/address_security/0x0000db5c8B030ae20308ac975898E09741e70000?chain_id=1",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:51.504Z"
+  },
+  "goplus-address-security-sanctioned-lazarus-ronin": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/address_security/0x098B716B8Aaf21512996dC57EB0615e2383E2f96?chain_id=1",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:54:32.315Z"
+  },
+  "goplus-address-security-wbtc-poisoner": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/address_security/0xd9A1C3788D81257612E2581A6ea0aDa244853a91?chain_id=1",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:53:52.692Z"
+  },
+  "goplus-approval-security-inferno-drainer": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/approval_security/1?contract_addresses=0x0000db5c8B030ae20308ac975898E09741e70000",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:55:06.360Z"
+  },
+  "goplus-approval-security-permit2": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/approval_security/1?contract_addresses=0x000000000022D473030F116dDEE9F6B43aC78BA3",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:55:01.247Z"
+  },
+  "goplus-approval-security-unverified-contract": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/approval_security/1?contract_addresses=0x8571C129F335832F6BBC76D49414AD2B8371a422",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:55:11.780Z"
+  },
+  "goplus-error-4029-rate-limited": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0x59A046Ba0313750e2c73537DfF23728Cf870297F",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:49:56.314Z"
+  },
+  "goplus-phishing-site-benign-uniswap": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/phishing_site?url=https://app.uniswap.org",
+    "status": 200,
+    "recordedAt": "2026-09-30T20:05:12.811Z"
+  },
+  "goplus-token-security-eoa-not-a-token": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0x28C6c06298d514Db089934071355E5743bf21d60",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:54:56.421Z"
+  },
+  "goplus-token-security-fake-dai": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0x7362De96703aB797156f3B1e3716323A358D7c76",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:54:41.945Z"
+  },
+  "goplus-token-security-fake-wbtc-not-in-dex": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0x2e57249F1e5ac0bD3b9187D19120d54008b3d967",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:54:46.737Z"
+  },
+  "goplus-token-security-ntda-honeypot-same-creator-unverified": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0x210e1d56f822a631e09e6514393e6508cce4360b",
+    "status": 200,
+    "recordedAt": "2026-09-30T20:05:07.674Z"
+  },
+  "goplus-token-security-pepe-full-fields": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0x6982508145454Ce325dDbE47a25d4ec3d2311933",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:54:51.547Z"
+  },
+  "goplus-token-security-sell-tax-9pct": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0x7f84f92453f20a43350b1ca23a8a8fb61906a4db",
+    "status": 200,
+    "recordedAt": "2026-09-30T20:05:17.640Z"
+  },
+  "goplus-token-security-usdc-trustlist": {
+    "method": "GET",
+    "url": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:54:37.114Z"
+  },
+  "openchain-lookup-approve-setApprovalForAll-permit2permit": {
+    "method": "GET",
+    "url": "https://api.openchain.xyz/signature-database/v1/lookup?function=0x095ea7b3,0xa22cb465,0x2b67b570&filter=true",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:34.022Z"
+  },
+  "openchain-lookup-error-invalid-hash": {
+    "method": "GET",
+    "url": "https://api.openchain.xyz/signature-database/v1/lookup?function=0xzz&filter=true",
+    "status": 500,
+    "recordedAt": "2026-09-30T19:52:36.573Z"
+  },
+  "openchain-lookup-execute-transfer-unknown-null": {
+    "method": "GET",
+    "url": "https://api.openchain.xyz/signature-database/v1/lookup?function=0x3593564c,0xa9059cbb,0x9f8e7d6c&filter=true",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:35.344Z"
+  },
+  "openchain-lookup-junk-collisions-filter-true": {
+    "method": "GET",
+    "url": "https://api.openchain.xyz/signature-database/v1/lookup?function=0x00000001&filter=true",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:35.958Z"
+  },
+  "rpc-batch-getCode-nonce-balanceOf": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": [
+      {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_getCode",
+        "params": [
+          "0xd9A1C3788D81257612E2581A6ea0aDa244853a91",
+          "latest"
+        ]
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "eth_getTransactionCount",
+        "params": [
+          "0xd9A1C3788D81257612E2581A6ea0aDa244853a91",
+          "latest"
+        ]
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "eth_call",
+        "params": [
+          {
+            "to": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+            "data": "0x70a08231000000000000000000000000d9a1c3788d81257612e2581a6ea0ada244853a91"
+          },
+          "latest"
+        ]
+      }
+    ],
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:42.644Z"
+  },
+  "rpc-call-usdc-balanceOf-binance14": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "data": "0x70a0823100000000000000000000000028c6c06298d514db089934071355e5743bf21d60"
+        },
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:40.309Z"
+  },
+  "rpc-error-invalid-params": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_getCode",
+      "params": [
+        "0xnothex",
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:41.862Z"
+  },
+  "rpc-getCode-contract-permit2": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_getCode",
+      "params": [
+        "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:29.328Z"
+  },
+  "rpc-getCode-eip7702-delegated-vitalik": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_getCode",
+      "params": [
+        "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:28.701Z"
+  },
+  "rpc-getCode-eoa-binance14": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_getCode",
+      "params": [
+        "0x28C6c06298d514Db089934071355E5743bf21d60",
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:27.932Z"
+  },
+  "rpc-getTransactionByHash-not-found": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_getTransactionByHash",
+      "params": [
+        "0x00000000000000000000000000000000000000000000000000000000deadbeef"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:41.086Z"
+  },
+  "rpc-getTransactionByHash-wbtc-poisoning-theft": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_getTransactionByHash",
+      "params": [
+        "0x3374abc5a9c766ba709651399b6e6162de97ca986abc23f423a9d893c8f5f570"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:31.156Z"
+  },
+  "rpc-getTransactionCount-binance14": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_getTransactionCount",
+      "params": [
+        "0x28C6c06298d514Db089934071355E5743bf21d60",
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:29.938Z"
+  },
+  "rpc-getTransactionCount-fresh-address": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_getTransactionCount",
+      "params": [
+        "0x00000000000000000000000000000000DeaDBeef",
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:30.550Z"
+  },
+  "rpc-simulateV1-insufficient-eth-no-override": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_simulateV1",
+      "params": [
+        {
+          "blockStateCalls": [
+            {
+              "calls": [
+                {
+                  "from": "0x00000000000000000000000000000000DeaDBeef",
+                  "to": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                  "data": "0xd0e30db0",
+                  "value": "0xde0b6b3a7640000"
+                }
+              ]
+            }
+          ],
+          "traceTransfers": true,
+          "validation": false
+        },
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:53.480Z"
+  },
+  "rpc-simulateV1-universal-router-swap-0.1eth-to-usdc": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_simulateV1",
+      "params": [
+        {
+          "blockStateCalls": [
+            {
+              "calls": [
+                {
+                  "from": "0x28C6c06298d514Db089934071355E5743bf21d60",
+                  "to": "0x66a9893cC07D91D95644AEDD05D03f95e1dBA8Af",
+                  "data": "0x3593564c000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000f486570000000000000000000000000000000000000000000000000000000000000000020b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000016345785d8a000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000016345785d8a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002bc02aaa39b223fe8d0a0e5c4f27ead9083c756cc20001f4a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000000000000000000000",
+                  "value": "0x16345785d8a0000"
+                }
+              ]
+            }
+          ],
+          "traceTransfers": true,
+          "validation": false
+        },
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:13.668Z"
+  },
+  "rpc-simulateV1-usdc-approve-permit2-max": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_simulateV1",
+      "params": [
+        {
+          "blockStateCalls": [
+            {
+              "calls": [
+                {
+                  "from": "0x28C6c06298d514Db089934071355E5743bf21d60",
+                  "to": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                  "data": "0x095ea7b3000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+                  "value": "0x0"
+                }
+              ]
+            }
+          ],
+          "traceTransfers": true,
+          "validation": false
+        },
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:50:23.061Z"
+  },
+  "rpc-simulateV1-usdc-transfer-revert": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_simulateV1",
+      "params": [
+        {
+          "blockStateCalls": [
+            {
+              "calls": [
+                {
+                  "from": "0x28C6c06298d514Db089934071355E5743bf21d60",
+                  "to": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                  "data": "0xa9059cbb000000000000000000000000d9a1c3788d81257612e2581a6ea0ada244853a910000000000000000000000000000000000000000000000ffffffffffffffffff",
+                  "value": "0x0"
+                }
+              ]
+            }
+          ],
+          "traceTransfers": true,
+          "validation": false
+        },
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:50:25.021Z"
+  },
+  "rpc-simulateV1-usdc-transfer-to-poisoner": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_simulateV1",
+      "params": [
+        {
+          "blockStateCalls": [
+            {
+              "calls": [
+                {
+                  "from": "0x28C6c06298d514Db089934071355E5743bf21d60",
+                  "to": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                  "data": "0xa9059cbb000000000000000000000000d9a1c3788d81257612e2581a6ea0ada244853a91000000000000000000000000000000000000000000000000000000003b9aca00",
+                  "value": "0x0"
+                }
+              ]
+            }
+          ],
+          "traceTransfers": true,
+          "validation": false
+        },
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:50:23.651Z"
+  },
+  "rpc-simulateV1-weth-deposit-1eth": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_simulateV1",
+      "params": [
+        {
+          "blockStateCalls": [
+            {
+              "calls": [
+                {
+                  "from": "0x28C6c06298d514Db089934071355E5743bf21d60",
+                  "to": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                  "data": "0xd0e30db0",
+                  "value": "0xde0b6b3a7640000"
+                }
+              ]
+            }
+          ],
+          "traceTransfers": true,
+          "validation": false
+        },
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:50:24.421Z"
+  },
+  "rpc-simulateV1-with-stateOverrides-balance": {
+    "method": "POST",
+    "url": "https://ethereum-rpc.publicnode.com",
+    "requestBody": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_simulateV1",
+      "params": [
+        {
+          "blockStateCalls": [
+            {
+              "stateOverrides": {
+                "0x00000000000000000000000000000000DeaDBeef": {
+                  "balance": "0x56bc75e2d63100000"
+                }
+              },
+              "calls": [
+                {
+                  "from": "0x00000000000000000000000000000000DeaDBeef",
+                  "to": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                  "data": "0xd0e30db0",
+                  "value": "0xde0b6b3a7640000"
+                }
+              ]
+            }
+          ],
+          "traceTransfers": true,
+          "validation": false
+        },
+        "latest"
+      ]
+    },
+    "status": 200,
+    "recordedAt": "2026-09-30T19:51:54.335Z"
+  },
+  "sourcify-v2-eoa-404": {
+    "method": "GET",
+    "url": "https://sourcify.dev/server/v2/contract/1/0x28C6c06298d514Db089934071355E5743bf21d60?fields=abi,proxyResolution",
+    "status": 404,
+    "recordedAt": "2026-09-30T19:52:13.108Z"
+  },
+  "sourcify-v2-error-invalid-address": {
+    "method": "GET",
+    "url": "https://sourcify.dev/server/v2/contract/1/not-an-address?fields=abi",
+    "status": 400,
+    "recordedAt": "2026-09-30T19:52:26.601Z"
+  },
+  "sourcify-v2-permit2-abi": {
+    "method": "GET",
+    "url": "https://sourcify.dev/server/v2/contract/1/0x000000000022D473030F116dDEE9F6B43aC78BA3?fields=abi,proxyResolution",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:11.062Z"
+  },
+  "sourcify-v2-universal-router-v4-abi": {
+    "method": "GET",
+    "url": "https://sourcify.dev/server/v2/contract/1/0x66a9893cC07D91D95644AEDD05D03f95e1dBA8Af?fields=abi,proxyResolution",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:12.500Z"
+  },
+  "sourcify-v2-unverified-contract-404": {
+    "method": "GET",
+    "url": "https://sourcify.dev/server/v2/contract/1/0x8571C129F335832F6BBC76D49414AD2B8371a422?fields=abi,proxyResolution",
+    "status": 404,
+    "recordedAt": "2026-09-30T19:52:26.026Z"
+  },
+  "sourcify-v2-usdc-implementation-FiatTokenV2_2-abi": {
+    "method": "GET",
+    "url": "https://sourcify.dev/server/v2/contract/1/0x43506849D7C04F9138D1A2050bbF3A0c054402dd?fields=abi,proxyResolution",
+    "status": 200,
+    "recordedAt": "2026-09-30T20:08:24.321Z"
+  },
+  "sourcify-v2-usdc-proxy-abi-proxyResolution": {
+    "method": "GET",
+    "url": "https://sourcify.dev/server/v2/contract/1/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48?fields=abi,proxyResolution",
+    "status": 200,
+    "recordedAt": "2026-09-30T19:52:08.423Z"
+  }
+}

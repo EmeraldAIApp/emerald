@@ -1,0 +1,5 @@
+{
+  "customCode": "invalid_parameter",
+  "message": "request/params/address must NOT have fewer than 42 characters",
+  "errorId": "f769feb7-7f5e-4b72-812b-d6b15cb5ae04"
+}

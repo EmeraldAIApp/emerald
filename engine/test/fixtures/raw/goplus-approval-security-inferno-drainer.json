@@ -1,0 +1,24 @@
+{
+  "code": 1,
+  "message": "ok",
+  "result": {
+    "contract_name": null,
+    "tag": null,
+    "is_contract": 0,
+    "creator_address": null,
+    "deployed_time": null,
+    "is_open_source": null,
+    "is_proxy": null,
+    "trust_list": 0,
+    "doubt_list": 1,
+    "malicious_behavior": [
+      "phishing_activities",
+      "blacklist_doubt"
+    ],
+    "contract_scan": {},
+    "risky_approval": {
+      "risk": "This spender is suspected to have potential risks. The Spender is not a contract address.",
+      "value": 1
+    }
+  }
+}

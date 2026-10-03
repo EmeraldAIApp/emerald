@@ -1,0 +1,18 @@
+{
+  "name": "txhash-setapprovalforall-inferno-drainer",
+  "input": "0xed8432c64e61b6c896d8964fc0013daa0853704e963b21595a7d359362877fe9",
+  "userAddress": "0x66658b54A2146B5922e4c54D65fB3c30312d89B5",
+  "expectedLevel": "red",
+  "expectedReasonCodes": [
+    "APPROVAL_FOR_ALL_EOA",
+    "LABEL_FLAGGED_GOPLUS",
+    "LABEL_FLAGGED_BLOCKSCOUT"
+  ],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). REAL phishing tx (2023-06-16T20:38:59Z, block 17494825, status ok): the victim 0x66658b54...89B5 called setApprovalForAll(0x00001f78189bE22C3498cFF1B8e02272C3220000, true) (selector 0xa22cb465) on the ERC-721 collection TheSadTimesBirthCertificate 0xA3F7250306Dbb856D8d312f93029be73343939aF; the ApprovalForAll log confirms it. Spec §2 RED rules: 'setApprovalForAll to an EOA' (operator with no code, Blockscout is_contract=false); 'GoPlus flag' (phishing_activities='1', blacklist_doubt='1'); 'Blockscout flag' (is_scam=true, reputation 'scam', tags Inferno Drainer/SCAM).",
+  "sources": [
+    "https://eth.blockscout.com/tx/0xed8432c64e61b6c896d8964fc0013daa0853704e963b21595a7d359362877fe9",
+    "https://eth.blockscout.com/address/0x00001f78189bE22C3498cFF1B8e02272C3220000",
+    "https://api.gopluslabs.io/api/v1/address_security/0x00001f78189bE22C3498cFF1B8e02272C3220000?chain_id=1",
+    "https://metadata.services.blockscout.com/api/v1/metadata?addresses=0x00001f78189bE22C3498cFF1B8e02272C3220000&chainId=1"
+  ]
+}

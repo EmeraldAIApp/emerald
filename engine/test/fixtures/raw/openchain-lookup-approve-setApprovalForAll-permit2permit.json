@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "result": {
+    "function": {
+      "0xa22cb465": [
+        {
+          "name": "setApprovalForAll(address,bool)",
+          "filtered": false,
+          "hasVerifiedContract": true
+        },
+        {
+          "name": "niceFunctionHerePlzClick943230089(address,bool)",
+          "filtered": false,
+          "hasVerifiedContract": false
+        }
+      ],
+      "0x2b67b570": [
+        {
+          "name": "permit(address,((address,uint160,uint48,uint48),address,uint256),bytes)",
+          "filtered": false,
+          "hasVerifiedContract": true
+        }
+      ],
+      "0x095ea7b3": [
+        {
+          "name": "approve(address,uint256)",
+          "filtered": false,
+          "hasVerifiedContract": true
+        }
+      ]
+    },
+    "event": {}
+  }
+}

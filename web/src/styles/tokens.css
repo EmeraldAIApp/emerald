@@ -1,0 +1,55 @@
+/* Locked DNA from brief §3-§4. The hex values are a contract: web/test/tokens.test.ts compares them with the brief. */
+@font-face { font-family: "Funnel Display"; src: url("/fonts/FunnelDisplay-500-600.woff2") format("woff2"); font-weight: 500 600; font-display: swap; }
+@font-face { font-family: "Funnel Sans"; src: url("/fonts/FunnelSans-400-500.woff2") format("woff2"); font-weight: 400 500; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("/fonts/IBMPlexMono-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("/fonts/IBMPlexMono-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+
+:root {
+  color-scheme: dark;
+  --night: #0f0c29;
+  --dusk: #302b63;
+  --haze: #24243e;
+  --eth: #667eea;
+  --plum: #764ba2;
+  --moon: #EEF0FA;
+  --lav: #B3AED0;
+  --dv-bg: #0a0e27;
+  --dv-ink: #7fbcff;
+  --dv-head: #cceeff;
+  --dv-cell: #b8d8ff;
+  --dv-row1: #0f1a3a;
+  --dv-row2: #12204a;
+  --dv-headrow: #1a2a4a;
+  --dv-line: #3d70c3;
+  --dv-line2: #2a4a7a;
+  --dv-btn: #1a3a6a;
+  --page: #ffffff;
+  --page-ink: #333333;
+  --emerald: #3CE68C;
+  --amber: #FFB02E;
+  --alert: #FF3B2F;
+
+  --font-display: "Funnel Display", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Funnel Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", ui-monospace, monospace;
+  --track-display: -0.03em;
+  --track-dateline: 0.12em;
+
+  /* Scale measured on the boards (390 -> 1440 px wide). */
+  --fs-h1: clamp(2.25rem, 1.5rem + 3.05vw, 4.5rem);
+  --fs-h2: clamp(2.125rem, 1.4rem + 3vw, 4.25rem);
+  --fs-sub: clamp(1rem, 0.93rem + 0.3vw, 1.25rem);
+  --fs-body: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  --fs-dateline: clamp(0.75rem, 0.72rem + 0.12vw, 0.875rem);
+  --fs-dv: clamp(0.8125rem, 0.7rem + 0.55vw, 1.25rem);
+  --fs-dv-verdict: clamp(1.5rem, 0.8rem + 2.8vw, 3.25rem);
+  --fs-nav: clamp(0.9375rem, 0.85rem + 0.3vw, 1.1875rem);
+
+  --gutter: clamp(16px, 4.2vw, 64px);
+  --content-max: 1440px;
+  --nav-h: clamp(64px, 5vw + 36px, 96px);
+  --radius-dv: 15px;
+  --radius-page: 12px;
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+  --verdict: var(--dv-ink);
+}

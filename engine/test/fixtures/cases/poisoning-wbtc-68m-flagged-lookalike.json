@@ -1,0 +1,23 @@
+{
+  "name": "poisoning-wbtc-68m-flagged-lookalike",
+  "input": "{\"from\":\"0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5\",\"to\":\"0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599\",\"value\":\"0x0\",\"data\":\"0xa9059cbb000000000000000000000000d9a1c3788d81257612e2581a6ea0ada244853a910000000000000000000000000000000000000000000000000000001ae60da1cf\"}",
+  "userAddress": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+  "expectedLevel": "red",
+  "expectedReasonCodes": [
+    "POISONING_LOOKALIKE",
+    "LABEL_FLAGGED_GOPLUS",
+    "LABEL_FLAGGED_BLOCKSCOUT"
+  ],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). Real incident of 2024-05-03 (~68M USD in WBTC). The calldata is byte for byte that of the theft (tx 0x3374abc5...: WBTC.transfer(0xd9A1C3788D81257612E2581A6ea0aDa244853a91, 115528802767 = 1155.28802767 WBTC)). Victim 0x1E227979...8FD5 history on Blockscout: 09:14:47Z real send of 0.05 ETH to the legitimate 0xd9A1b0B1e1aE382DbDc898Ea68012FfcB2853a91 (tx 0xb18ab131...; shows up in /transactions, NOT in /token-transfers); 09:17:35Z FAKE Transfer event from a spoof 'ETH' token (0x739352337C902c3874B95f14e81ebBCF1B7b262E, method 0xe19c2253, tx sent by the attacker) showing victim->poisoned; 09:17:59Z 0 ETH tx poisoned->victim (0x87c6e5d5...). The poisoned and the legitimate address share the first 4 ('d9a1') and last 4 ('3a91') hex, compared in lowercase. Spec §2 RED rules: 'poisoning detected' (destination differs from the legitimate prior counterparty but has the same prefix/suffix; its first appearance in the history is spoof/0-value); 'GoPlus flag': phishing_activities='1' (data_source SlowMist); 'Blockscout flag': is_scam=true, reputation='scam', metadata tag 'Fake_Phishing327990'. NOTE: eth_simulateV1 at latest REVERTS (the victim no longer has WBTC); the red does not depend on the simulation. Candidate for 'Try a real scam'.",
+  "sources": [
+    "https://eth.blockscout.com/tx/0x3374abc5a9c766ba709651399b6e6162de97ca986abc23f423a9d893c8f5f570",
+    "https://eth.blockscout.com/tx/0xb18ab131d251f7429c56a2ae2b1b75ce104fe9e83315a0c71ccf2b20267683ac",
+    "https://eth.blockscout.com/tx/0x9147d74ef5749b7f27eb2e2528e5a611060b3f609b435f7f50ac87f49e5b957c",
+    "https://eth.blockscout.com/tx/0x87c6e5d56fea35315ba283de8b6422ad390b6b9d8d399d9b93a9051a3e11bf73",
+    "https://eth.blockscout.com/api/v2/addresses/0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5/token-transfers?type=ERC-20",
+    "https://eth.blockscout.com/address/0xd9A1C3788D81257612E2581A6ea0aDa244853a91",
+    "https://api.gopluslabs.io/api/v1/address_security/0xd9A1C3788D81257612E2581A6ea0aDa244853a91?chain_id=1",
+    "https://www.coindesk.com/business/2024/05/03/exploiter-steals-68m-worth-of-crypto-through-address-poisoning",
+    "https://www.chainalysis.com/blog/address-poisoning-scam/"
+  ]
+}

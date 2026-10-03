@@ -1,0 +1,59 @@
+{
+  "code": 1,
+  "message": "OK",
+  "result": {
+    "0x7f84f92453f20a43350b1ca23a8a8fb61906a4db": {
+      "buy_tax": "0.0498",
+      "cannot_buy": "0",
+      "cannot_sell_all": "0",
+      "creator_address": "0x184f7275fe7a0eb9dc74461b139da350e31522ed",
+      "creator_balance": "950000000",
+      "creator_percent": "0.950000",
+      "dex": [
+        {
+          "liquidity_type": "UniV2",
+          "name": "UniswapV2",
+          "liquidity": "134.09472411",
+          "pool_fee": "0.0030",
+          "pair": "0xd9469eebcfd19fb2c886b1c8a74264f9109076b6"
+        }
+      ],
+      "holder_count": "3",
+      "holders": [
+        {
+          "address": "0x184f7275fe7a0eb9dc74461b139da350e31522ed",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "950000000",
+          "percent": "0.950000000000000000",
+          "is_locked": 0
+        },
+        {
+          "address": "0xd9469eebcfd19fb2c886b1c8a74264f9109076b6",
+          "tag": "UniswapV2",
+          "is_contract": 1,
+          "balance": "49999019.918282943810042775",
+          "percent": "0.049999019918282943",
+          "is_locked": 0
+        },
+        {
+          "address": "0x7f84f92453f20a43350b1ca23a8a8fb61906a4db",
+          "tag": "",
+          "is_contract": 1,
+          "balance": "980.081717056189957225",
+          "percent": "0.000000980081717056",
+          "is_locked": 0
+        }
+      ],
+      "honeypot_with_same_creator": "0",
+      "is_in_dex": "1",
+      "is_open_source": "0",
+      "lp_holder_count": "0",
+      "owner_address": "",
+      "sell_tax": "0.0958",
+      "token_name": "test",
+      "token_symbol": "test",
+      "total_supply": "1000000000"
+    }
+  }
+}

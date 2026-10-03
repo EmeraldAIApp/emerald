@@ -1,0 +1,82 @@
+{
+  "addresses": {
+    "0x0000db5c8B030ae20308ac975898E09741e70000": {
+      "tags": [
+        {
+          "slug": "inferno-drainer-approvals",
+          "name": "Inferno Drainer: Approvals",
+          "tagType": "name",
+          "ordinal": 10,
+          "meta": "{}"
+        },
+        {
+          "slug": "fakephishing187019",
+          "name": "Fake_Phishing187019",
+          "tagType": "name",
+          "ordinal": 10,
+          "meta": "{}"
+        },
+        {
+          "slug": "phish--hack",
+          "name": "Phish / Hack",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{\"bgColor\":\"#FED7D7\",\"textColor\":\"#822727\"}"
+        },
+        {
+          "slug": "exploit",
+          "name": "Exploit",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{\"info\":[\"Inferno Drainer:  Inferno Drainer\\n Exploit\"]}"
+        },
+        {
+          "slug": "scam",
+          "name": "SCAM",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{\"info\":[\"Phish\"]}"
+        },
+        {
+          "slug": "note0",
+          "name": "note_0",
+          "tagType": "note",
+          "ordinal": 0,
+          "meta": "{\"alertStatus\":\"info\",\"data\":\"There are reports that this address was used in a Phishing scam. Please exercise caution when interacting with it.\"}"
+        },
+        {
+          "slug": "inferno-drainer",
+          "name": "Inferno Drainer",
+          "tagType": "protocol",
+          "ordinal": 0,
+          "meta": "{}"
+        }
+      ]
+    },
+    "0xd9A1C3788D81257612E2581A6ea0aDa244853a91": {
+      "tags": [
+        {
+          "slug": "fakephishing327990",
+          "name": "Fake_Phishing327990",
+          "tagType": "name",
+          "ordinal": 10,
+          "meta": "{}"
+        },
+        {
+          "slug": "phish--hack",
+          "name": "Phish / Hack",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{\"bgColor\":\"#FED7D7\",\"textColor\":\"#822727\"}"
+        },
+        {
+          "slug": "note0",
+          "name": "note_0",
+          "tagType": "note",
+          "ordinal": 0,
+          "meta": "{\"alertStatus\":\"info\",\"data\":\"There are reports that this address was used in a Phishing scam. Please exercise caution when interacting with it. Reported by Cyvers Alerts.\"}"
+        }
+      ]
+    }
+  }
+}

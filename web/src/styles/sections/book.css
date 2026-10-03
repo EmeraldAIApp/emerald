@@ -1,0 +1,27 @@
+/* ---------- S2 THE BOOK: headline top-left + white page on the right + cropped bracelet ---------- */
+.book .stage { --fx: .22; --fy: .6; }
+.book__in { display: grid; gap: 28px; padding-block: 88px 64px; }
+.book__quote { margin-top: 1.4rem; }
+.book__quote p { font-size: var(--fs-sub); color: color-mix(in srgb, var(--moon) 84%, var(--lav)); }
+.book__quote footer { margin-top: .8rem; }
+.book__read { display: inline-flex; align-items: center; gap: .6em; margin-top: 1.8rem; font-size: var(--fs-sub); color: var(--moon); text-decoration: none; border-bottom: 1px solid var(--moon); padding-bottom: 4px; }
+.book__read svg { width: 28px; height: 12px; }
+.book__read:hover { color: var(--dv-head); border-color: var(--dv-head); }
+.page { background: var(--page); color: var(--page-ink); border-radius: var(--radius-page); padding: clamp(20px, 3vw, 48px); box-shadow: 0 30px 80px -30px rgb(0 0 0 / .75); display: grid; gap: 1rem; }
+.page p { font-size: var(--fs-body); }
+.page__h { font: 500 clamp(1.75rem, 1.1rem + 1.9vw, 2.75rem)/1.1 var(--font-body); color: var(--page-ink); padding-bottom: .45em; border-bottom: 2px solid var(--eth); max-width: 86%; }
+.page__dateline { font: 500 var(--fs-dateline)/1.4 var(--font-mono) !important; letter-spacing: var(--track-dateline); color: var(--dusk); }
+.dv--book { padding: 10px; border-radius: 12px; font-size: clamp(.75rem, .45rem + .55vw, .92rem); }
+.dv--book .dv__table { table-layout: auto; }
+.dv--book .dv__table th, .dv--book .dv__table td { padding: .6em .8em; }
+.dv--book .dv__table th:first-child, .dv--book .dv__table td:first-child,
+.dv--book .dv__table th:last-child, .dv--book .dv__table td:last-child { white-space: nowrap; }
+.book__coda { margin-top: 1.4rem; font-size: var(--fs-sub); color: var(--dv-head); text-align: right; }
+.book__legal { margin-top: 8px; }
+@media (min-width: 768px) and (orientation: landscape) {
+  .book { min-height: clamp(560px, calc(100vw / 1.7684), 1100px); }
+  .book .stage { --fx: .5; --fy: .5; }
+  .book__in { grid-template-columns: minmax(0, 1fr) minmax(0, 46%); column-gap: 6%; padding-block: 6vw 3vw; }
+  .book__side { margin-top: 8vw; grid-row: 1 / span 2; grid-column: 2; }
+  .book__legal { align-self: end; grid-column: 1; }
+}

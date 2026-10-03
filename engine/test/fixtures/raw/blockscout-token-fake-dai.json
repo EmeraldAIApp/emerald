@@ -1,0 +1,15 @@
+{
+  "address_hash": "0x7362De96703aB797156f3B1e3716323A358D7c76",
+  "circulating_market_cap": null,
+  "circulating_supply": null,
+  "decimals": "18",
+  "exchange_rate": null,
+  "holders_count": "467",
+  "icon_url": null,
+  "name": "Dai Stablecoin",
+  "reputation": "ok",
+  "symbol": "DAI",
+  "total_supply": "3635304980151554943224214482",
+  "type": "ERC-20",
+  "volume_24h": null
+}

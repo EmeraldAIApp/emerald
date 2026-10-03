@@ -1,0 +1,16 @@
+{
+  "name": "poisoning-wbtc-68m-unflagged-lookalike",
+  "input": "{\"from\":\"0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5\",\"to\":\"0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599\",\"value\":\"0x0\",\"data\":\"0xa9059cbb000000000000000000000000d9a192566e41e0804c3d81588a2d15be58853a910000000000000000000000000000000000000000000000000000001ae60da1cf\"}",
+  "userAddress": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+  "expectedLevel": "red",
+  "expectedReasonCodes": [
+    "POISONING_LOOKALIKE"
+  ],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). Isolates the poisoning module (without help from labels). The address 0xD9A192566e41e0804C3D81588a2D15Be58853a91 is REAL and is in the same victim's history: on 2024-05-08T11:00:23Z a fake 'WBTC' token with Cyrillic letters in symbol/name (0x2e57249F1e5ac0bD3b9187D19120d54008b3d967, method 0xe19c2253, tx 0x19a2e155...) emitted a spoof Transfer victim->0xD9A19256... for '1155.28802767' imitating the theft. Same prefix 'd9a1' and suffix '3a91' as the legitimate 0xd9A1b0B1... GoPlus address_security: all '0' (no flag). Blockscout: is_scam=false, reputation='ok'. The tx is CONSTRUCTED (the victim never sent real WBTC to this address): same calldata as the theft with a different recipient. Spec §2 RED rule: 'poisoning detected'. It also reverts in simulation (no WBTC balance).",
+  "sources": [
+    "https://eth.blockscout.com/tx/0x19a2e1554734218c534d86d37834e4886167fbc5e34e64a5bac673b55dc6c757",
+    "https://eth.blockscout.com/address/0xD9A192566e41e0804C3D81588a2D15Be58853a91",
+    "https://api.gopluslabs.io/api/v1/address_security/0xD9A192566e41e0804C3D81588a2D15Be58853a91?chain_id=1",
+    "https://eth.blockscout.com/api/v2/addresses/0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5/token-transfers?type=ERC-20"
+  ]
+}

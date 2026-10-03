@@ -1,0 +1,28 @@
+/* ---------- S4 TOKEN: receipt center-left + counter on the right, bracelet in the foreground ---------- */
+.token .stage { --fx: .87; --fy: .6; }
+/* Mobile: the photo band (.sec--band, base.css) fills only the bottom of the section, so the bracelet sits under the counter. */
+.token__in { display: grid; gap: 32px; padding-block: 88px 100vw; }
+.dv--receipt { margin-top: 2rem; max-width: 30rem; padding: 0; overflow: hidden; }
+.dv--receipt .dv__table { border: 0; }
+.dv--receipt thead th { text-align: center; font-size: 1.15em; }
+.counter { display: grid; gap: .2rem; align-self: start; max-width: 24rem; }
+.counter__k { color: var(--dv-head); font-weight: 700; }
+.counter__v { font: 700 clamp(1.75rem, 1.2rem + 1.6vw, 2.5rem)/1.15 var(--font-mono); color: var(--dv-ink); margin-bottom: .7rem; font-variant-numeric: tabular-nums; }
+.counter__small { font-size: .85em; color: var(--dv-cell); }
+.counter__ca { overflow-wrap: anywhere; color: var(--dv-head); margin-bottom: .7rem; }
+.counter__quotas { margin-top: .4rem; }
+@media (min-width: 768px) and (orientation: landscape) {
+  /* 780px floor: below ~1380px wide the counter (about 340px tall) would otherwise reach down to the bracelet screen. */
+  .token { min-height: clamp(780px, calc(100vw / 1.7684), 1100px); }
+  /* Crop toward the bracelet when the section is narrower than the photo; the dark wall on the left can go. */
+  .token .stage { --fx: .8; --fy: .5; }
+  /* Third track: air on the right so the counter sits where the board puts it and never over the headline. */
+  .token__in { grid-template-columns: minmax(0, 1fr) 18.5rem clamp(0px, 4vw, 2rem); column-gap: 4%; padding-block: 8vw 8vw; }
+  .dv--receipt { max-width: 30vw; margin-top: 3vw; }
+  /* The counter has to end above the bracelet screen (about half way down the photo, right side), like the board. */
+  .counter { grid-column: 2; margin-top: -5vw; font-size: min(.82em, .98rem); padding: clamp(12px, 1.3vw, 20px); }
+  .counter__v { font-size: clamp(1.35rem, .45rem + 1.4vw, 2.3rem); margin-bottom: .35rem; }
+  .counter__small { text-wrap: balance; }
+  .counter__ca { margin-bottom: .35rem; }
+  .counter__quotas td { padding: .35em .6em; }
+}

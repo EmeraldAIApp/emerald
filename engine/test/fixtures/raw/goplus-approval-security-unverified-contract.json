@@ -1,0 +1,28 @@
+{
+  "code": 2,
+  "message": "partial data obtained",
+  "result": {
+    "contract_name": null,
+    "tag": null,
+    "is_contract": 1,
+    "creator_address": null,
+    "deployed_time": null,
+    "is_open_source": 0,
+    "is_proxy": 0,
+    "trust_list": 0,
+    "doubt_list": 0,
+    "malicious_behavior": [],
+    "contract_scan": {
+      "owner": null,
+      "privilege_withdraw": null,
+      "withdraw_missing": null,
+      "blacklist": null,
+      "selfdestruct": null,
+      "approval_abuse": null
+    },
+    "risky_approval": {
+      "risk": null,
+      "value": 0
+    }
+  }
+}

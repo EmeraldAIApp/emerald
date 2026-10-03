@@ -1,0 +1,114 @@
+{
+  "code": 1,
+  "message": "OK",
+  "result": {
+    "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+      "buy_tax": "0",
+      "creator_address": "0x95ba4cf87d6723ad9c0db21737d862be80e93911",
+      "creator_balance": "2505.454092",
+      "creator_percent": "0.000000",
+      "holder_count": "9182488",
+      "holders": [
+        {
+          "address": "0x37305b1cd40574e4c5ce33f8e8306be057fd7341",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "4160868625.581937",
+          "percent": "0.084324180304600304",
+          "is_locked": 0
+        },
+        {
+          "address": "0xe1940f578743367f38d3f25c2d2d32d6636929b6",
+          "tag": "",
+          "is_contract": 1,
+          "balance": "1699999999.039577",
+          "percent": "0.034452206819383685",
+          "is_locked": 0
+        },
+        {
+          "address": "0xffa69c0080582098af595156240214b742735a5e",
+          "tag": "",
+          "is_contract": 1,
+          "balance": "1582999999.8601",
+          "percent": "0.032081084365338777",
+          "is_locked": 0
+        },
+        {
+          "address": "0xad354cfbaa4a8572dd6df021514a3931a8329ef5",
+          "tag": "",
+          "is_contract": 1,
+          "balance": "1400000000.5201",
+          "percent": "0.028372405642532508",
+          "is_locked": 0
+        },
+        {
+          "address": "0x40ec5b33f54e0e8a33a975908c5ba1c14e5bbbdf",
+          "tag": "",
+          "is_contract": 1,
+          "balance": "1009854437.050457",
+          "percent": "0.020465714083759041",
+          "is_locked": 0
+        },
+        {
+          "address": "0x38aaef3782910bdd9ea3566c839788af6ff9b200",
+          "tag": "",
+          "is_contract": 1,
+          "balance": "957274198.53902",
+          "percent": "0.019400122758563765",
+          "is_locked": 0
+        },
+        {
+          "address": "0x3d09d2354530466d32ed37c6ad19ea58504a0c37",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "722532678.853313",
+          "percent": "0.014642850176282942",
+          "is_locked": 0
+        },
+        {
+          "address": "0x01b8697695eab322a339c4bf75740db75dc9375e",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "721170670.473822",
+          "percent": "0.014615247708985020",
+          "is_locked": 0
+        },
+        {
+          "address": "0xee7ae85f2fe2239e27d9c1e23fffe168d63b4055",
+          "tag": "",
+          "is_contract": 1,
+          "balance": "654562764.285404",
+          "percent": "0.013265371614216823",
+          "is_locked": 0
+        },
+        {
+          "address": "0x3b4d794a66304f130a4db8f2551b0070dfcf5ca7",
+          "tag": "",
+          "is_contract": 1,
+          "balance": "644618651.354085",
+          "percent": "0.013063844181547022",
+          "is_locked": 0
+        }
+      ],
+      "honeypot_with_same_creator": "0",
+      "is_honeypot": "0",
+      "is_in_cex": {
+        "listed": "1",
+        "cex_list": [
+          "Binance",
+          "Coinbase"
+        ]
+      },
+      "is_in_dex": "1",
+      "is_open_source": "1",
+      "is_proxy": "1",
+      "sell_tax": "0",
+      "token_name": "USD Coin",
+      "token_symbol": "USDC",
+      "total_supply": "49343718617.267613",
+      "transfer_tax": "",
+      "cannot_buy": "0",
+      "trust_list": "1"
+    }
+  }
+}

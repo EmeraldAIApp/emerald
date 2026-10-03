@@ -1,0 +1,16 @@
+{
+  "name": "poisoning-wbtc-68m-legit-counterparty",
+  "input": "{\"from\":\"0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5\",\"to\":\"0xd9A1b0B1e1aE382DbDc898Ea68012FfcB2853a91\",\"value\":\"0xb1a2bc2ec50000\",\"data\":\"0x\"}",
+  "userAddress": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+  "expectedLevel": "yellow",
+  "expectedReasonCodes": [
+    "POISONING_LOOKALIKE_IN_HISTORY"
+  ],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). False-positive control. This is the REAL test tx that the victim sent to their legitimate counterparty (0xb18ab131...: 0.05 native ETH to 0xd9A1b0B1e1aE382DbDc898Ea68012FfcB2853a91, data 0x). The legitimate one has NO flags (GoPlus all '0'; Blockscout is_scam=false, reputation 'ok', EOA with no code) and the victim had already sent it real value (not a first interaction). It must NOT be red: a naive rule 'same prefix/suffix as another counterparty' would flag it red because there are two lookalikes in the history (0xd9A1C3... and 0xD9A192...). YELLOW is a design decision (not literal from spec §2): the destination is a genuine prior counterparty (tx.from = victim, real value, the first of the three to appear) but there are similar addresses in the history -> warn 'verify the full address'. With the literal spec it would be GREEN. eth_simulateV1 OK (traceTransfers emits a Transfer log from 0xeeee...eeee for 0.05 ETH). The rule 'asset outflow with nothing in return' must NOT apply to a simple send by the user themself (native transfer or ERC-20 transfer), or every send would be red.",
+  "sources": [
+    "https://eth.blockscout.com/tx/0xb18ab131d251f7429c56a2ae2b1b75ce104fe9e83315a0c71ccf2b20267683ac",
+    "https://eth.blockscout.com/address/0xd9A1b0B1e1aE382DbDc898Ea68012FfcB2853a91",
+    "https://api.gopluslabs.io/api/v1/address_security/0xd9A1b0B1e1aE382DbDc898Ea68012FfcB2853a91?chain_id=1",
+    "https://eth.blockscout.com/api/v2/addresses/0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5/transactions"
+  ]
+}

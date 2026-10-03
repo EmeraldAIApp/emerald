@@ -1,0 +1,3349 @@
+{
+ "case": "permit2-batch-inferno-drainer",
+ "recordedAt": "2026-09-30T20:48:10.560Z",
+ "entries": {
+  "GET https://eth.blockscout.com/api/v2/addresses/0x13c7c033175f000c931b718157894f2d0389df4c/token-transfers?type=ERC-20": {
+   "status": 200,
+   "body": {
+    "items": [
+     {
+      "block_hash": "0x49f357fa3675411e52e0b6f16a3da3d871559f1ef3719c9fd0a7e79e084c1fb5",
+      "block_number": 17532020,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 2,
+      "method": "0x0d58b1db",
+      "timestamp": "2023-06-22T01:52:47.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x29488E5fD6bF9B3cc98A9d06A25204947ccCBE4D",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": true,
+       "is_verified": false,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {},
+          "name": "Fake_Phishing180395",
+          "ordinal": 10,
+          "slug": "fakephishing180395",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "bgColor": "#FED7D7",
+           "textColor": "#822727"
+          },
+          "name": "Phish / Hack",
+          "ordinal": 0,
+          "slug": "phish--hack",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "alertStatus": "info",
+           "data": "Warning! There are reports that this address was used in a Phishing scam. Please exercise caution when interacting with this address. Reported by Scam Sniffer."
+          },
+          "name": "note_0",
+          "ordinal": 0,
+          "slug": "note0",
+          "tagType": "note"
+         }
+        ]
+       },
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "scam",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+       "circulating_market_cap": "74191680125.63536",
+       "circulating_supply": null,
+       "decimals": "6",
+       "exchange_rate": "0.99982",
+       "holders_count": "9402097",
+       "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+       "name": "USDC",
+       "reputation": "ok",
+       "symbol": "USDC",
+       "total_supply": "49335543923077551",
+       "type": "ERC-20",
+       "volume_24h": "17700092839.069504"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "6",
+       "value": "2000000"
+      },
+      "transaction_hash": "0x00693cdac4fa8b0f4a30ffc9277ab42f3cfecbcaa3fa32cfb7b10add9a6a7730",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0x49f357fa3675411e52e0b6f16a3da3d871559f1ef3719c9fd0a7e79e084c1fb5",
+      "block_number": 17532020,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 1,
+      "method": "0x0d58b1db",
+      "timestamp": "2023-06-22T01:52:47.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0xC5024614C0320794206B721CEb3AcFE8c7535770",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": true,
+       "is_verified": false,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {},
+          "name": "Fake_Phishing937454",
+          "ordinal": 10,
+          "slug": "fakephishing937454",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "bgColor": "#FED7D7",
+           "textColor": "#822727"
+          },
+          "name": "Phish / Hack",
+          "ordinal": 0,
+          "slug": "phish--hack",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "alertStatus": "info",
+           "data": "Warning! This address is involved with a phishing campaign. Reported by BlockSec."
+          },
+          "name": "note_0",
+          "ordinal": 0,
+          "slug": "note0",
+          "tagType": "note"
+         }
+        ]
+       },
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "scam",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+       "circulating_market_cap": "74191680125.63536",
+       "circulating_supply": null,
+       "decimals": "6",
+       "exchange_rate": "0.99982",
+       "holders_count": "9402097",
+       "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+       "name": "USDC",
+       "reputation": "ok",
+       "symbol": "USDC",
+       "total_supply": "49335543923077551",
+       "type": "ERC-20",
+       "volume_24h": "17700092839.069504"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "6",
+       "value": "8000000"
+      },
+      "transaction_hash": "0x00693cdac4fa8b0f4a30ffc9277ab42f3cfecbcaa3fa32cfb7b10add9a6a7730",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0xbedb776867849f230672ece4e47ae8fa4eaeef643336d449c4940aea09d1072f",
+      "block_number": 17367589,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 231,
+      "method": "0x3593564c",
+      "timestamp": "2023-05-29T22:24:35.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipDescription": "Uniswap V3 pool to exchange between USDC and WETH.",
+           "tooltipUrl": "https://info.uniswap.org/#/pools/0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
+          },
+          "name": "Uniswap V3: USDC 3",
+          "ordinal": 10,
+          "slug": "uniswap-v3-usdc-3",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Liquidity Pool",
+          "ordinal": 0,
+          "slug": "liquidity-pool",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "UniswapV3Pool",
+          "ordinal": 0,
+          "slug": "uniswapv3pool",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Uniswap",
+           "appID": "uniswap",
+           "bgColor": "#FF007A",
+           "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+           "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+           "textColor": "#FFFFFF",
+           "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+           "tooltipTitle": "Uniswap",
+           "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+          },
+          "name": "Uniswap V3",
+          "ordinal": 0,
+          "slug": "uniswap-v3",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "UniswapV3Pool",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+       "circulating_market_cap": "74191680125.63536",
+       "circulating_supply": null,
+       "decimals": "6",
+       "exchange_rate": "0.99982",
+       "holders_count": "9402097",
+       "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+       "name": "USDC",
+       "reputation": "ok",
+       "symbol": "USDC",
+       "total_supply": "49335543923077551",
+       "type": "ERC-20",
+       "volume_24h": "17700092839.069504"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "6",
+       "value": "290000000"
+      },
+      "transaction_hash": "0xf4f834c9e9c065793d40360877336cc5612582521acccb2dedb01c360ac6d0de",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0xbcb003d2797534b82999a4333f6450a041dea7c910981d67a648f6bf5bff85da",
+      "block_number": 17331200,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 267,
+      "method": "0x3593564c",
+      "timestamp": "2023-05-24T19:43:23.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipDescription": "Uniswap V3 pool to exchange between USDC and WETH.",
+           "tooltipUrl": "https://info.uniswap.org/#/pools/0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
+          },
+          "name": "Uniswap V3: USDC 3",
+          "ordinal": 10,
+          "slug": "uniswap-v3-usdc-3",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Liquidity Pool",
+          "ordinal": 0,
+          "slug": "liquidity-pool",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "UniswapV3Pool",
+          "ordinal": 0,
+          "slug": "uniswapv3pool",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Uniswap",
+           "appID": "uniswap",
+           "bgColor": "#FF007A",
+           "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+           "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+           "textColor": "#FFFFFF",
+           "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+           "tooltipTitle": "Uniswap",
+           "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+          },
+          "name": "Uniswap V3",
+          "ordinal": 0,
+          "slug": "uniswap-v3",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "UniswapV3Pool",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+       "circulating_market_cap": "74191680125.63536",
+       "circulating_supply": null,
+       "decimals": "6",
+       "exchange_rate": "0.99982",
+       "holders_count": "9402097",
+       "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+       "name": "USDC",
+       "reputation": "ok",
+       "symbol": "USDC",
+       "total_supply": "49335543923077551",
+       "type": "ERC-20",
+       "volume_24h": "17700092839.069504"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "6",
+       "value": "1000000000"
+      },
+      "transaction_hash": "0x606568f86148fc0eb222b4b4429c45a8972608e145dade68bef236e41a6a5136",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0x619a4fb46618a0906034a345b73df11f62a383a54481e45679fede0895eaf143",
+      "block_number": 17322283,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0xB684dc3F33052a90c2Eb7B588121b9c8A7077279",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 131,
+      "method": "0xa9059cbb",
+      "timestamp": "2023-05-23T13:38:47.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+       "circulating_market_cap": "74191680125.63536",
+       "circulating_supply": null,
+       "decimals": "6",
+       "exchange_rate": "0.99982",
+       "holders_count": "9402097",
+       "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+       "name": "USDC",
+       "reputation": "ok",
+       "symbol": "USDC",
+       "total_supply": "49335543923077551",
+       "type": "ERC-20",
+       "volume_24h": "17700092839.069504"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "6",
+       "value": "1300000000"
+      },
+      "transaction_hash": "0x4f747d94236f5f30ec4936a75013aa99667b05ad1ed5ca5957b725a95b052802",
+      "type": "token_transfer"
+     }
+    ],
+    "next_page_params": null
+   }
+  },
+  "GET https://metadata.services.blockscout.com/api/v1/metadata?addresses=0x00001f78189be22c3498cff1b8e02272c3220000&chainId=1": {
+   "status": 200,
+   "body": {
+    "addresses": {
+     "0x00001f78189bE22C3498cFF1B8e02272C3220000": {
+      "tags": [
+       {
+        "slug": "inferno-drainer",
+        "name": "Inferno Drainer",
+        "tagType": "name",
+        "ordinal": 10,
+        "meta": "{}"
+       },
+       {
+        "slug": "phish--hack",
+        "name": "Phish / Hack",
+        "tagType": "generic",
+        "ordinal": 0,
+        "meta": "{\"bgColor\":\"#FED7D7\",\"textColor\":\"#822727\"}"
+       },
+       {
+        "slug": "blocked",
+        "name": "BLOCKED",
+        "tagType": "generic",
+        "ordinal": 0,
+        "meta": "{\"info\":[\"Blocked By USDT\"],\"tooltipDescription\":\"Address blocked by a custodial stablecoin provider\"}"
+       },
+       {
+        "slug": "scam",
+        "name": "SCAM",
+        "tagType": "generic",
+        "ordinal": 0,
+        "meta": "{\"info\":[\"Phish\"]}"
+       },
+       {
+        "slug": "note0",
+        "name": "note_0",
+        "tagType": "note",
+        "ordinal": 0,
+        "meta": "{\"alertStatus\":\"info\",\"data\":\"Warning! There are reports that this address was used in a Phishing scam. Please exercise caution when interacting with this address. Reported by Scam Sniffer.\"}"
+       }
+      ]
+     }
+    }
+   }
+  },
+  "GET https://eth.blockscout.com/api/v2/addresses/0x13c7c033175f000c931b718157894f2d0389df4c/transactions?filter=from": {
+   "status": 200,
+   "body": {
+    "items": [
+     {
+      "priority_fee": "12109000000000",
+      "raw_input": "0x9a4896fe18002d54ec216400006400000000000000000000000000000000000000000003000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000420000000000000000000000000000000000000600000000000000000000000013c7c033175f000c931b718157894f2d0389df4c0000000000000000000000009ae506cddd27dee1275fd1fe6627e5dc6525706100000000000000000000000000000000000000000000000000d529ae9e86000000000000000000000000000000000000000000000000000000d4d7d3dc7e600000000000000000000000000000000000000000000000000000d48822e3faf94100000000000000000000000000000000000000000000000000054330695bbfeb",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x0625b5fe689010acaf48c91d56fa5a22543eb469314e14e860d77d43beac9200",
+      "max_fee_per_gas": "46066693213",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "4181972057812580",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7051555,
+      "position": 114,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "60000000000000000",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "121090",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x48b6101128C0ed1E208b7C910e60542A2ee6f476",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "Portico",
+          "ordinal": 0,
+          "slug": "portico",
+          "tagType": "name"
+         }
+        ]
+       },
+       "name": "Portico",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "start",
+      "fee": {
+       "type": "actual",
+       "value": "4194081057812580"
+      },
+      "gas_limit": "148642",
+      "gas_price": "34636064562",
+      "decoded_input": {
+       "method_call": "start((bytes32,address,address,address,address,address,uint256,uint256,uint256,uint256) params)",
+       "method_id": "9a4896fe",
+       "parameters": [
+        {
+         "name": "params",
+         "type": "(bytes32,address,address,address,address,address,uint256,uint256,uint256,uint256)",
+         "value": [
+          "0x18002d54ec216400006400000000000000000000000000000000000000000003",
+          "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+          "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+          "0x4200000000000000000000000000000000000006",
+          "0x13C7c033175F000C931b718157894F2D0389DF4C",
+          "0x9ae506cDDd27DEe1275fd1fe6627E5dc65257061",
+          "60000000000000000",
+          "59910000000000000",
+          "59822378497800513",
+          "1481250088665067"
+         ]
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "34536064562",
+      "timestamp": "2024-01-19T13:32:47.000000Z",
+      "nonce": 20,
+      "historic_exchange_rate": "2427.9",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call",
+       "token_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 19041229,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "6564700000000",
+      "raw_input": "0x9f3ce55a00000000000000000000000013c7c033175f000c931b718157894f2d0389df4c00000000000000000000000000000000000000000000000000022a4aaf1ac90000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x24fb911760d2740c9bde2565bc9ce20cf0b48153a495878386893e3e54499f0d",
+      "max_fee_per_gas": "49366122873",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "2236055362858014",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7505637,
+      "position": 155,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "160609450207136000",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "65647",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0xd19d4B5d358258f05D7B411E21A1460D11B0876F",
+       "implementations": [
+        {
+         "address_hash": "0x052b73d934E9412045Bf731574463Fd026D74645",
+         "name": "LineaRollup"
+        }
+       ],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "Linea",
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0x67afc97bed31b18712b1e9aceda382ed552ac546496fee1ad348586f1350cf46",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Linea's official L1 Message Service contract",
+           "tooltipUrl": "https://linea.build/",
+           "verifiedDomains": [
+            "bridge.linea.build",
+            "linea.build"
+           ]
+          },
+          "name": "Linea: L1 Message Service",
+          "ordinal": 10,
+          "slug": "linea-l1-message-service",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "LineaRollup",
+          "ordinal": 0,
+          "slug": "linearollup",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Linea",
+          "ordinal": 0,
+          "slug": "linea",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "TransparentUpgradeableProxy",
+       "private_tags": [],
+       "proxy_type": "eip1967",
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "sendMessage",
+      "fee": {
+       "type": "actual",
+       "value": "2242620062858014"
+      },
+      "gas_limit": "99283",
+      "gas_price": "34161805762",
+      "decoded_input": {
+       "method_call": "sendMessage(address _to, uint256 _fee, bytes _calldata)",
+       "method_id": "9f3ce55a",
+       "parameters": [
+        {
+         "name": "_to",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        },
+        {
+         "name": "_fee",
+         "type": "uint256",
+         "value": "609450207136000"
+        },
+        {
+         "name": "_calldata",
+         "type": "bytes",
+         "value": "0x"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "34061805762",
+      "timestamp": "2023-11-16T21:31:11.000000Z",
+      "nonce": 19,
+      "historic_exchange_rate": "1961.54",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 18587147,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "30456600000000",
+      "raw_input": "0x9f8420b300000000000000000000000000000000000000000000000002386f26fc1000000000000000000000000000000000000000000000000000000000000000029040",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x07a7ed9defafdb3f1cb9438128d1095308c451b78b5e39ab5d8fcdfb760f895e",
+      "max_fee_per_gas": "46741992184",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "10717787053710318",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7505645,
+      "position": 63,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "160427754880000000",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "304566",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6",
+       "implementations": [
+        {
+         "address_hash": "0xb93Ac04010Bd61F45BF492022A5b49a902F798F3",
+         "name": "L1GatewayRouter"
+        }
+       ],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "Scroll",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0x2ae0752bd31043bc981da472b5ef73b44b97f2c051828026bbd75036dc7a0952",
+           "tooltipDescription": "Scroll's L1 Gateway Router Proxy contract",
+           "tooltipUrl": "https://scroll.io/",
+           "verifiedDomains": [
+            "scroll.io",
+            "portal.scroll.io"
+           ]
+          },
+          "name": "Scroll: L1 Gateway Router Proxy",
+          "ordinal": 10,
+          "slug": "scroll-l1-gateway-router-proxy",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Router",
+          "ordinal": 0,
+          "slug": "router",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "L1 Deposit bridge",
+          "ordinal": 0,
+          "slug": "l1-deposit-bridge",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Scroll",
+          "ordinal": 0,
+          "slug": "scroll",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "TransparentUpgradeableProxy",
+       "private_tags": [],
+       "proxy_type": "eip1967",
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "depositETH",
+      "fee": {
+       "type": "actual",
+       "value": "10748243653710318"
+      },
+      "gas_limit": "329999",
+      "gas_price": "35290359573",
+      "decoded_input": {
+       "method_call": "depositETH(uint256 _amount, uint256 _gasLimit)",
+       "method_id": "9f8420b3",
+       "parameters": [
+        {
+         "name": "_amount",
+         "type": "uint256",
+         "value": "160000000000000000"
+        },
+        {
+         "name": "_gasLimit",
+         "type": "uint256",
+         "value": "168000"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "35190359573",
+      "timestamp": "2023-11-16T21:29:35.000000Z",
+      "nonce": 18,
+      "historic_exchange_rate": "1961.54",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 18587139,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "2100000000000",
+      "raw_input": "0x",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x970b82787658266ff9bddedf695f8d92da899c3f58b7b95b955b83534be272cd",
+      "max_fee_per_gas": "40264629658",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "620133283308000",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7577264,
+      "position": 187,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "2600000000000000000",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21000",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x19Fe0604b7FE675e701cBE41237749d8F707aA8F",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": null,
+      "fee": {
+       "type": "actual",
+       "value": "622233283308000"
+      },
+      "gas_limit": "21000",
+      "gas_price": "29630156348",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "29530156348",
+      "timestamp": "2023-11-06T21:09:11.000000Z",
+      "nonce": 17,
+      "historic_exchange_rate": "1900.98",
+      "transaction_types": [
+       "coin_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 18515520,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "2100000000000",
+      "raw_input": "0x",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x02b34b82d3f1279052c6ebf956c749fe53782dfa734503561cde611993cb0382",
+      "max_fee_per_gas": "41166375468",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "596511247395000",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7577273,
+      "position": 90,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "10000000000000000",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21000",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x19Fe0604b7FE675e701cBE41237749d8F707aA8F",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": null,
+      "fee": {
+       "type": "actual",
+       "value": "598611247395000"
+      },
+      "gas_limit": "21000",
+      "gas_price": "28505297495",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "28405297495",
+      "timestamp": "2023-11-06T21:07:23.000000Z",
+      "nonce": 16,
+      "historic_exchange_rate": "1900.98",
+      "transaction_types": [
+       "coin_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 18515511,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "177180000000000",
+      "raw_input": "0xeb67241900000000000000000000000013c7c033175f000c931b718157894f2d0389df4c00000000000000000000000000000000000000000000000024ea37e81e8a000000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000b54a30000000000000000000000000000000000000000000000000000000000000320000000000000000000000000000000000000000000000000000000000000010000000000000000000000000013c7c033175f000c931b718157894f2d0389df4c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x8a0ad2b08fe67d0a6ea42bb9f50dda89f96ea7a95a867ec613122ac67e0d019d",
+      "max_fee_per_gas": "72514798368",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "5417134112592520",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7578985,
+      "position": 25,
+      "max_priority_fee_per_gas": "1500000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "2661144244632691358",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "118120",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x32400084C286CF3E17e7B677ea9583e60a000324",
+       "implementations": [
+        {
+         "address_hash": "0x37CefD5b44c131FEf27e9Bc542e5B77A177A7253",
+         "name": "AdminFacet"
+        },
+        {
+         "address_hash": "0x1666124221622eb6154306Ea9BA87043e8be88B2",
+         "name": "GettersFacet"
+        },
+        {
+         "address_hash": "0x1e34aB39a9682149165ddeCc0583d238A5448B45",
+         "name": "MailboxFacet"
+        },
+        {
+         "address_hash": "0x0597CaA8A823A699d7CD9E62B5E5d4153FF82691",
+         "name": "ExecutorFacet"
+        }
+       ],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "zkSync Era",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0x9e1fd83e3df9eb8841bd35823cfc5eb878c988c5833b997cd0d5662dac025d8f",
+           "tooltipDescription": "zkSync Era's official Diamond Proxy contract",
+           "tooltipUrl": "https://zksync.io/",
+           "verifiedDomains": [
+            "portal.zksync.io"
+           ]
+          },
+          "name": "zkSync Era: Diamond Proxy",
+          "ordinal": 10,
+          "slug": "zksync-era-diamond-proxy",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Layer 2",
+          "ordinal": 0,
+          "slug": "layer-2",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "Bridge",
+          "ordinal": 0,
+          "slug": "bridge",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "ZKSync Bridge",
+          "ordinal": 0,
+          "slug": "zksync-bridge",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "zkSync Era",
+          "ordinal": 0,
+          "slug": "zksync-era",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "DiamondProxy",
+       "private_tags": [],
+       "proxy_type": "eip2535",
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "requestL2Transaction",
+      "fee": {
+       "type": "actual",
+       "value": "5594314112592520"
+      },
+      "gas_limit": "149264",
+      "gas_price": "47361277621",
+      "decoded_input": {
+       "method_call": "requestL2Transaction(address _contractL2, uint256 _l2Value, bytes _calldata, uint256 _l2GasLimit, uint256 _l2GasPerPubdataByteLimit, bytes[] _factoryDeps, address _refundRecipient)",
+       "method_id": "eb672419",
+       "parameters": [
+        {
+         "name": "_contractL2",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        },
+        {
+         "name": "_l2Value",
+         "type": "uint256",
+         "value": "2660000000000000000"
+        },
+        {
+         "name": "_calldata",
+         "type": "bytes",
+         "value": "0x"
+        },
+        {
+         "name": "_l2GasLimit",
+         "type": "uint256",
+         "value": "742563"
+        },
+        {
+         "name": "_l2GasPerPubdataByteLimit",
+         "type": "uint256",
+         "value": "800"
+        },
+        {
+         "name": "_factoryDeps",
+         "type": "bytes[]",
+         "value": []
+        },
+        {
+         "name": "_refundRecipient",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "45861277621",
+      "timestamp": "2023-11-06T15:21:23.000000Z",
+      "nonce": 15,
+      "historic_exchange_rate": "1900.98",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 18513799,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "177180000000000",
+      "raw_input": "0xeb67241900000000000000000000000013c7c033175f000c931b718157894f2d0389df4c000000000000000000000000000000000000000000000000016345785d8a000000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000b54a30000000000000000000000000000000000000000000000000000000000000320000000000000000000000000000000000000000000000000000000000000010000000000000000000000000013c7c033175f000c931b718157894f2d0389df4c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0xbb978fba4eb5e526b3c1c9fa707186e88995a96cfa41d8e0001330c46bad3963",
+      "max_fee_per_gas": "91623619855",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "6821280794595840",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7579064,
+      "position": 86,
+      "max_priority_fee_per_gas": "1500000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "101445771588206086",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "118120",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x32400084C286CF3E17e7B677ea9583e60a000324",
+       "implementations": [
+        {
+         "address_hash": "0x37CefD5b44c131FEf27e9Bc542e5B77A177A7253",
+         "name": "AdminFacet"
+        },
+        {
+         "address_hash": "0x1666124221622eb6154306Ea9BA87043e8be88B2",
+         "name": "GettersFacet"
+        },
+        {
+         "address_hash": "0x1e34aB39a9682149165ddeCc0583d238A5448B45",
+         "name": "MailboxFacet"
+        },
+        {
+         "address_hash": "0x0597CaA8A823A699d7CD9E62B5E5d4153FF82691",
+         "name": "ExecutorFacet"
+        }
+       ],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "zkSync Era",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0x9e1fd83e3df9eb8841bd35823cfc5eb878c988c5833b997cd0d5662dac025d8f",
+           "tooltipDescription": "zkSync Era's official Diamond Proxy contract",
+           "tooltipUrl": "https://zksync.io/",
+           "verifiedDomains": [
+            "portal.zksync.io"
+           ]
+          },
+          "name": "zkSync Era: Diamond Proxy",
+          "ordinal": 10,
+          "slug": "zksync-era-diamond-proxy",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Layer 2",
+          "ordinal": 0,
+          "slug": "layer-2",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "Bridge",
+          "ordinal": 0,
+          "slug": "bridge",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "ZKSync Bridge",
+          "ordinal": 0,
+          "slug": "zksync-bridge",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "zkSync Era",
+          "ordinal": 0,
+          "slug": "zksync-era",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "DiamondProxy",
+       "private_tags": [],
+       "proxy_type": "eip2535",
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "requestL2Transaction",
+      "fee": {
+       "type": "actual",
+       "value": "6998460794595840"
+      },
+      "gas_limit": "149264",
+      "gas_price": "59248736832",
+      "decoded_input": {
+       "method_call": "requestL2Transaction(address _contractL2, uint256 _l2Value, bytes _calldata, uint256 _l2GasLimit, uint256 _l2GasPerPubdataByteLimit, bytes[] _factoryDeps, address _refundRecipient)",
+       "method_id": "eb672419",
+       "parameters": [
+        {
+         "name": "_contractL2",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        },
+        {
+         "name": "_l2Value",
+         "type": "uint256",
+         "value": "100000000000000000"
+        },
+        {
+         "name": "_calldata",
+         "type": "bytes",
+         "value": "0x"
+        },
+        {
+         "name": "_l2GasLimit",
+         "type": "uint256",
+         "value": "742563"
+        },
+        {
+         "name": "_l2GasPerPubdataByteLimit",
+         "type": "uint256",
+         "value": "800"
+        },
+        {
+         "name": "_factoryDeps",
+         "type": "bytes[]",
+         "value": []
+        },
+        {
+         "name": "_refundRecipient",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "57748736832",
+      "timestamp": "2023-11-06T15:05:35.000000Z",
+      "nonce": 14,
+      "historic_exchange_rate": "1900.98",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 18513720,
+      "has_error_in_internal_transactions": null
+     },
+     {
+      "priority_fee": "177165000000000",
+      "raw_input": "0xeb67241900000000000000000000000013c7c033175f000c931b718157894f2d0389df4c00000000000000000000000000000000000000000000000024150e398004000000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000b54a30000000000000000000000000000000000000000000000000000000000000320000000000000000000000000000000000000000000000000000000000000010000000000000000000000000013c7c033175f000c931b718157894f2d0389df4c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0xfd991c0b6899ddb9ff4427a10b56299b305ec232330676e459aaf04dc2d08b95",
+      "max_fee_per_gas": "21093266773",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "1642603916006070",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7597332,
+      "position": 131,
+      "max_priority_fee_per_gas": "1500000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "2600371281500000000",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "118110",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x32400084C286CF3E17e7B677ea9583e60a000324",
+       "implementations": [
+        {
+         "address_hash": "0x37CefD5b44c131FEf27e9Bc542e5B77A177A7253",
+         "name": "AdminFacet"
+        },
+        {
+         "address_hash": "0x1666124221622eb6154306Ea9BA87043e8be88B2",
+         "name": "GettersFacet"
+        },
+        {
+         "address_hash": "0x1e34aB39a9682149165ddeCc0583d238A5448B45",
+         "name": "MailboxFacet"
+        },
+        {
+         "address_hash": "0x0597CaA8A823A699d7CD9E62B5E5d4153FF82691",
+         "name": "ExecutorFacet"
+        }
+       ],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "zkSync Era",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0x9e1fd83e3df9eb8841bd35823cfc5eb878c988c5833b997cd0d5662dac025d8f",
+           "tooltipDescription": "zkSync Era's official Diamond Proxy contract",
+           "tooltipUrl": "https://zksync.io/",
+           "verifiedDomains": [
+            "portal.zksync.io"
+           ]
+          },
+          "name": "zkSync Era: Diamond Proxy",
+          "ordinal": 10,
+          "slug": "zksync-era-diamond-proxy",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Layer 2",
+          "ordinal": 0,
+          "slug": "layer-2",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "Bridge",
+          "ordinal": 0,
+          "slug": "bridge",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "ZKSync Bridge",
+          "ordinal": 0,
+          "slug": "zksync-bridge",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "zkSync Era",
+          "ordinal": 0,
+          "slug": "zksync-era",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "DiamondProxy",
+       "private_tags": [],
+       "proxy_type": "eip2535",
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "requestL2Transaction",
+      "fee": {
+       "type": "actual",
+       "value": "1819768916006070"
+      },
+      "gas_limit": "149264",
+      "gas_price": "15407407637",
+      "decoded_input": {
+       "method_call": "requestL2Transaction(address _contractL2, uint256 _l2Value, bytes _calldata, uint256 _l2GasLimit, uint256 _l2GasPerPubdataByteLimit, bytes[] _factoryDeps, address _refundRecipient)",
+       "method_id": "eb672419",
+       "parameters": [
+        {
+         "name": "_contractL2",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        },
+        {
+         "name": "_l2Value",
+         "type": "uint256",
+         "value": "2600000000000000000"
+        },
+        {
+         "name": "_calldata",
+         "type": "bytes",
+         "value": "0x"
+        },
+        {
+         "name": "_l2GasLimit",
+         "type": "uint256",
+         "value": "742563"
+        },
+        {
+         "name": "_l2GasPerPubdataByteLimit",
+         "type": "uint256",
+         "value": "800"
+        },
+        {
+         "name": "_factoryDeps",
+         "type": "bytes[]",
+         "value": []
+        },
+        {
+         "name": "_refundRecipient",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "13907407637",
+      "timestamp": "2023-11-04T01:38:11.000000Z",
+      "nonce": 13,
+      "historic_exchange_rate": "1857.23",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 18495452,
+      "has_error_in_internal_transactions": null
+     },
+     {
+      "priority_fee": "177165000000000",
+      "raw_input": "0xeb67241900000000000000000000000013c7c033175f000c931b718157894f2d0389df4c000000000000000000000000000000000000000000000000016345785d8a000000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000b54a30000000000000000000000000000000000000000000000000000000000000320000000000000000000000000000000000000000000000000000000000000010000000000000000000000000013c7c033175f000c931b718157894f2d0389df4c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0xb164316441dbc61e2d82b134503953612fd596ec462aa070ee3c0e54c57925d6",
+      "max_fee_per_gas": "23440519369",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "1641877820017320",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7597442,
+      "position": 51,
+      "max_priority_fee_per_gas": "1500000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "100371281500000000",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "118110",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x32400084C286CF3E17e7B677ea9583e60a000324",
+       "implementations": [
+        {
+         "address_hash": "0x37CefD5b44c131FEf27e9Bc542e5B77A177A7253",
+         "name": "AdminFacet"
+        },
+        {
+         "address_hash": "0x1666124221622eb6154306Ea9BA87043e8be88B2",
+         "name": "GettersFacet"
+        },
+        {
+         "address_hash": "0x1e34aB39a9682149165ddeCc0583d238A5448B45",
+         "name": "MailboxFacet"
+        },
+        {
+         "address_hash": "0x0597CaA8A823A699d7CD9E62B5E5d4153FF82691",
+         "name": "ExecutorFacet"
+        }
+       ],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "zkSync Era",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0x9e1fd83e3df9eb8841bd35823cfc5eb878c988c5833b997cd0d5662dac025d8f",
+           "tooltipDescription": "zkSync Era's official Diamond Proxy contract",
+           "tooltipUrl": "https://zksync.io/",
+           "verifiedDomains": [
+            "portal.zksync.io"
+           ]
+          },
+          "name": "zkSync Era: Diamond Proxy",
+          "ordinal": 10,
+          "slug": "zksync-era-diamond-proxy",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Layer 2",
+          "ordinal": 0,
+          "slug": "layer-2",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "Bridge",
+          "ordinal": 0,
+          "slug": "bridge",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "ZKSync Bridge",
+          "ordinal": 0,
+          "slug": "zksync-bridge",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "zkSync Era",
+          "ordinal": 0,
+          "slug": "zksync-era",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "DiamondProxy",
+       "private_tags": [],
+       "proxy_type": "eip2535",
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "requestL2Transaction",
+      "fee": {
+       "type": "actual",
+       "value": "1819042820017320"
+      },
+      "gas_limit": "149264",
+      "gas_price": "15401260012",
+      "decoded_input": {
+       "method_call": "requestL2Transaction(address _contractL2, uint256 _l2Value, bytes _calldata, uint256 _l2GasLimit, uint256 _l2GasPerPubdataByteLimit, bytes[] _factoryDeps, address _refundRecipient)",
+       "method_id": "eb672419",
+       "parameters": [
+        {
+         "name": "_contractL2",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        },
+        {
+         "name": "_l2Value",
+         "type": "uint256",
+         "value": "100000000000000000"
+        },
+        {
+         "name": "_calldata",
+         "type": "bytes",
+         "value": "0x"
+        },
+        {
+         "name": "_l2GasLimit",
+         "type": "uint256",
+         "value": "742563"
+        },
+        {
+         "name": "_l2GasPerPubdataByteLimit",
+         "type": "uint256",
+         "value": "800"
+        },
+        {
+         "name": "_factoryDeps",
+         "type": "bytes[]",
+         "value": []
+        },
+        {
+         "name": "_refundRecipient",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "13901260012",
+      "timestamp": "2023-11-04T01:15:59.000000Z",
+      "nonce": 12,
+      "historic_exchange_rate": "1857.23",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 18495342,
+      "has_error_in_internal_transactions": null
+     },
+     {
+      "priority_fee": "11810800000000",
+      "raw_input": "0xeb67241900000000000000000000000013c7c033175f000c931b718157894f2d0389df4c000000000000000000000000000000000000000000000000006a94d74f43000000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000b54a30000000000000000000000000000000000000000000000000000000000000320000000000000000000000000000000000000000000000000000000000000010000000000000000000000000013c7c033175f000c931b718157894f2d0389df4c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0xe6c85e4a8a133d2ea948f04aae307e7877657bededbd853b027e6e10d4068026",
+      "max_fee_per_gas": "44531556722",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "3776332478746088",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7622370,
+      "position": 99,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "30774097891478253",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "118108",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x32400084C286CF3E17e7B677ea9583e60a000324",
+       "implementations": [
+        {
+         "address_hash": "0x37CefD5b44c131FEf27e9Bc542e5B77A177A7253",
+         "name": "AdminFacet"
+        },
+        {
+         "address_hash": "0x1666124221622eb6154306Ea9BA87043e8be88B2",
+         "name": "GettersFacet"
+        },
+        {
+         "address_hash": "0x1e34aB39a9682149165ddeCc0583d238A5448B45",
+         "name": "MailboxFacet"
+        },
+        {
+         "address_hash": "0x0597CaA8A823A699d7CD9E62B5E5d4153FF82691",
+         "name": "ExecutorFacet"
+        }
+       ],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "zkSync Era",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0x9e1fd83e3df9eb8841bd35823cfc5eb878c988c5833b997cd0d5662dac025d8f",
+           "tooltipDescription": "zkSync Era's official Diamond Proxy contract",
+           "tooltipUrl": "https://zksync.io/",
+           "verifiedDomains": [
+            "portal.zksync.io"
+           ]
+          },
+          "name": "zkSync Era: Diamond Proxy",
+          "ordinal": 10,
+          "slug": "zksync-era-diamond-proxy",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Layer 2",
+          "ordinal": 0,
+          "slug": "layer-2",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "Bridge",
+          "ordinal": 0,
+          "slug": "bridge",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "ZKSync Bridge",
+          "ordinal": 0,
+          "slug": "zksync-bridge",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "zkSync Era",
+          "ordinal": 0,
+          "slug": "zksync-era",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "DiamondProxy",
+       "private_tags": [],
+       "proxy_type": "eip2535",
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "requestL2Transaction",
+      "fee": {
+       "type": "actual",
+       "value": "3788143278746088"
+      },
+      "gas_limit": "149264",
+      "gas_price": "32073553686",
+      "decoded_input": {
+       "method_call": "requestL2Transaction(address _contractL2, uint256 _l2Value, bytes _calldata, uint256 _l2GasLimit, uint256 _l2GasPerPubdataByteLimit, bytes[] _factoryDeps, address _refundRecipient)",
+       "method_id": "eb672419",
+       "parameters": [
+        {
+         "name": "_contractL2",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        },
+        {
+         "name": "_l2Value",
+         "type": "uint256",
+         "value": "30000000000000000"
+        },
+        {
+         "name": "_calldata",
+         "type": "bytes",
+         "value": "0x"
+        },
+        {
+         "name": "_l2GasLimit",
+         "type": "uint256",
+         "value": "742563"
+        },
+        {
+         "name": "_l2GasPerPubdataByteLimit",
+         "type": "uint256",
+         "value": "800"
+        },
+        {
+         "name": "_factoryDeps",
+         "type": "bytes[]",
+         "value": []
+        },
+        {
+         "name": "_refundRecipient",
+         "type": "address",
+         "value": "0x13C7c033175F000C931b718157894F2D0389DF4C"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "31973553686",
+      "timestamp": "2023-10-31T13:29:59.000000Z",
+      "nonce": 11,
+      "historic_exchange_rate": "1789.79",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 18470414,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "8148000000000",
+      "raw_input": "0x",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x87a8b7a5b0f4357ad6a3e0b1eaeb130894900aa988e6e6b6a58a99a794c00879",
+      "max_fee_per_gas": "59389417332",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "932430943227000",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 7626270,
+      "position": 66,
+      "max_priority_fee_per_gas": "388000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "150000000000000000",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21000",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x2Fc617E933a52713247CE25730f6695920B3befe",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipDescription": "Layerswap is a web3 onboarding solution.",
+           "tooltipUrl": "https://www.layerswap.io/"
+          },
+          "name": "Layerswap 1",
+          "ordinal": 10,
+          "slug": "layerswap-1",
+          "tagType": "name"
+         }
+        ]
+       },
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": null,
+      "fee": {
+       "type": "actual",
+       "value": "940578943227000"
+      },
+      "gas_limit": "21000",
+      "gas_price": "44789473487",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "44401473487",
+      "timestamp": "2023-10-31T00:21:23.000000Z",
+      "nonce": 10,
+      "historic_exchange_rate": "1789.79",
+      "transaction_types": [
+       "coin_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 18466514,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "2100000000000",
+      "raw_input": "0x",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x44427ee9c7e4243b48827bb4dacb1342e46423309e4c8ed4c6284c3a51ac082a",
+      "max_fee_per_gas": "18252308150",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "289063079655000",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 8532126,
+      "position": 76,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "22500000000009006",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21000",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x80C67432656d59144cEFf962E8fAF8926599bCF8",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipUrl": "https://www.orbiter.finance/"
+          },
+          "name": "Orbiter Finance: Bridge",
+          "ordinal": 10,
+          "slug": "orbiter-finance-bridge",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Bridge",
+          "ordinal": 0,
+          "slug": "bridge",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Orbiter",
+           "appID": "orbiter"
+          },
+          "name": "Orbiter Finance",
+          "ordinal": 0,
+          "slug": "orbiter-finance",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": null,
+      "fee": {
+       "type": "actual",
+       "value": "291163079655000"
+      },
+      "gas_limit": "21000",
+      "gas_price": "13864908555",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "13764908555",
+      "timestamp": "2023-06-26T02:32:23.000000Z",
+      "nonce": 9,
+      "historic_exchange_rate": "1896.53",
+      "transaction_types": [
+       "coin_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 17560658,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "2100000000000",
+      "raw_input": "0x",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0xef5608a535d013d2219773c4f93265eb116efe04e6f29b8d2af1775d9f054c02",
+      "max_fee_per_gas": "20406109307",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "307512574425000",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 8560600,
+      "position": 97,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "42100000000009014",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21000",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x80C67432656d59144cEFf962E8fAF8926599bCF8",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipUrl": "https://www.orbiter.finance/"
+          },
+          "name": "Orbiter Finance: Bridge",
+          "ordinal": 10,
+          "slug": "orbiter-finance-bridge",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Bridge",
+          "ordinal": 0,
+          "slug": "bridge",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Orbiter",
+           "appID": "orbiter"
+          },
+          "name": "Orbiter Finance",
+          "ordinal": 0,
+          "slug": "orbiter-finance",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": null,
+      "fee": {
+       "type": "actual",
+       "value": "309612574425000"
+      },
+      "gas_limit": "21000",
+      "gas_price": "14743455925",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "14643455925",
+      "timestamp": "2023-06-22T02:25:47.000000Z",
+      "nonce": 8,
+      "historic_exchange_rate": "1886.52",
+      "transaction_types": [
+       "coin_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 17532184,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "114395580281170",
+      "raw_input": "0x3158952e",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x9ffee1a9a55480573ee6881a2b2d126e83b58ae407ba106693969e33f359a046",
+      "max_fee_per_gas": "21235017924",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "335914209815174",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 8560805,
+      "position": 32,
+      "max_priority_fee_per_gas": "21235017924",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "50711871547023331",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21206",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x00003d1cEf5F30E34510198cB045E4ae0aa20000",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": true,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {},
+          "name": "Fake_Phishing180526",
+          "ordinal": 10,
+          "slug": "fakephishing180526",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "bgColor": "#FED7D7",
+           "textColor": "#822727"
+          },
+          "name": "Phish / Hack",
+          "ordinal": 0,
+          "slug": "phish--hack",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "info": [
+            "Phish"
+           ]
+          },
+          "name": "SCAM",
+          "ordinal": 0,
+          "slug": "scam",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "ClaimRewards",
+          "ordinal": 0,
+          "slug": "claimrewards",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "alertStatus": "info",
+           "data": "There are reports that this address was used in a Phishing scam. Please exercise caution when interacting with it. Reported by scamsniffer."
+          },
+          "name": "note_0",
+          "ordinal": 0,
+          "slug": "note0",
+          "tagType": "note"
+         }
+        ]
+       },
+       "name": "ClaimRewards",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "scam",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "Claim",
+      "fee": {
+       "type": "actual",
+       "value": "450309790096344"
+      },
+      "gas_limit": "27568",
+      "gas_price": "21235017924",
+      "decoded_input": {
+       "method_call": "Claim()",
+       "method_id": "3158952e",
+       "parameters": []
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "15840526729",
+      "timestamp": "2023-06-22T01:44:23.000000Z",
+      "nonce": 7,
+      "historic_exchange_rate": "1886.52",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 17531979,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "2100000000000",
+      "raw_input": "0x",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x06f4320b5a8b20894a85e5eed8c5312ff839d9ce79d16019d865dea270f75ec3",
+      "max_fee_per_gas": "35359217042",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "597655607178000",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 8562163,
+      "position": 107,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "21200000000009002",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21000",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x80C67432656d59144cEFf962E8fAF8926599bCF8",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipUrl": "https://www.orbiter.finance/"
+          },
+          "name": "Orbiter Finance: Bridge",
+          "ordinal": 10,
+          "slug": "orbiter-finance-bridge",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Bridge",
+          "ordinal": 0,
+          "slug": "bridge",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Orbiter",
+           "appID": "orbiter"
+          },
+          "name": "Orbiter Finance",
+          "ordinal": 0,
+          "slug": "orbiter-finance",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": null,
+      "fee": {
+       "type": "actual",
+       "value": "599755607178000"
+      },
+      "gas_limit": "21000",
+      "gas_price": "28559790818",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "28459790818",
+      "timestamp": "2023-06-21T21:09:35.000000Z",
+      "nonce": 6,
+      "historic_exchange_rate": "1791.93",
+      "transaction_types": [
+       "coin_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 17530621,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "2100000000000",
+      "raw_input": "0x",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x7970e650572b5a20dbedf5b94b13d4eb15d1a39e567941ad31d8e4b93caad455",
+      "max_fee_per_gas": "37888567184",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "545257783896000",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 8725187,
+      "position": 87,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "140500000000009006",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21000",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0xE4eDb277e41dc89aB076a1F049f4a3EfA700bCE8",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipDescription": "Orbiter Finance is an ultimate solution that optimises the performance of Ethereum by supporting cross-rollup transactions and synchronising mainnet-rollups interoperabilities.",
+           "tooltipUrl": "https://www.orbiter.finance/"
+          },
+          "name": "Orbiter Finance: Bridge 2",
+          "ordinal": 10,
+          "slug": "orbiter-finance-bridge-2",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Bridge",
+          "ordinal": 0,
+          "slug": "bridge",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Orbiter",
+           "appID": "orbiter"
+          },
+          "name": "Orbiter Finance",
+          "ordinal": 0,
+          "slug": "orbiter-finance",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": null,
+      "fee": {
+       "type": "actual",
+       "value": "547357783896000"
+      },
+      "gas_limit": "21000",
+      "gas_price": "26064656376",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "25964656376",
+      "timestamp": "2023-05-29T22:26:11.000000Z",
+      "nonce": 5,
+      "historic_exchange_rate": "1910.72",
+      "transaction_types": [
+       "coin_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 17367597,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "14612400000000",
+      "raw_input": "0x3593564c000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000064752ca70000000000000000000000000000000000000000000000000000000000000002000c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000160000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000011490c8000000000000000000000000000000000000000000000000002179c4373f4027d00000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002ba0b86991c6218b36c1d19d4a2e9eb0ce3606eb480001f4c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000002179c4373f4027d",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0xf4f834c9e9c065793d40360877336cc5612582521acccb2dedb01c360ac6d0de",
+      "max_fee_per_gas": "34393948439",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "3507426069226200",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 8725195,
+      "position": 149,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "0",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "146124",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "Uniswap",
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0xa9eeedd547d4f5a48d3b18f49a4bd678c0aab73bc88bda031595bd2a2c18785b",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Uniswap's NFT universal router contract",
+           "tooltipUrl": "https://uniswap.org/",
+           "verifiedDomains": [
+            "app.uniswap.org"
+           ]
+          },
+          "name": "Universal Router",
+          "ordinal": 10,
+          "slug": "universal-router-1",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Router",
+          "ordinal": 0,
+          "slug": "router",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "DEX",
+          "ordinal": 0,
+          "slug": "dex",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Uniswap",
+           "appID": "uniswap"
+          },
+          "name": "Uniswap",
+          "ordinal": 0,
+          "slug": "uniswap",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "UniversalRouter",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "execute",
+      "fee": {
+       "type": "actual",
+       "value": "3522038469226200"
+      },
+      "gas_limit": "206395",
+      "gas_price": "24103080050",
+      "decoded_input": {
+       "method_call": "execute(bytes commands, bytes[] inputs, uint256 deadline)",
+       "method_id": "3593564c",
+       "parameters": [
+        {
+         "name": "commands",
+         "type": "bytes",
+         "value": "0x000c"
+        },
+        {
+         "name": "inputs",
+         "type": "bytes[]",
+         "value": [
+          "0x00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000011490c8000000000000000000000000000000000000000000000000002179c4373f4027d00000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002ba0b86991c6218b36c1d19d4a2e9eb0ce3606eb480001f4c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000000000000000000000",
+          "0x000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000002179c4373f4027d"
+         ]
+        },
+        {
+         "name": "deadline",
+         "type": "uint256",
+         "value": "1685400743"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "24003080050",
+      "timestamp": "2023-05-29T22:24:35.000000Z",
+      "nonce": 4,
+      "historic_exchange_rate": "1910.72",
+      "transaction_types": [
+       "contract_call",
+       "token_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 17367589,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "2100000000000",
+      "raw_input": "0x",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x6055331f44eb9feda330d9d851bd132005fe3ebe00ad0c62971a4a8271cafaa2",
+      "max_fee_per_gas": "31713991075",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "551866152306000",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 8745861,
+      "position": 89,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "82100000000009014",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21000",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0xE4eDb277e41dc89aB076a1F049f4a3EfA700bCE8",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipDescription": "Orbiter Finance is an ultimate solution that optimises the performance of Ethereum by supporting cross-rollup transactions and synchronising mainnet-rollups interoperabilities.",
+           "tooltipUrl": "https://www.orbiter.finance/"
+          },
+          "name": "Orbiter Finance: Bridge 2",
+          "ordinal": 10,
+          "slug": "orbiter-finance-bridge-2",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Bridge",
+          "ordinal": 0,
+          "slug": "bridge",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Orbiter",
+           "appID": "orbiter"
+          },
+          "name": "Orbiter Finance",
+          "ordinal": 0,
+          "slug": "orbiter-finance",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": null,
+      "fee": {
+       "type": "actual",
+       "value": "553966152306000"
+      },
+      "gas_limit": "21000",
+      "gas_price": "26379340586",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "26279340586",
+      "timestamp": "2023-05-27T00:46:59.000000Z",
+      "nonce": 3,
+      "historic_exchange_rate": "1827.81",
+      "transaction_types": [
+       "coin_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 17346923,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "2100000000000",
+      "raw_input": "0x",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0xc8fcbb2c6e11018c2be06b77d4fe680f3c0999799f1251369d058e58547aac66",
+      "max_fee_per_gas": "50334608967",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "747656636895000",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 8761575,
+      "position": 195,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "632100000000009014",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21000",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x0a88BC5c32b684D467b43C06D9e0899EfEAF59Df",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": null,
+      "fee": {
+       "type": "actual",
+       "value": "749756636895000"
+      },
+      "gas_limit": "21000",
+      "gas_price": "35702696995",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "35602696995",
+      "timestamp": "2023-05-24T19:45:11.000000Z",
+      "nonce": 2,
+      "historic_exchange_rate": "1853.38",
+      "transaction_types": [
+       "coin_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 17331209,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "18260400000000",
+      "raw_input": "0x3593564c000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000646e6fa700000000000000000000000000000000000000000000000000000000000000030a000c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000001e000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000160000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000ffffffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000000000006495f5970000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ef1c6e67703c7bd7107eed8303fbe6ec2554bf6b00000000000000000000000000000000000000000000000000000000646e6f9f00000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000000418e43e3014957220b25db628bd1a7fabb38f47380a1cd03701842ac5852ded0da5d26d459bc0ce87d7d1624b8029c71ed932e3112164ab0079706a3e924aa5d131c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000007a9a6d84cc6396a00000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002ba0b86991c6218b36c1d19d4a2e9eb0ce3606eb480001f4c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000007a9a6d84cc6396a",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x606568f86148fc0eb222b4b4429c45a8972608e145dade68bef236e41a6a5136",
+      "max_fee_per_gas": "52300304404",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "6739671142070604",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 8761584,
+      "position": 169,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "0",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "182604",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "Uniswap",
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0xa9eeedd547d4f5a48d3b18f49a4bd678c0aab73bc88bda031595bd2a2c18785b",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Uniswap's NFT universal router contract",
+           "tooltipUrl": "https://uniswap.org/",
+           "verifiedDomains": [
+            "app.uniswap.org"
+           ]
+          },
+          "name": "Universal Router",
+          "ordinal": 10,
+          "slug": "universal-router-1",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Router",
+          "ordinal": 0,
+          "slug": "router",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "DEX",
+          "ordinal": 0,
+          "slug": "dex",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Uniswap",
+           "appID": "uniswap"
+          },
+          "name": "Uniswap",
+          "ordinal": 0,
+          "slug": "uniswap",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "UniversalRouter",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "execute",
+      "fee": {
+       "type": "actual",
+       "value": "6757931542070604"
+      },
+      "gas_limit": "248983",
+      "gas_price": "37008672001",
+      "decoded_input": {
+       "method_call": "execute(bytes commands, bytes[] inputs, uint256 deadline)",
+       "method_id": "3593564c",
+       "parameters": [
+        {
+         "name": "commands",
+         "type": "bytes",
+         "value": "0x0a000c"
+        },
+        {
+         "name": "inputs",
+         "type": "bytes[]",
+         "value": [
+          "0x000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000ffffffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000000000006495f5970000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ef1c6e67703c7bd7107eed8303fbe6ec2554bf6b00000000000000000000000000000000000000000000000000000000646e6f9f00000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000000418e43e3014957220b25db628bd1a7fabb38f47380a1cd03701842ac5852ded0da5d26d459bc0ce87d7d1624b8029c71ed932e3112164ab0079706a3e924aa5d131c00000000000000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000007a9a6d84cc6396a00000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002ba0b86991c6218b36c1d19d4a2e9eb0ce3606eb480001f4c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000000000000000000000",
+          "0x000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000007a9a6d84cc6396a"
+         ]
+        },
+        {
+         "name": "deadline",
+         "type": "uint256",
+         "value": "1684959143"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "36908672001",
+      "timestamp": "2023-05-24T19:43:23.000000Z",
+      "nonce": 1,
+      "historic_exchange_rate": "1853.38",
+      "transaction_types": [
+       "contract_call",
+       "token_transfer"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 17331200,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "5990300000000",
+      "raw_input": "0x095ea7b3000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba3000000000000000000000000000000000000000000000000000000004d7c6d00",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x1d4f13a5f4a5b833b4006f0483a9cac769753f67cd99ab726ac509bf4a9b37e5",
+      "max_fee_per_gas": "52620070082",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "2307388757985743",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 8761589,
+      "position": 136,
+      "max_priority_fee_per_gas": "100000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "0",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "59903",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+       "implementations": [
+        {
+         "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+         "name": "FiatTokenV2_2"
+        }
+       ],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "Circle",
+           "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+           "textColor": "#C163D4",
+           "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Circle's USDC Token contract on Ethereum Mainnet",
+           "tooltipUrl": "https://www.circle.com/"
+          },
+          "name": "USDC Token",
+          "ordinal": 10,
+          "slug": "usdc-token-1",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Token Contract",
+          "ordinal": 0,
+          "slug": "token-contract",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "Stablecoin",
+          "ordinal": 0,
+          "slug": "stablecoin",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "USDC",
+          "ordinal": 0,
+          "slug": "usdc",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "USD Coin",
+          "ordinal": 0,
+          "slug": "usd-coin",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "appID": "circle",
+           "appMarketplaceURL": "https://app.circle.com/get-started",
+           "bgColor": "#2775ca",
+           "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+           "textColor": "#FFFFFF",
+           "tooltipUrl": "https://www.circle.com/"
+          },
+          "name": "Circle",
+          "ordinal": 0,
+          "slug": "circle",
+          "tagType": "protocol"
+         },
+         {
+          "meta": {
+           "data": "ok"
+          },
+          "name": "Credible token",
+          "ordinal": 0,
+          "slug": "credible-token",
+          "tagType": "token_reputation"
+         }
+        ]
+       },
+       "name": "USDC",
+       "private_tags": [],
+       "proxy_type": "eip1967_oz",
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "approve",
+      "fee": {
+       "type": "actual",
+       "value": "2313379057985743"
+      },
+      "gas_limit": "60352",
+      "gas_price": "38618751281",
+      "decoded_input": {
+       "method_call": "approve(address spender, uint256 value)",
+       "method_id": "095ea7b3",
+       "parameters": [
+        {
+         "name": "spender",
+         "type": "address",
+         "value": "0x000000000022D473030F116dDEE9F6B43aC78BA3"
+        },
+        {
+         "name": "value",
+         "type": "uint256",
+         "value": "1300000000"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "38518751281",
+      "timestamp": "2023-05-24T19:42:23.000000Z",
+      "nonce": 0,
+      "historic_exchange_rate": "1853.38",
+      "transaction_types": [
+       "contract_call"
+      ],
+      "exchange_rate": "2679.03",
+      "block_number": 17331195,
+      "has_error_in_internal_transactions": false
+     }
+    ],
+    "next_page_params": null
+   }
+  },
+  "GET https://eth.blockscout.com/api/v2/addresses/0x00001f78189be22c3498cff1b8e02272c3220000": {
+   "status": 200,
+   "body": {
+    "block_number_balance_updated_at": 26092777,
+    "coin_balance": "268025337228949904",
+    "creation_status": null,
+    "creation_transaction_hash": null,
+    "creator_address_hash": null,
+    "ens_domain_name": "inferno-drainer-3.eth",
+    "exchange_rate": "2679.43",
+    "has_beacon_chain_withdrawals": false,
+    "has_logs": false,
+    "has_token_transfers": true,
+    "has_tokens": true,
+    "has_validated_blocks": false,
+    "hash": "0x00001f78189bE22C3498cFF1B8e02272C3220000",
+    "implementations": [],
+    "is_contract": false,
+    "is_scam": true,
+    "is_verified": false,
+    "metadata": null,
+    "name": null,
+    "private_tags": [],
+    "proxy_type": null,
+    "public_tags": [],
+    "reputation": "scam",
+    "token": null,
+    "watchlist_address_id": null,
+    "watchlist_names": []
+   }
+  },
+  "POST https://ethereum-rpc.publicnode.com {\"id\":1,\"jsonrpc\":\"2.0\",\"method\":\"eth_getCode\",\"params\":[\"0x00001f78189be22c3498cff1b8e02272c3220000\",\"latest\"]}": {
+   "status": 200,
+   "body": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0x"
+   }
+  },
+  "GET https://api.gopluslabs.io/api/v1/address_security/0x00001f78189be22c3498cff1b8e02272c3220000?chain_id=1": {
+   "status": 200,
+   "body": {
+    "code": 1,
+    "message": "ok",
+    "result": {
+     "cybercrime": "0",
+     "money_laundering": "0",
+     "number_of_malicious_contracts_created": "0",
+     "gas_abuse": "0",
+     "financial_crime": "0",
+     "darkweb_transactions": "0",
+     "reinit": "0",
+     "phishing_activities": "1",
+     "contract_address": "0",
+     "fake_kyc": "0",
+     "blacklist_doubt": "1",
+     "fake_standard_interface": "0",
+     "data_source": "SlowMist,ScamSniffer,BlockSec",
+     "stealing_attack": "0",
+     "blackmail_activities": "0",
+     "sanctioned": "0",
+     "malicious_mining_activities": "0",
+     "mixer": "0",
+     "fake_token": "0",
+     "honeypot_related_address": "0"
+    }
+   }
+  }
+ }
+}

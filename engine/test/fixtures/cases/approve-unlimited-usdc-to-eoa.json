@@ -1,0 +1,15 @@
+{
+  "name": "approve-unlimited-usdc-to-eoa",
+  "input": "{\"from\":\"0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f\",\"to\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\",\"value\":\"0x0\",\"data\":\"0x095ea7b30000000000000000000000003bfa437f9d5c0318ca78668836a15f528497d76fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\"}",
+  "userAddress": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+  "expectedLevel": "red",
+  "expectedReasonCodes": [
+    "APPROVE_UNLIMITED_EOA"
+  ],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). CONSTRUCTED tx (ice-phishing template): USDC.approve(0x3BFA437F9d5c0318cA78668836a15F528497d76f, 2^256-1) from the real EOA 0x72Fc85...7e6f. The spender is an arbitrary real EOA with NO flags (eth_getCode=0x, not 7702; Blockscout is_contract=false, is_scam=false, reputation 'ok', ~326 txs; GoPlus address_security all '0'), to isolate the rule without help from labels. Spec §2 RED rule: 'unlimited approval to an EOA'. It is also a first interaction (the user's full history, 8 txs and 12 token transfers, does not include it) -> FIRST_INTERACTION warn possible, not required.",
+  "sources": [
+    "https://eth.blockscout.com/address/0x3BFA437F9d5c0318cA78668836a15F528497d76f",
+    "https://api.gopluslabs.io/api/v1/address_security/0x3BFA437F9d5c0318cA78668836a15F528497d76f?chain_id=1",
+    "https://eth.blockscout.com/address/0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f"
+  ]
+}

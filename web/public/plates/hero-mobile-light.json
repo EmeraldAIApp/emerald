@@ -1,0 +1,74 @@
+{
+  "plate": "hero-mobile.png",
+  "size": [
+    1520,
+    2688
+  ],
+  "screen_px": [
+    700.0,
+    2093.0
+  ],
+  "css": {
+    "--sx": "46.05%",
+    "--sy": "77.86%",
+    "--wx": "53.9%",
+    "--wy": "22.1%"
+  },
+  "mask_size": [
+    380,
+    672
+  ],
+  "mask_coverage": 0.0236,
+  "params": {
+    "mode": "neutral",
+    "unlit": null,
+    "screen": [
+      700.0,
+      2093.0
+    ],
+    "screen_box": [
+      452.0,
+      1953.0,
+      947.0,
+      2233.0
+    ],
+    "roi": [
+      800.0,
+      2200.0,
+      720.0,
+      488.0
+    ],
+    "exclude": null,
+    "open": 7,
+    "blur": 14.0,
+    "feather": 18.0,
+    "gamma": 0.5,
+    "lo_pct": 5.0,
+    "hi_pct": 85.0,
+    "scale": 0.25,
+    "name": "hero-mobile",
+    "bake_neutral": null
+  },
+  "layers": {
+    "sky": {
+      "color": "#7fbcff",
+      "mul": 1.0,
+      "glow": 0.22
+    },
+    "amber": {
+      "color": "#FFB02E",
+      "mul": 1.0,
+      "glow": 0.3
+    },
+    "red": {
+      "color": "#FF3B2F",
+      "mul": 1.0,
+      "glow": 0.28
+    },
+    "emerald": {
+      "color": "#3CE68C",
+      "mul": 0.85,
+      "glow": 0.18
+    }
+  }
+}

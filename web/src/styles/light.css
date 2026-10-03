@@ -1,0 +1,78 @@
+/* Stage = the plate at its REAL aspect ratio, cropped like object-fit: cover. Light, mini-screens and marks go in plate px. */
+@property --r { syntax: "<percentage>"; inherits: true; initial-value: 0%; }
+
+.stage {
+  --ar-n: 1.7684;                       /* 2688/1520: the 2k "16:9" of gpt_image_2 */
+  --fx: .5; --fy: .5;                   /* = object-position of the crop */
+  --w: max(100cqw, 100cqh * var(--ar-n));
+  position: absolute; width: var(--w); height: calc(var(--w) / var(--ar-n));
+  left: calc((100cqw - var(--w)) * var(--fx));
+  top: calc((100cqh - var(--w) / var(--ar-n)) * var(--fy));
+  --sx: 50%; --sy: 50%; --wx: 30%; --wy: 30%;   /* light.ts overrides them with <plate>-light.json */
+  --spill: none;
+  --c-prev: var(--dv-ink); --mul-prev: 1; --glow-prev: .22;
+  --c-next: var(--dv-ink); --mul-next: 1; --glow-next: .22;
+  --edge: 14%;
+  background: var(--night);
+}
+@media (orientation: portrait) { .stage--dual { --ar-n: .5655; } }  /* 1520/2688 */
+.stage .plate, .stage .plate img { display: block; width: 100%; height: 100%; }
+.stage .plate img { object-fit: cover; }
+
+/* mask + blend on THE SAME element: an ancestor with mask/opacity/filter isolates the group and the blend stops seeing the plate */
+.light {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0;
+  -webkit-mask-image: var(--spill), var(--wave); mask-image: var(--spill), var(--wave);
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-composite: source-in; mask-composite: intersect;
+}
+.light--prev { background: var(--c-prev); --wave: radial-gradient(ellipse var(--wx) var(--wy) at var(--sx) var(--sy), transparent calc(var(--r) - var(--edge)), #000 var(--r)); }
+.light--next { background: var(--c-next); --wave: radial-gradient(ellipse var(--wx) var(--wy) at var(--sx) var(--sy), #000 calc(var(--r) - var(--edge)), transparent var(--r)); }
+.light--mul { mix-blend-mode: multiply; }
+.light--glow { mix-blend-mode: screen; }
+/* They only turn on once the plate decoded (is-ready) and the plate has a measured mask (has-light). */
+.stage.is-ready.has-light .light--prev.light--mul { opacity: var(--mul-prev); }
+.stage.is-ready.has-light .light--next.light--mul { opacity: var(--mul-next); }
+.stage.is-ready.has-light .light--prev.light--glow { opacity: var(--glow-prev); }
+.stage.is-ready.has-light .light--next.light--glow { opacity: var(--glow-next); }
+
+/* Bracelet mini-screens ("second read") and lineup marks, in plate px scaled by --k. */
+.plate-space { position: absolute; left: 0; top: 0; transform-origin: 0 0; transform: scale(var(--k, 0)); pointer-events: none; display: none; }
+.js .stage.is-mapped .plate-space { display: block; }
+.plate-marks { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.plate-marks text { font: 500 34px var(--font-body); fill: color-mix(in srgb, var(--lav) 70%, transparent); }
+.plate-marks .dots { font: 700 30px var(--font-mono); fill: color-mix(in srgb, var(--dv-cell) 55%, transparent); letter-spacing: 4px; }
+.plate-marks line { stroke: color-mix(in srgb, var(--lav) 60%, transparent); stroke-width: 2; }
+
+.mini {
+  position: absolute; left: 0; top: 0; transform-origin: 0 0; overflow: hidden;
+  background: var(--dv-bg); border-radius: 16px; padding: 22px 26px;
+  font-family: var(--font-mono); font-variant-ligatures: none; color: var(--dv-ink);
+  box-shadow: inset 0 0 40px rgb(127 188 255 / .12);
+}
+.mini p { margin: 0; }
+.mini__status { display: flex; gap: 12px; align-items: center; font: 700 24px/1 var(--font-mono); color: var(--dv-head); }
+.mini__verdict { font: 700 46px/1.1 var(--font-mono); color: var(--verdict, var(--dv-ink)); margin-top: 34px; white-space: nowrap; }
+.mini[data-verdict="red"] { --verdict: var(--alert); box-shadow: inset 0 0 0 5px var(--alert); }
+.mini[data-verdict="yellow"] { --verdict: var(--amber); box-shadow: inset 0 0 0 5px var(--amber); }
+.mini[data-verdict="green"] { --verdict: var(--emerald); }
+.mini--me { box-shadow: inset 0 0 0 4px var(--dv-line), inset 0 0 40px rgb(127 188 255 / .2); }
+.mini--me .mini__status { font-weight: 500; color: var(--dv-ink); }
+.mini__line { display: flex; gap: 14px; align-items: center; margin-top: 30px !important; font: 700 40px/1 var(--font-mono); color: var(--dv-head); }
+.mini--book { padding: 14px; }
+.mini--book table { width: 100%; border-collapse: collapse; font: 500 19px/1.3 var(--font-mono); color: var(--dv-cell); }
+.mini--book th { text-align: left; color: var(--dv-head); border-bottom: 1px solid var(--dv-line); padding: 6px 8px; }
+.mini--book td { vertical-align: top; padding: 6px 8px; border: 1px solid var(--dv-line2); }
+.mini--total { display: grid; place-items: center; font: 500 36px/1 var(--font-mono); color: var(--dv-ink); white-space: nowrap; }
+.mini--loan { padding: 14px 18px; font: 500 17px/1.35 var(--font-mono); color: var(--dv-cell); display: grid; gap: 8px; align-content: start; }
+.mini--loan .mini__head { color: var(--dv-head); font-weight: 700; display: flex; justify-content: space-between; gap: 8px; }
+.mini--loan .mini__head b { font-weight: 500; font-size: 13px; border: 1px solid var(--lav); color: var(--lav); padding: 2px 6px; }
+.mini--loan .mini__btn { justify-self: center; border: 1px solid var(--dv-line); background: var(--dv-btn); padding: 4px 18px; color: var(--dv-head); }
+
+@keyframes breathe { 0%, 100% { opacity: calc(var(--glow-prev) * .6); } 50% { opacity: var(--glow-prev); } }
+
+/* Motion pass: the light breathes slowly at rest (only if the user allows motion). */
+@media (prefers-reduced-motion: no-preference) {
+  .stage.is-ready.has-light .light--prev.light--glow { animation: breathe 6.5s ease-in-out infinite; }
+}

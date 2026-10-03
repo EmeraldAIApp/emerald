@@ -1,0 +1,15 @@
+{
+  "name": "swap-uniswap-universal-router-txhash",
+  "input": "0x020419afcdb33f575ba84361e3125b832c11a2d22fc187132a87a4b4baa02f8e",
+  "userAddress": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+  "expectedLevel": "green",
+  "expectedReasonCodes": [],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). REAL, legitimate mined swap (block 26092508, 2026-09-30T19:52:47Z, status ok) from 0x72Fc85...7e6f to Universal Router 2.1.2 0x23617e59A5925b2A4Bf75d73ff6711cD0b29De85: execute(commands=0x0a00 [PERMIT2_PERMIT, V3_SWAP_EXACT_IN], inputs, deadline=1790799753). Flows (Blockscout token_transfers): 550 USDC leave the user, 2441.385022776743077841 FET (0xaea46A60368A7bD060eec7DF8CBa43b7EF41Ad85) come in -> there is a counterpart, it is not an 'outflow with nothing in return'. Router verified (Sourcify match), 13 days (>= 7), GoPlus/Blockscout no flags; FET on GoPlus is_honeypot='0', cannot_sell_all='0', 165k holders. Not a first interaction: the same user used that router in 0x67cfee32... (19:39:59Z). GREEN. Time-sensitive: with ctx.now < 2026-09-24T21:46:11Z the router would be < 7 days old -> YELLOW (CONTRACT_NEW). The calldata of this execute is NOT usable as an unsigned tx for smoke-live (expired deadline -> revert).",
+  "sources": [
+    "https://eth.blockscout.com/tx/0x020419afcdb33f575ba84361e3125b832c11a2d22fc187132a87a4b4baa02f8e",
+    "https://eth.blockscout.com/tx/0x67cfee32f4471374d8308f02f045a78751079ece90090143630cd8a63512c49b",
+    "https://sourcify.dev/server/v2/contract/1/0x23617e59A5925b2A4Bf75d73ff6711cD0b29De85",
+    "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0xaea46A60368A7bD060eec7DF8CBa43b7EF41Ad85",
+    "https://github.com/Uniswap/universal-router/releases/tag/2.1.2"
+  ]
+}

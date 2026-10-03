@@ -1,0 +1,15 @@
+{
+  "name": "approve-exact-usdc-to-permit2",
+  "input": "{\"from\":\"0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f\",\"to\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\",\"value\":\"0x0\",\"data\":\"0x095ea7b3000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba30000000000000000000000000000000000000000000000000000000026c428ab\"}",
+  "userAddress": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+  "expectedLevel": "green",
+  "expectedReasonCodes": [],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). REAL tx (0xe5509524..., block 26092506, 2026-09-30T19:52:23Z) from the EOA 0x72Fc85...7e6f (no code, no GoPlus/Blockscout flags): USDC.approve(Permit2, 650389675 = 650.389675 USDC). Exact amount = the balance it had just received; it then swapped 550 USDC for FET on Universal Router 2.1.2 (tx 0x020419af...). Checks: decode (USDC approve; proxy -> FiatTokenV2_2 on Sourcify); simulate (eth_simulateV1 status 0x1, only one Approval log, no asset outflow); labels (Permit2: Blockscout is_verified=true, Sourcify match, created 2022-11-17, GoPlus no flags except contract_address='1'; USDC verified); token (GoPlus USDC is_honeypot='0'). Not unlimited. GREEN assuming 'first interaction' (spec §2 yellow) does NOT apply to exact approves to verified contracts older than 7 days; if it applied to the spender, this EOA had never touched Permit2 before this tx and it would be YELLOW (FIRST_INTERACTION).",
+  "sources": [
+    "https://eth.blockscout.com/tx/0xe550952489961ca44bab854d44e546bbf770a224d486518618afe346d68b30e5",
+    "https://eth.blockscout.com/address/0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+    "https://api.gopluslabs.io/api/v1/address_security/0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f?chain_id=1",
+    "https://sourcify.dev/server/v2/contract/1/0x000000000022D473030F116dDEE9F6B43aC78BA3",
+    "https://api.gopluslabs.io/api/v1/address_security/0x000000000022D473030F116dDEE9F6B43aC78BA3?chain_id=1"
+  ]
+}

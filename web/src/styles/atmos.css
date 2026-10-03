@@ -1,0 +1,60 @@
+/* The living night (fx/atmos.ts, fx/atmos-lite.ts): one fixed light layer between the photos and the content.
+   It sits at z-index 0 in the root stacking context: above every .sec__bg (z -1) and below every .sec__in (z 1),
+   so it lights the photos and the night between them and never the text. Screen blend: it can only add light. */
+.fx-atmos, .fx-lite {
+  position: fixed; inset: 0; z-index: 0; width: 100%; height: 100%;
+  pointer-events: none; mix-blend-mode: screen;
+}
+.fx-atmos { display: block; }
+
+/* ---------- light tier ---------- */
+@property --fog-lit { syntax: "<color>"; inherits: true; initial-value: #4a4fa6; }
+@property --fog-deep { syntax: "<color>"; inherits: true; initial-value: #120f36; }
+@property --ray { syntax: "<color>"; inherits: true; initial-value: #b4c0ff; }
+@property --dawn { syntax: "<number>"; inherits: true; initial-value: 0; }
+
+.fx-lite { overflow: hidden; contain: strict; transition: --fog-lit 1.4s, --fog-deep 1.4s, --ray 1.4s, --dawn 1.4s; }
+html[data-tone="lineup"] .fx-lite { --fog-lit: #4252a8; --fog-deep: #0f1036; --ray: #a9bcff; }
+html[data-tone="book"] .fx-lite { --fog-lit: #5a4c98; --fog-deep: #170f33; --ray: #c4b8f0; }
+html[data-tone="how"] .fx-lite { --fog-lit: #4a4aa8; --fog-deep: #110f38; --ray: #b0b4ff; --dawn: .1; }
+html[data-tone="token"] .fx-lite { --fog-lit: #5a40a0; --fog-deep: #170c38; --ray: #bca8f4; --dawn: .35; }
+html[data-tone="roadmap"] .fx-lite { --fog-lit: #7a4a9e; --fog-deep: #1d0c34; --ray: #e0b4ec; --dawn: 1; }
+
+.fx-lite > i { position: absolute; display: block; }
+.fx-lite__fog {
+  inset: -25%; opacity: .55;
+  background:
+    radial-gradient(34% 26% at 68% 22%, color-mix(in srgb, var(--fog-lit) 60%, transparent), transparent 72%),
+    radial-gradient(42% 30% at 24% 64%, color-mix(in srgb, var(--fog-lit) 32%, transparent), transparent 70%),
+    radial-gradient(60% 40% at 50% 100%, var(--fog-deep), transparent 75%);
+}
+.fx-lite__fog--b {
+  opacity: .35;
+  background:
+    radial-gradient(30% 22% at 30% 30%, color-mix(in srgb, var(--fog-lit) 45%, transparent), transparent 70%),
+    radial-gradient(38% 26% at 78% 72%, color-mix(in srgb, var(--fog-lit) 30%, transparent), transparent 70%);
+}
+.fx-lite__rays {
+  inset: 0; opacity: .8; transform-origin: 84% 0;
+  background: repeating-conic-gradient(from 196deg at 84% -14%,
+    transparent 0deg, color-mix(in srgb, var(--ray) 12%, transparent) 2.5deg, transparent 5.5deg 12deg);
+  -webkit-mask-image: radial-gradient(90% 95% at 84% -6%, #000, transparent 72%);
+  mask-image: radial-gradient(90% 95% at 84% -6%, #000, transparent 72%);
+}
+.fx-lite__dawn {
+  inset: auto 0 0; height: 62%; opacity: var(--dawn);
+  background: radial-gradient(120% 100% at 50% 100%, rgb(200 108 170 / .32), rgb(118 75 162 / .22) 42%, transparent 76%);
+}
+.fx-lite__snow { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.is-still) .fx-lite__fog { animation: fog-drift 34s ease-in-out infinite alternate; }
+  html:not(.is-still) .fx-lite__fog--b { animation: fog-drift-b 46s ease-in-out infinite alternate; }
+  html:not(.is-still) .fx-lite__rays { animation: rays-breathe 11s ease-in-out infinite alternate; }
+}
+@keyframes fog-drift { to { transform: translate3d(7%, -4%, 0) scale(1.08); } }
+@keyframes fog-drift-b { from { transform: translate3d(4%, 3%, 0); } to { transform: translate3d(-6%, -2%, 0) scale(1.1); } }
+@keyframes rays-breathe { from { opacity: .5; transform: rotate(-1.2deg); } to { opacity: .95; transform: rotate(1.2deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .fx-lite { transition: none; }
+}

@@ -1,0 +1,127 @@
+/* Motion pass: loader, headline masks, panel depth, hover light, moon bloom, snow and film grain.
+   The default state of everything is the FINAL one: animations only ever play from a hidden state (WAAPI, fill backwards). */
+
+/* ---------- loader: the Emerald mark draws itself, a hairline fills, the night lifts ---------- */
+.loader {
+  position: fixed; inset: 0; z-index: 100; display: grid; place-content: center; justify-items: center; gap: 22px;
+  background: radial-gradient(60% 50% at 50% 48%, color-mix(in srgb, var(--dusk) 40%, var(--night)), var(--night) 70%);
+  color: var(--dv-cell); pointer-events: none;
+  /* Fail-safe: even without JS events it lifts by itself. */
+  animation: loader-out 900ms var(--ease-out) 1.8s forwards;
+}
+.no-js .loader, .is-still .loader { display: none; }
+.is-loaded .loader { animation: loader-out 900ms cubic-bezier(.7, 0, .2, 1) forwards; }
+.loader__mark { width: 44px; height: auto; overflow: visible; filter: drop-shadow(0 0 14px rgb(127 188 255 / .45)); }
+.loader__mark path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: loader-draw 1100ms cubic-bezier(.65, 0, .35, 1) forwards; }
+.loader__mark path + path { animation-delay: 160ms; }
+.loader__mark circle { opacity: 0; transform-origin: 33px 42px; animation: loader-led 600ms 700ms var(--ease-out) forwards; }
+.loader__line { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, var(--dv-ink), transparent); transform: scaleX(0); animation: loader-line 1400ms cubic-bezier(.65, 0, .35, 1) forwards; }
+@keyframes loader-draw { to { stroke-dashoffset: 0; } }
+@keyframes loader-led { from { opacity: 0; scale: .2; } to { opacity: 1; scale: 1; } }
+@keyframes loader-line { to { transform: scaleX(1); } }
+@keyframes loader-out {
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+.is-loaded .loader__mark { animation: loader-mark-out 700ms cubic-bezier(.7, 0, .2, 1) forwards; }
+@keyframes loader-mark-out { to { scale: 1.6; opacity: 0; filter: blur(6px) drop-shadow(0 0 14px rgb(127 188 255 / .45)); } }
+
+/* ---------- headline masks (motion.ts splitWords) ---------- */
+.w { display: inline-block; overflow: clip; overflow-clip-margin: .06em; padding-block: .1em .16em; margin-block: -.1em -.16em; vertical-align: top; }
+.w__in { display: inline-block; transform-origin: 0 100%; }
+
+/* Panels land in 3D: their parent column gives them a perspective. While tilted (and on parallax overscan) they may
+   poke past the viewport edge: each section clips sideways (clip, not hidden: no scroll container, no page widening). */
+.js .sec__in { perspective: 1600px; }
+.js main > .sec { overflow-x: clip; }
+
+/* ---------- typing: a block caret rides the clip while the verdict writes itself ---------- */
+.typed { position: relative; }
+.typed.is-typing::after {
+  content: ""; display: inline-block; width: .5em; height: .9em; margin-left: .08em; vertical-align: -.06em;
+  background: currentColor; opacity: .85; animation: dv-caret .5s steps(2, start) infinite;
+}
+
+/* ---------- hover light: buttons and chips catch the light where the pointer is ---------- */
+.dv__btn, .dv__chip, .nav__chip { position: relative; isolation: isolate; overflow: hidden; }
+.dv__btn::before, .dv__chip::before, .nav__chip::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(140px circle at var(--hx, 50%) var(--hy, 50%), rgb(127 188 255 / .38), rgb(127 188 255 / .08) 45%, transparent 70%);
+  opacity: 0; transition: opacity 420ms var(--ease-out);
+}
+.dv__btn:hover::before, .dv__chip:hover::before, .nav__chip:hover::before { opacity: 1; }
+.dv__btn, .dv__chip { transition: background-color 260ms, border-color 260ms, color 260ms, box-shadow 420ms var(--ease-out), translate 160ms; }
+.dv__btn:hover, .dv__chip:hover { box-shadow: 0 0 0 1px rgb(127 188 255 / .35), 0 8px 28px -10px rgb(127 188 255 / .7); }
+.dv__chip:hover { color: var(--dv-head); }
+/* The scam chips warm toward the alert red they lead to. */
+.dv__try .dv__chip:hover { border-color: color-mix(in srgb, var(--alert) 55%, var(--dv-ink)); box-shadow: 0 0 0 1px rgb(255 59 47 / .25), 0 8px 28px -12px rgb(255 59 47 / .6); }
+.dv__try .dv__chip::before { background: radial-gradient(140px circle at var(--hx, 50%) var(--hy, 50%), rgb(255 120 100 / .3), rgb(255 59 47 / .06) 45%, transparent 70%); }
+/* the real cases that end green warm toward emerald instead */
+.dv__try .dv__chip[data-level="green"]::before { background: radial-gradient(140px circle at var(--hx, 50%) var(--hy, 50%), rgb(120 255 180 / .3), rgb(60 230 140 / .06) 45%, transparent 70%); }
+
+/* Nav links: a hairline draws under them. */
+.nav__links a { position: relative; transition: color 260ms, opacity 260ms; }
+.nav__links a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1px; background: currentColor;
+  transform: scaleX(0); transform-origin: right; transition: transform 520ms var(--ease-out);
+}
+.nav__links a:hover::after { transform: scaleX(1); transform-origin: left; }
+.book__read svg { transition: translate 420ms var(--ease-out); }
+.book__read:hover svg { translate: 6px 0; }
+
+/* The panel outline and the loupe follow the verdict color smoothly. */
+.dv { transition: box-shadow 700ms var(--ease-out); }
+.loupe line { transition: stroke 700ms var(--ease-out); }
+.dv[data-verdict="red"] .dv__led { background: var(--alert); box-shadow: 0 0 10px var(--alert); }
+.dv[data-verdict="yellow"] .dv__led { background: var(--amber); box-shadow: 0 0 10px var(--amber); }
+
+/* ---------- moon bloom (fx/snow.ts mountMoon) ---------- */
+.fx-moon {
+  position: absolute; aspect-ratio: 1; translate: -50% -50%; pointer-events: none; mix-blend-mode: screen;
+  background: radial-gradient(closest-side, rgb(205 214 255 / .34), rgb(150 160 240 / .12) 45%, transparent 100%);
+  opacity: .75;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .fx-moon { animation: moon-breathe 9s ease-in-out infinite; }
+}
+@keyframes moon-breathe { 50% { opacity: 1; scale: 1.05; } }
+
+/* ---------- snow behind the glass (fx/snow.ts) ---------- */
+.fx-snow {
+  position: absolute; pointer-events: none; mix-blend-mode: screen; opacity: .9;
+  -webkit-mask-image: var(--snow-mask); mask-image: var(--snow-mask);
+  -webkit-mask-size: var(--snow-mask-size); mask-size: var(--snow-mask-size);
+  -webkit-mask-position: var(--snow-mask-pos); mask-position: var(--snow-mask-pos);
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  mask-mode: luminance;
+}
+
+/* ---------- film grain over everything (fine, low; it only shimmers on the rich tier) ---------- */
+/* The box is the viewport (overflow clipped: an oversized fixed layer would widen the page); the noise layer inside moves. */
+.fx-grain { position: fixed; inset: 0; z-index: 60; pointer-events: none; overflow: hidden; contain: strict; }
+.fx-grain::before {
+  content: ""; position: absolute; inset: -120px; opacity: .055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .92 0 0 0 0 .94 0 0 0 0 1 0 0 0 1.4 -.35'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.fx-grain.is-live::before { animation: grain 900ms steps(1) infinite; will-change: transform; }
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  12% { transform: translate(-42px, 18px); }
+  25% { transform: translate(30px, -54px); }
+  37% { transform: translate(-70px, -20px); }
+  50% { transform: translate(56px, 40px); }
+  62% { transform: translate(-16px, 74px); }
+  75% { transform: translate(80px, -8px); }
+  87% { transform: translate(-60px, 52px); }
+}
+
+/* Lenis owns the smooth scroll on the rich tier (native smooth scrolling would fight it). */
+html.has-lenis { scroll-behavior: auto; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-stopped { overflow: clip; }
+
+@media (prefers-reduced-motion: reduce) {
+  .loader { display: none; }
+  .fx-grain.is-live::before, .typed.is-typing::after { animation: none; }
+  .dv, .loupe line, .dv__btn, .dv__chip, .nav__links a::after, .book__read svg { transition: none; }
+}

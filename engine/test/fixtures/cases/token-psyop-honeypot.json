@@ -1,0 +1,14 @@
+{
+  "name": "token-psyop-honeypot",
+  "input": "0x4680bdc9af57523f85d75499133f4e6633ac0ead",
+  "expectedLevel": "red",
+  "expectedReasonCodes": [
+    "TOKEN_CANNOT_SELL"
+  ],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). Documented real honeypot ($PSYOP, 2023): GoPlus token_security TODAY is_honeypot='1', honeypot_with_same_creator='1', owner_change_balance='1' (cannot_sell_all='0', sell_tax='0'), dex UniswapV2 with ~0 liquidity. Spec §2 RED rule: 'token that cannot be sold' (GoPlus is_honeypot field). Blockscout does NOT flag it (is_scam=false, reputation 'ok', verified; Sourcify match; created 2023-05-15) -> the red comes only from GoPlus.",
+  "sources": [
+    "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0x4680bdc9af57523f85d75499133f4e6633ac0ead",
+    "https://eth.blockscout.com/address/0x4680BDC9aF57523f85d75499133f4e6633ac0Ead",
+    "https://rouss.substack.com/p/how-to-earn-more-than-27-eth-in-less"
+  ]
+}

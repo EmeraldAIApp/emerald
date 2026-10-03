@@ -1,0 +1,3 @@
+[submodule "launch/lib/forge-std"]
+	path = launch/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std

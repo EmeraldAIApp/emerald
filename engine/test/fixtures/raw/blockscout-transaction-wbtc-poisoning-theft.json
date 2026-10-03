@@ -1,0 +1,224 @@
+{
+  "priority_fee": null,
+  "raw_input": "0xa9059cbb000000000000000000000000d9a1c3788d81257612e2581a6ea0ada244853a910000000000000000000000000000000000000000000000000000001ae60da1cf",
+  "is_pending_update": false,
+  "result": "success",
+  "hash": "0x3374abc5a9c766ba709651399b6e6162de97ca986abc23f423a9d893c8f5f570",
+  "max_fee_per_gas": null,
+  "revert_reason": null,
+  "confirmation_duration": [
+    0,
+    12121
+  ],
+  "transaction_burnt_fee": null,
+  "type": 0,
+  "token_transfers_overflow": false,
+  "confirmations": 6303502,
+  "position": 30,
+  "max_priority_fee_per_gas": null,
+  "transaction_tag": null,
+  "created_contract": null,
+  "value": "0",
+  "from": {
+    "ens_domain_name": null,
+    "hash": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+    "implementations": [],
+    "is_contract": false,
+    "is_scam": false,
+    "is_verified": false,
+    "metadata": null,
+    "name": null,
+    "private_tags": [],
+    "proxy_type": null,
+    "public_tags": [],
+    "reputation": "ok",
+    "watchlist_names": []
+  },
+  "gas_used": "49623",
+  "status": "ok",
+  "to": {
+    "ens_domain_name": null,
+    "hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "implementations": [],
+    "is_contract": true,
+    "is_scam": false,
+    "is_verified": true,
+    "metadata": {
+      "tags": [
+        {
+          "meta": {
+            "projectName": "Wrapped BTC",
+            "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+            "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0x27502c297b7d3221115b309c6793d82367429f60ad4e32465d92cf5c4a6bb66b@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+            "textColor": "#C163D4",
+            "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmU12hockJzZaSK6pvzH1K1im4X9ababHx388mw6uEh986/Bce2ei6Xi58TfHx1tkQFvcmgwRnu2mTFeuVvUh3wJdouZD3wdi2pBWBL1Kn89TCvmoW58yuhe179WiLMKTk67yg4pz\",\"token_symbol\":\"WBTC\",\"token_name\":\"Wrapped Bitcoin\",\"decimals\":8}",
+            "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+            "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+            "tooltipDescription": "A wrapped version of bitcoin as an ERC20",
+            "tooltipUrl": "https://wbtc.network/"
+          },
+          "name": "Wrapped BTC: WBTC Token",
+          "ordinal": 10,
+          "slug": "wrapped-btc-wbtc-token",
+          "tagType": "name"
+        },
+        {
+          "meta": {},
+          "name": "Token Contract",
+          "ordinal": 0,
+          "slug": "token-contract",
+          "tagType": "generic"
+        },
+        {
+          "meta": {},
+          "name": "Wrapped BTC",
+          "ordinal": 0,
+          "slug": "wrapped-btc",
+          "tagType": "protocol"
+        },
+        {
+          "meta": {
+            "data": "ok"
+          },
+          "name": "Credible token",
+          "ordinal": 0,
+          "slug": "credible-token",
+          "tagType": "token_reputation"
+        }
+      ]
+    },
+    "name": "Wrapped BTC",
+    "private_tags": [],
+    "proxy_type": null,
+    "public_tags": [],
+    "reputation": "ok",
+    "watchlist_names": []
+  },
+  "authorization_list": [],
+  "method": "transfer",
+  "fee": {
+    "type": "actual",
+    "value": "744345000000000"
+  },
+  "gas_limit": "110000",
+  "gas_price": "15000000000",
+  "decoded_input": {
+    "method_call": "transfer(address _to, uint256 _value)",
+    "method_id": "a9059cbb",
+    "parameters": [
+      {
+        "name": "_to",
+        "type": "address",
+        "value": "0xd9A1C3788D81257612E2581A6ea0aDa244853a91"
+      },
+      {
+        "name": "_value",
+        "type": "uint256",
+        "value": "115528802767"
+      }
+    ]
+  },
+  "fhe_operations_count": 0,
+  "token_transfers": [
+    {
+      "block_hash": "0x636ead12ce1c28808a560f4cc28ff8c30c95db046f7a7672a1562fdf6389bbac",
+      "block_number": 19789009,
+      "from": {
+        "ens_domain_name": null,
+        "hash": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "log_index": 119,
+      "method": null,
+      "timestamp": null,
+      "to": {
+        "ens_domain_name": null,
+        "hash": "0xd9A1C3788D81257612E2581A6ea0aDa244853a91",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": true,
+        "is_verified": false,
+        "metadata": {
+          "tags": [
+            {
+              "meta": {},
+              "name": "Fake_Phishing327990",
+              "ordinal": 10,
+              "slug": "fakephishing327990",
+              "tagType": "name"
+            },
+            {
+              "meta": {
+                "bgColor": "#FED7D7",
+                "textColor": "#822727"
+              },
+              "name": "Phish / Hack",
+              "ordinal": 0,
+              "slug": "phish--hack",
+              "tagType": "generic"
+            },
+            {
+              "meta": {
+                "alertStatus": "info",
+                "data": "There are reports that this address was used in a Phishing scam. Please exercise caution when interacting with it. Reported by Cyvers Alerts."
+              },
+              "name": "note_0",
+              "ordinal": 0,
+              "slug": "note0",
+              "tagType": "note"
+            }
+          ]
+        },
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "scam",
+        "watchlist_names": []
+      },
+      "token": {
+        "address_hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "circulating_market_cap": "9757665672.149858",
+        "circulating_supply": null,
+        "decimals": "8",
+        "exchange_rate": "84023",
+        "holders_count": "201896",
+        "icon_url": "https://assets.coingecko.com/coins/images/7598/small/WBTCLOGO.png?1764496367",
+        "name": "Wrapped Bitcoin",
+        "reputation": "ok",
+        "symbol": "WBTC",
+        "total_supply": "11613218173272",
+        "type": "ERC-20",
+        "volume_24h": "141296613.07216007"
+      },
+      "token_type": "ERC-20",
+      "total": {
+        "decimals": "8",
+        "value": "115528802767"
+      },
+      "transaction_hash": "0x3374abc5a9c766ba709651399b6e6162de97ca986abc23f423a9d893c8f5f570",
+      "type": "token_transfer"
+    }
+  ],
+  "base_fee_per_gas": "5646345327",
+  "timestamp": "2024-05-03T10:31:35.000000Z",
+  "nonce": 4,
+  "historic_exchange_rate": "2982.34",
+  "transaction_types": [
+    "contract_call",
+    "token_transfer"
+  ],
+  "exchange_rate": "2675.21",
+  "block_number": 19789009,
+  "has_error_in_internal_transactions": false
+}

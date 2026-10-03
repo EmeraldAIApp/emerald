@@ -1,0 +1,17 @@
+{
+  "name": "txhash-nft-approve-inferno-drainer",
+  "input": "0x0f076bf8690c685bdd5f8f44d3d19425367926125ef5c8fbc3215dfde2d1c029",
+  "userAddress": "0x8FB6bf62183182773219C8DdFc81CB44a5003cDa",
+  "expectedLevel": "red",
+  "expectedReasonCodes": [
+    "LABEL_FLAGGED_GOPLUS",
+    "LABEL_FLAGGED_BLOCKSCOUT"
+  ],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). REAL tx (2023-06-08T03:29:59Z, block 17432934): the victim 0x8FB6bf62...3cDa called approve(0x00001f78189bE22C3498cFF1B8e02272C3220000, 5965) on the ERC-721 collection CryptoNinjaPartners 0x138A5C693279b6Cd82F48d4bEf563251Bc15ADcE; the drainer took NFT #5965 with safeTransferFrom on 2024-10-23 (tx 0x27d58b3f...). decode TRAP: selector 0x095ea7b3 is the same as ERC-20 approve(spender, amount); here the 2nd argument is a tokenId, not an amount (Blockscout token type 'ERC-721'). It is not an 'unlimited approval' nor setApprovalForAll, so the red comes from labels: GoPlus phishing_activities='1'/blacklist_doubt='1' and Blockscout is_scam=true on the spender.",
+  "sources": [
+    "https://eth.blockscout.com/tx/0x0f076bf8690c685bdd5f8f44d3d19425367926125ef5c8fbc3215dfde2d1c029",
+    "https://eth.blockscout.com/tx/0x27d58b3f70bfbc6b977a1b32a8f50132885834b88534c7c6a600c9837e281d58",
+    "https://eth.blockscout.com/address/0x00001f78189bE22C3498cFF1B8e02272C3220000",
+    "https://api.gopluslabs.io/api/v1/address_security/0x00001f78189bE22C3498cFF1B8e02272C3220000?chain_id=1"
+  ]
+}

@@ -1,0 +1,116 @@
+@font-face { font-family: "Patrick Hand"; src: url("/fonts/PatrickHand-400.woff2") format("woff2"); font-display: swap; }
+/* The room (room.ts). html.is-room is set in <head> on desktop, once per session; without it the room never shows. */
+.room { display: none; }
+.is-room body { overflow: hidden; }
+.is-room .room {
+  display: block; position: fixed; inset: 0; z-index: 200; overflow: hidden; overflow: clip;
+  background: #0b0a24; cursor: default;
+}
+.is-room .room::before { /* the same room, blurred, behind the photo: fills the sides on screens of any shape */
+  content: ""; position: absolute; inset: -6%; background: url("/room/room.webp") center / cover no-repeat; filter: blur(40px) brightness(.5);
+}
+.room__scene {
+  position: absolute; left: 0; top: 0; transform-origin: 0 0; opacity: 0;
+  transition: transform .95s cubic-bezier(.22, 1, .36, 1), opacity .5s;
+}
+.room.is-ready .room__scene { opacity: 1; }
+.room[data-phase="entering"] .room__scene { transition: transform 1.3s cubic-bezier(.55, 0, .85, .35); } /* a dive: slow, then faster */
+.room.is-fast[data-phase="entering"] .room__scene { transition: transform .6s cubic-bezier(.6, 0, .3, 1); }
+.room.is-out { opacity: 0; visibility: hidden; transition: opacity .5s ease, visibility 0s .5s; }
+.room__photo, .room__snow { position: absolute; inset: 0; width: 100%; height: 100%; display: block; user-select: none; -webkit-user-drag: none; }
+.room__snow { pointer-events: none; }
+
+/* the CRT glass: black and dead until the power button */
+.room__crt {
+  position: absolute; left: 35.68%; top: 13.09%; width: 25%; height: 33.53%;
+  border-radius: 3% / 4.5%; overflow: hidden; container-type: size; cursor: pointer;
+  background: radial-gradient(ellipse at 50% 45%, #10131c, #050608 75%);
+  box-shadow: inset 0 0 2.5cqw #000;
+}
+.room__crt::after { /* glare + scanlines + vignette, above everything on the glass */
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 2;
+  background:
+    radial-gradient(30% 26% at 78% 22%, rgb(200 210 255 / .07), transparent 70%),
+    repeating-linear-gradient(transparent 0 2px, rgb(0 0 0 / .22) 2px 3px),
+    radial-gradient(80% 78% at 50% 50%, transparent 55%, rgb(0 0 0 / .55));
+}
+.room[data-phase="off"] .room__crt:hover { box-shadow: inset 0 0 2.5cqw #000, inset 0 0 0 .5cqw rgb(60 230 140 / .18); }
+.room[data-phase="on"] .room__crt, .room[data-phase="entering"] .room__crt {
+  background: radial-gradient(ellipse at 50% 45%, #0f2a20, #06100c 72%, #020403);
+  animation: room-crt-on .32s ease-out both;
+}
+.room[data-phase="entering"] .room__crt { background: #05041a; }
+.room.is-fast[data-phase="entering"] .room__crt { background: #667eea; transition: background .3s; }
+.room[data-phase="entering"] .room__boot { opacity: 0; transition: opacity .2s; }
+.room__warp { position: absolute; inset: 0; width: 100%; height: 100%; display: block; image-rendering: pixelated; image-rendering: crisp-edges; animation: room-warp-in .35s ease-out both; }
+.room__screen { position: absolute; inset: 0; z-index: 1; }
+
+/* the boot of "Emerald AI" (B) */
+.room__boot {
+  position: absolute; inset: 0; margin: 0; padding: 8cqh 9cqw; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: .25em;
+  font: 500 4.9cqw/1.4 "IBM Plex Mono", ui-monospace, monospace; color: #8ff5bd; white-space: pre-wrap;
+  text-shadow: 0 0 .5em rgb(60 230 140 / .45);
+}
+.room__boot .room__line { display: block; min-height: 1.4em; }
+.room__boot .room__title { font: 700 8cqw/1.1 "Pixelify Sans", ui-monospace, monospace; color: #3ce68c; letter-spacing: .02em; margin-bottom: .45em; }
+.room__boot .is-typing::after { content: ""; display: inline-block; width: .55em; height: 1em; vertical-align: -.15em; background: currentColor; animation: room-blink 1s steps(2, start) infinite; }
+.room__gem {
+  display: block; width: 12cqw; aspect-ratio: 1; margin-bottom: 3cqh;
+  background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' shape-rendering='crispEdges'%3E%3Cpath d='M6 1h8l5 5v8l-5 5H6l-5-5V6z' fill='%233ce68c' stroke='%230f5a33' stroke-width='1.2'/%3E%3Cpath d='M7 5h6l2 2v6l-2 2H7l-2-2V7z' fill='%238ff5bd'/%3E%3Cpath d='M7.5 6.5h3l1 1' stroke='%23fff' stroke-width='1.2' fill='none'/%3E%3C/svg%3E");
+  filter: drop-shadow(0 0 2cqw rgb(60 230 140 / .6)); animation: room-gem 1.2s ease-in-out infinite alternate;
+}
+
+/* the power button of the monitor (the real one in the photo) and its LED */
+.room__power {
+  position: absolute; left: 58.75%; top: 51.67%; width: 2.5%; aspect-ratio: 1; min-width: 34px; translate: -50% -50%;
+  border: 0; border-radius: 50%; padding: 0; background: none; cursor: pointer;
+}
+.room__power::before {
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(60 230 140 / .0); animation: room-pulse 2.4s ease-in-out 1.2s infinite;
+}
+.room__power:hover::before, .room__power:focus-visible::before { animation: none; box-shadow: 0 0 0 2px rgb(60 230 140 / .9), 0 0 18px 4px rgb(60 230 140 / .45); }
+.room__power:focus-visible { outline: none; }
+.room__led { position: absolute; left: 56.78%; top: 51.9%; width: .45%; aspect-ratio: 1; translate: -50% -50%; border-radius: 50%; background: #3ce68c; opacity: 0; box-shadow: 0 0 8px 2px rgb(60 230 140 / .8); transition: opacity .2s; pointer-events: none; }
+.room[data-phase="on"] .room__led, .room[data-phase="entering"] .room__led { opacity: 1; }
+
+/* the only text in the room: a quiet hint, and a way out for anyone in a hurry */
+.room__hint {
+  position: absolute; left: 50%; bottom: max(22px, env(safe-area-inset-bottom)); translate: -50% 0; margin: 0;
+  padding: 7px 14px; font: 600 15px/1 "Pixelify Sans", ui-monospace, monospace; letter-spacing: .04em; color: #e6e3fb;
+  background: rgb(13 10 51 / .62); border: 1px solid rgb(143 157 243 / .35); white-space: nowrap;
+  opacity: 0; animation: room-hint .5s 2.2s ease-out forwards;
+}
+.room__hint b { color: #3ce68c; font-weight: 600; }
+.room__skip {
+  position: absolute; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom));
+  padding: 8px 12px; min-height: 36px; border: 1px solid rgb(143 157 243 / .35); background: rgb(13 10 51 / .5); color: #a9a5e6;
+  font: 500 12px/1 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .08em; cursor: pointer;
+}
+.room__skip:hover, .room__skip:focus-visible { color: #fff; border-color: #fff; outline: none; }
+.room:not([data-phase="off"]) .room__hint, .room:not([data-phase="off"]) .room__skip { opacity: 0; visibility: hidden; transition: opacity .2s, visibility 0s .2s; animation: none; }
+
+@keyframes room-crt-on { 0% { filter: brightness(3); clip-path: inset(49% 0); } 60% { filter: brightness(1.6); clip-path: inset(0); } 100% { filter: none; clip-path: inset(0); } }
+@keyframes room-blink { 50% { opacity: 0; } }
+@keyframes room-gem { to { scale: 1.06; } }
+@keyframes room-pulse { 0%, 100% { box-shadow: 0 0 0 2px rgb(60 230 140 / 0), 0 0 0 0 rgb(60 230 140 / 0); } 50% { box-shadow: 0 0 0 2px rgb(60 230 140 / .8), 0 0 16px 4px rgb(60 230 140 / .35); } }
+@keyframes room-warp-in { from { opacity: 0; } }
+@keyframes room-hint { to { opacity: 1; } }
+
+/* our X, on a post-it stuck to the side of the monitor (like "Meldan, Veridia" on the front): a real link */
+.room__note {
+  position: absolute; left: 61.4%; top: 21%; width: 7.4%; aspect-ratio: 1 / .95; rotate: 5deg; container-type: inline-size;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; padding: 0;
+  background: linear-gradient(160deg, #fff59a, #f1dc62); color: #14123a; text-decoration: none; text-align: center;
+  box-shadow: 1px 2px 0 rgb(0 0 0 / .18), 4px 8px 14px rgb(0 0 0 / .35); transform-origin: 30% 10%;
+  transition: rotate .25s, translate .25s, box-shadow .25s; cursor: pointer;
+}
+.room__note::before { /* a strip of tape */
+  content: ""; position: absolute; top: -9cqw; left: 30%; width: 40%; height: 18cqw; rotate: -4deg;
+  background: rgb(255 255 255 / .45); box-shadow: 0 0 0 1px rgb(255 255 255 / .2);
+}
+.room__note svg { width: 28cqw; height: 28cqw; margin-bottom: 5cqw; }
+.room__note span { font: 400 15.5cqw/1.05 "Patrick Hand", "Comic Sans MS", cursive; }
+.room__note:hover, .room__note:focus-visible { rotate: 1deg; translate: 0 -3%; outline: none; box-shadow: 1px 2px 0 rgb(0 0 0 / .18), 8px 16px 22px rgb(0 0 0 / .4), 0 0 0 3px rgb(60 230 140 / .7); }
+.room:not([data-phase="off"]) .room__note { pointer-events: none; }

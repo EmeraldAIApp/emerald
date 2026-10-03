@@ -1,0 +1,153 @@
+{
+  "addresses": {
+    "0x000000000022D473030F116dDEE9F6B43aC78BA3": {
+      "tags": [
+        {
+          "slug": "uniswap-protocol-permit2",
+          "name": "Uniswap Protocol: Permit2",
+          "tagType": "name",
+          "ordinal": 10,
+          "meta": "{\"projectName\":\"Uniswap\",\"tagIcon \":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"tagUrl\":\"https://scout-app.kleros.io/single-tags/0x1800302e80f77bad8262d823410c5b6d278c017c969ed605af914acb2cc92e9e\",\"textColor\":\"#C163D4\",\"tooltipAttribution\":\"https://www.openlabelsinitiative.org?utm_source=blockscout\",\"tooltipAttributionIcon\":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"tooltipDescription\":\"Uniswap's Permit2 contract. Permit2 allows token approvals to be shared and managed across different applications creating a more unified, cost-efficient, and safer UX.\",\"tooltipUrl\":\"https://uniswap.org/\",\"verifiedDomains\":[\"trade.bebop.xyz\",\"app.termmax.ts.finance\",\"app.dzap.io\",\"www.brid.gg\",\"monorail.xyz\",\"app.uniswap.org\",\"matcha.xyz\",\"oku.trade\",\"app.euler.finance\",\"app.shroomy.io\",\"houdiniswap.com\",\"v4.houdiniswap.com\",\"bridge.openocean.finance\",\"app.tristero.com\",\"app.takaralend.com\",\"nad.fun\",\"2.horswap.eth.limo\",\"jumper.xyz\",\"zkcodex.com\",\"www.bungee.exchange\",\"app.seamlessprotocol.com\",\"linea.build\",\"bridge.abs.xyz\",\"app.openocean.finance\",\"app.superform.xyz\",\"swap.defillama.com\"]}"
+        },
+        {
+          "slug": "defi",
+          "name": "DeFi",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{}"
+        },
+        {
+          "slug": "uniswap-v3",
+          "name": "Uniswap V3",
+          "tagType": "protocol",
+          "ordinal": 0,
+          "meta": "{\"appActionButtonText\":\"Uniswap\",\"appID\":\"uniswap\",\"bgColor\":\"#FF007A\",\"tagIcon\":\"https://blockscout-content.s3.amazonaws.com/uniswap.png\",\"tagUrl\":\"https://uniswap.org/?utm_source=Blockscout\",\"textColor\":\"#FFFFFF\",\"tooltipDescription\":\"Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.\",\"tooltipTitle\":\"Uniswap\",\"tooltipUrl\":\"https://uniswap.org/?utm_source=Blockscout\"}"
+        }
+      ]
+    },
+    "0x28C6c06298d514Db089934071355E5743bf21d60": {
+      "tags": [
+        {
+          "slug": "binance-hot-wallet",
+          "name": "Binance: Hot Wallet",
+          "tagType": "name",
+          "ordinal": 10,
+          "meta": "{\"main_entity\":\"Binance\",\"tooltipUrl\":\"https://www.binance.com/en\"}"
+        },
+        {
+          "slug": "hot-wallet",
+          "name": "HOT WALLET",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{}"
+        },
+        {
+          "slug": "exchange",
+          "name": "Exchange",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{}"
+        },
+        {
+          "slug": "binance-14",
+          "name": "Binance 14",
+          "tagType": "name",
+          "ordinal": 0,
+          "meta": "{\"tagIcon \":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"textColor\":\"#C163D4\",\"tooltipAttribution\":\"https://www.openlabelsinitiative.org?utm_source=blockscout\",\"tooltipAttributionIcon\":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"tooltipDescription\":\"Provided by OLI\",\"tooltipUrl\":\"https://www.binance.com/\"}"
+        },
+        {
+          "slug": "binance",
+          "name": "Binance",
+          "tagType": "protocol",
+          "ordinal": 0,
+          "meta": "{}"
+        }
+      ]
+    },
+    "0x66a9893cC07D91D95644AEDD05D03f95e1dBA8Af": {
+      "tags": [
+        {
+          "slug": "uniswap-v4-universal-router",
+          "name": "Uniswap V4: Universal Router",
+          "tagType": "name",
+          "ordinal": 10,
+          "meta": "{\"tagIcon \":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"textColor\":\"#C163D4\",\"tooltipAttribution\":\"https://www.openlabelsinitiative.org?utm_source=blockscout\",\"tooltipAttributionIcon\":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"tooltipDescription\":\"Provided by OLI\",\"tooltipUrl\":\"https://app.uniswap.org/\"}"
+        },
+        {
+          "slug": "router",
+          "name": "Router",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{}"
+        },
+        {
+          "slug": "dex",
+          "name": "DEX",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{}"
+        },
+        {
+          "slug": "uniswap-v4",
+          "name": "Uniswap V4",
+          "tagType": "protocol",
+          "ordinal": 0,
+          "meta": "{\"appActionButtonText\":\"Uniswap\",\"appID\":\"uniswap\"}"
+        }
+      ]
+    },
+    "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48": {
+      "tags": [
+        {
+          "slug": "usdc-token-1",
+          "name": "USDC Token",
+          "tagType": "name",
+          "ordinal": 10,
+          "meta": "{\"projectName\":\"Circle\",\"tagIcon\":\"https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694\",\"tagIcon \":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"tagUrl\":\"https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390\",\"textColor\":\"#C163D4\",\"tokenAttributes\":\"{\\\"logo_url\\\":\\\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\\\",\\\"token_symbol\\\":\\\"USDC\\\",\\\"token_name\\\":\\\"USD Coin\\\",\\\"decimals\\\":6}\",\"tooltipAttribution\":\"https://www.openlabelsinitiative.org?utm_source=blockscout\",\"tooltipAttributionIcon\":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"tooltipDescription\":\"USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.\",\"tooltipUrl\":\"https://www.circle.com/en/usdc\"}"
+        },
+        {
+          "slug": "token-contract",
+          "name": "Token Contract",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{}"
+        },
+        {
+          "slug": "stablecoin",
+          "name": "Stablecoin",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{}"
+        },
+        {
+          "slug": "usdc",
+          "name": "USDC",
+          "tagType": "generic",
+          "ordinal": 0,
+          "meta": "{}"
+        },
+        {
+          "slug": "usd-coin",
+          "name": "USD Coin",
+          "tagType": "name",
+          "ordinal": 0,
+          "meta": "{\"tagIcon \":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"textColor\":\"#C163D4\",\"tooltipAttribution\":\"https://www.openlabelsinitiative.org?utm_source=blockscout\",\"tooltipAttributionIcon\":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"tooltipDescription\":\"Provided by OLI\"}"
+        },
+        {
+          "slug": "circle",
+          "name": "Circle",
+          "tagType": "protocol",
+          "ordinal": 0,
+          "meta": "{\"appID\":\"circle\",\"appMarketplaceURL\":\"https://app.circle.com/get-started\",\"bgColor\":\"#2775ca\",\"tagIcon\":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png\",\"textColor\":\"#FFFFFF\",\"tooltipUrl\":\"https://www.circle.com/\"}"
+        },
+        {
+          "slug": "credible-token",
+          "name": "Credible token",
+          "tagType": "token_reputation",
+          "ordinal": 0,
+          "meta": "{\"data\":\"ok\"}"
+        }
+      ]
+    }
+  }
+}

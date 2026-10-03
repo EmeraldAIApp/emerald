@@ -1,0 +1,13 @@
+{
+  "name": "token-snt-goplus-honeypot-false-positive",
+  "input": "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
+  "expectedLevel": "red",
+  "expectedReasonCodes": [
+    "TOKEN_CANNOT_SELL"
+  ],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). Status Network Token (SNT), a legitimate, long-standing token. GoPlus token_security TODAY returns is_honeypot='1' (with owner_change_balance='1'; cannot_sell_all='0', sell_tax='0'), flag reported since 2026-09-11 with no confirmed sell-block (probable false positive due to the controller function). By the literal rule of spec §2 ('token that cannot be sold', is_honeypot field) the engine must give RED: it cannot tell the false positive apart. It exists to pin the score() contract and so the LLM can explain which source the flag comes from. NEVER use it as a public 'scam' example (defamation risk).",
+  "sources": [
+    "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
+    "https://pluang.com/en/news-feed/peringatan-honeypot-token-snt-penjelasan-klaim-edit-saldo-pemilik"
+  ]
+}

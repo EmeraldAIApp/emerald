@@ -1,0 +1,44 @@
+/* ---------- S5 ROADMAP + FOOTER: three hours in a row + the chapter 6 loan ---------- */
+/* Mobile: two grid rows. Row 1 is the content (headline, hours, loan) over the photo band (.sec--band, base.css), which
+   fills only the bottom of that row, so the bracelet sits under the loan panel; row 2 is the footer on plain night.
+   Anchoring the band to row 1 keeps the bracelet clear of the footer text whatever its height (long CA, wrapped legal).
+   The end lines are explicit on purpose: an absolutely positioned grid child with an `auto` end line stretches to the container edge. */
+.roadmap { display: grid; }
+.roadmap > .sec__bg { grid-area: 1 / 1 / 2 / 2; }
+.roadmap > .sec__in { width: 100%; }
+/* The bracelet bezel spans 33 % to 15 % of the band height above its bottom edge (63vw to 29vw): 80vw leaves air under the panel. */
+.roadmap .stage { --fx: .95; }
+.roadmap__in { padding-block: 88px 80vw; }
+.dial {
+  height: 12px; margin-top: 2.2rem;
+  background:
+    linear-gradient(var(--eth), var(--eth)) center / 100% 1px no-repeat,
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--eth) 70%, transparent) 0 1px, transparent 1px 11px) center / 100% 8px no-repeat;
+}
+.hours { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: -9px; }
+.hours li { display: grid; gap: .4rem; align-content: start; }
+.hours__dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--eth); background: var(--night); }
+.hours .is-now .hours__dot { background: var(--moon); border-color: var(--moon); box-shadow: 0 0 10px var(--moon); }
+.hours__k { font: 700 var(--fs-dv)/1.2 var(--font-mono); color: var(--lav); margin-top: .6rem; }
+.hours li p:last-child { font-size: .9375rem; color: color-mix(in srgb, var(--moon) 86%, var(--lav)); }
+.dv--loan { margin-top: 2.2rem; max-width: 36rem; font-size: .88em; }
+.dv--loan .tag { float: right; font-weight: 500; font-size: .8em; color: var(--lav); border: 1px solid var(--lav); padding: .1em .5em; }
+.loan__actions { display: flex; justify-content: center; margin-top: 14px; }
+.foot { padding-block: 0 40px; display: grid; gap: 1.1rem; }
+.foot::before { content: ""; display: block; height: 1px; background: color-mix(in srgb, var(--lav) 45%, transparent); margin-bottom: 1.4rem; max-width: 60rem; }
+.foot__claim { font: 600 clamp(1.75rem, 1.1rem + 2.2vw, 3rem)/1.1 var(--font-display); letter-spacing: var(--track-display); color: var(--moon); }
+.foot__row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 36px; }
+.foot__ca { font: 500 1rem/1 var(--font-mono); color: var(--moon); border: 1px solid var(--dv-line); border-radius: 4px; padding: .7em 1em; overflow-wrap: anywhere; }
+.foot__link { font-size: var(--fs-sub); color: var(--dv-head); text-underline-offset: 4px; }
+.foot__link.is-soon { color: var(--lav); }
+.foot__warn { font-size: var(--fs-sub); color: var(--lav); }
+@media (min-width: 768px) and (orientation: landscape) {
+  .roadmap { display: block; min-height: clamp(640px, calc(100vw / 1.7684), 1150px); }
+  .roadmap .stage { --fx: .5; --fy: .5; }
+  .roadmap__in { padding-block: 5vw 0; }
+  .hours { grid-template-columns: 35% 27% 1fr; }
+  .hours li p:last-child { max-width: 20rem; }
+  .dv--loan { margin-left: 18%; max-width: 32vw; }
+  .foot { padding-block: 2vw 32px; }
+  .foot > * { max-width: 62%; }
+}

@@ -1,0 +1,108 @@
+{
+  "code": 1,
+  "message": "OK",
+  "result": {
+    "0x7362de96703ab797156f3b1e3716323a358d7c76": {
+      "buy_tax": "",
+      "cannot_buy": "0",
+      "creator_address": "0x520f575e0779d1c88d2c22173c9dda2532d803ab",
+      "creator_balance": "3202608368.160703449462424442",
+      "creator_percent": "0.880974",
+      "fake_token": {
+        "true_token_address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+        "value": 1
+      },
+      "holder_count": "468",
+      "holders": [
+        {
+          "address": "0xff958a5cc3ec9e1ec9302e55138d2b75b69c89b7",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "2956263070.702634055420854579",
+          "percent": "0.813209094379583029",
+          "is_locked": 0
+        },
+        {
+          "address": "0xfe05120efbf45e62164f17a1477b04337bf24c4d",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "2956263070.702634055420854579",
+          "percent": "0.813209094379583029",
+          "is_locked": 0
+        },
+        {
+          "address": "0xfd8181c868f64cecd543d954a07ddc13f01a0507",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "2956263070.702634055420854579",
+          "percent": "0.813209094379583029",
+          "is_locked": 0
+        },
+        {
+          "address": "0xfd6f2ad09ab621a3c85479a4bcb40309472a718f",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "2956263070.702634055420854579",
+          "percent": "0.813209094379583029",
+          "is_locked": 0
+        },
+        {
+          "address": "0xfd69cd5c8113225a0daf3f4d92d3ad1cbf2a718f",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "2956263070.702634055420854579",
+          "percent": "0.813209094379583029",
+          "is_locked": 0
+        },
+        {
+          "address": "0xfccd959643272f5398021af39c4e3e6077d4c6d4",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "2956263070.702634055420854579",
+          "percent": "0.813209094379583029",
+          "is_locked": 0
+        },
+        {
+          "address": "0xfbac90ef7874ebf862575f1ed11f4f07a3edbf92",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "2956263070.702634055420854579",
+          "percent": "0.813209094379583029",
+          "is_locked": 0
+        },
+        {
+          "address": "0xf828fa5d40a72c90f65ac7ebe483ed4d470b8672",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "2956263070.702634055420854579",
+          "percent": "0.813209094379583029",
+          "is_locked": 0
+        },
+        {
+          "address": "0xf7f8e78dc0e4951b84c19f4d4d488038d3f06eb3",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "2956263070.702634055420854579",
+          "percent": "0.813209094379583029",
+          "is_locked": 0
+        },
+        {
+          "address": "0xf694178e6939fa67c89695c08c9990502d98f7c4",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "2956263070.702634055420854579",
+          "percent": "0.813209094379583029",
+          "is_locked": 0
+        }
+      ],
+      "honeypot_with_same_creator": "0",
+      "is_in_dex": "0",
+      "is_open_source": "0",
+      "owner_address": "",
+      "sell_tax": "",
+      "token_name": "Dai Stablecoin",
+      "token_symbol": "DAI",
+      "total_supply": "3635304980.151554943224214482"
+    }
+  }
+}

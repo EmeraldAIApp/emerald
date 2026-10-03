@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Emerald · Know what you’re signing</title>
+    <meta name="description" content="Paste what your wallet wants you to sign. Emerald tells you what it really does, and what it couldn't check. Ethereum mainnet. Not affiliated with Vitalik Buterin." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0f0c29" />
+    <meta property="og:title" content="Emerald · Know what you’re signing" />
+    <meta property="og:description" content="A transaction checker for Ethereum, from the novel Snowmoon. Fixed rules set the verdict, and an AI explains it in plain words." />
+    <!--meta:og-->
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/FunnelDisplay-500-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <!--preload:hero-desktop:hero-mobile-->
+    <script>document.documentElement.classList.replace('no-js', 'js'); if (/[?&]static\b/.test(location.search)) document.documentElement.classList.add('is-still')</script>
+  </head>
+  <body>
+    <div class="loader" aria-hidden="true" data-loader>
+      <svg class="loader__mark" viewBox="0 0 40 48">
+        <path d="M10 2h20l8 8v28l-8 8H10l-8-8V10z" fill="none" stroke="currentColor" stroke-width="1.4" pathLength="1" />
+        <path d="M14 8h12l5 5v22l-5 5H14l-5-5V13z" fill="none" stroke="currentColor" stroke-width="1" opacity=".5" pathLength="1" />
+        <circle cx="33" cy="42" r="2.4" fill="#3CE68C" />
+      </svg>
+      <span class="loader__line"></span>
+    </div>
+    <a class="skip" href="#chat-input">Skip to the checker</a>
+
+    <header class="nav" data-nav>
+      <a class="nav__brand" href="#top" aria-label="Emerald, back to top">
+        <svg class="mark" viewBox="0 0 40 48" aria-hidden="true">
+          <path d="M10 2h20l8 8v28l-8 8H10l-8-8V10z" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M14 8h12l5 5v22l-5 5H14l-5-5V13z" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".5" />
+          <circle cx="33" cy="42" r="2.6" fill="#3CE68C" />
+        </svg>
+        <span>EMERALD</span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Sections">
+        <a href="#try">Try it</a>
+        <a href="#book">The book</a>
+        <a href="#how">How it works</a>
+        <a href="#token">Token</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+      <span class="nav__chip"><span class="nav__chain">Ethereum · </span><!--ca:short--></span>
+      <a class="nav__open dv__btn" href="#chat-input" data-open-emerald>Check a tx</a>
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle>
+        <span class="sr">Menu</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.6" /></svg>
+      </button>
+    </header>
+
+    <main id="top">
+      <!-- HERO · boards hero-desktop-v2.png + hero-mobile-v2.png -->
+      <section class="sec hero" id="try" aria-labelledby="hero-h1" data-verdict="idle">
+        <div class="sec__bg">
+          <div class="stage stage--dual" data-stage data-plate="hero-desktop" data-plate-portrait="hero-mobile" data-reactive>
+            <!--plate:hero-desktop:hero-mobile:priority-->
+            <div class="light light--prev light--mul"></div>
+            <div class="light light--prev light--glow"></div>
+            <div class="light light--next light--mul"></div>
+            <div class="light light--next light--glow"></div>
+            <div class="plate-space" aria-hidden="true">
+              <div class="mini mini--chat" data-mini data-w="400" data-h="200" data-verdict="idle">
+                <p class="mini__status"><i class="dv__led"></i>EMERALD · Ethereum</p>
+                <p class="mini__verdict" data-mini-text>Ready.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg class="loupe" aria-hidden="true" data-loupe="hero-panel"></svg>
+        <div class="sec__in hero__in">
+          <div class="hero__copy">
+            <p class="dateline">Meldan, Veridia · 3724 Snowmoon 3</p>
+            <h1 id="hero-h1">Know what you’re signing.</h1>
+            <p class="sub">Paste the transaction or signature your wallet is asking for. Emerald checks it against live Ethereum data and tells you in plain words what it does, and what it couldn’t verify.</p>
+            <p class="trust">Emerald never asks you to sign anything and never touches your keys.</p>
+          </div>
+          <section class="dv hero__panel" id="hero-panel" data-verdict="idle" aria-label="Emerald">
+            <p class="dv__status"><i class="dv__led"></i>EMERALD <small>· Ethereum</small></p>
+            <div class="dv__scroll">
+              <table class="dv__table dv__screen" data-screen>
+                <thead><tr><th scope="col">Nothing checked yet</th></tr></thead>
+                <tbody>
+                  <tr class="dv__verdict is-idle"><td><span class="dot" aria-hidden="true"></span>Ready.</td></tr>
+                  <tr class="dv__explain"><td>Paste something below, or try one of these real cases.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <form class="dv__form" data-chat-form>
+              <label class="sr" for="chat-input">Paste a transaction, signature, address or token</label>
+              <textarea id="chat-input" class="dv__input" name="input" rows="2" autocomplete="off" spellcheck="false"
+                placeholder="Paste a transaction, signature, address or token" data-placeholder-narrow="Paste a transaction or address"></textarea>
+              <button class="dv__btn dv__submit" type="submit">Check</button>
+            </form>
+            <p class="dv__try"><span>Try a real case:</span> <span data-chips></span></p>
+            <p class="dv__quota" data-quota></p>
+            <p class="sr" aria-live="polite" data-announce></p>
+          </section>
+        </div>
+      </section>
+
+      <!-- S1 · boards lineup-desktop-v2.png + lineup-mobile-v3.png -->
+      <section class="sec lineup" id="lineup" aria-labelledby="lineup-h2">
+        <div class="sec__bg">
+          <div class="stage stage--dual" data-stage data-plate="lineup-desktop" data-plate-portrait="lineup-mobile">
+            <!--plate:lineup-desktop:lineup-mobile-->
+            <div class="plate-space" aria-hidden="true">
+              <svg class="plate-marks" data-marks></svg>
+              <div class="mini mini--me" data-mini data-w="400" data-h="200">
+                <p class="mini__status">EMERALD · Ethereum</p>
+                <p class="mini__line"><i class="dv__led"></i>This one works.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sec__in lineup__in">
+          <div class="lineup__copy">
+            <h2 id="lineup-h2">7 $EMERALD.<br />Only one answers.</h2>
+            <p class="sub">There are at least seven tokens called $EMERALD. This is the one with a working product: paste a transaction above and see for yourself.</p>
+          </div>
+          <div class="dv ca-panel">
+            <!--ca:big-->
+            <p class="ca-panel__actions"><!--ca:actions--></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- S2 · board book-desktop-v1.png -->
+      <section class="sec book" id="book" aria-labelledby="book-h2">
+        <div class="sec__bg">
+          <div class="stage" data-stage data-plate="book-desktop">
+            <!--plate:book-desktop-->
+            <div class="plate-space" aria-hidden="true">
+              <div class="mini mini--book" data-mini data-w="440" data-h="200">
+                <table><thead><tr><th>From</th><th>Message</th><th>Time</th></tr></thead>
+                  <tbody><tr><td>Gladias →</td><td>[Wallet 0x8f62... social recovery mode transaction request]</td><td>65129</td></tr></tbody></table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg class="loupe" aria-hidden="true" data-loupe="book-page"></svg>
+        <div class="sec__in book__in">
+          <div class="book__copy">
+            <h2 id="book-h2">Emerald comes from Snowmoon.</h2>
+            <blockquote class="book__quote">
+              <p>“the local AI running from Gladias's hand device”</p>
+              <footer class="dateline">Snowmoon · Chapter 1</footer>
+            </blockquote>
+            <a class="book__read" href="https://vitalik.eth.limo/snowmoon/" target="_blank" rel="noopener noreferrer">Read Snowmoon
+              <svg viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.4" /></svg></a>
+          </div>
+          <div class="book__side">
+            <article class="page" id="book-page">
+              <h3 class="page__h">Chapter 16</h3>
+              <p class="page__dateline">Meldan, Veridia · 3724 Firemoon 25</p>
+              <p>A few ticks later, Febric's watch buzzed.</p>
+              <div class="dv dv--book">
+                <table class="dv__table">
+                  <thead><tr><th scope="col">From</th><th scope="col">Message</th><th scope="col">Time</th></tr></thead>
+                  <tbody><tr><td>Gladias →</td><td>[Wallet 0x8f62...<br />social recovery mode<br />transaction request]</td><td>65129</td></tr></tbody>
+                </table>
+              </div>
+              <p>He asked Emerald to search for the receiving address online.</p>
+              <p>Febric clicked "Confirm".</p>
+            </article>
+            <p class="book__coda">In the book, Emerald checks and the person decides. Same here: you sign, Emerald never does.</p>
+          </div>
+          <p class="legal book__legal">Snowmoon is a novel by Vitalik Buterin, released under GPL v3. Emerald is not affiliated with Vitalik Buterin.</p>
+        </div>
+      </section>
+
+      <!-- S3 · board how-desktop-v3.png -->
+      <section class="sec sec--band how" id="how" aria-labelledby="how-h2" data-verdict="idle">
+        <div class="sec__bg">
+          <div class="stage" data-stage data-plate="how-desktop" data-reactive>
+            <!--plate:how-desktop-->
+            <div class="light light--prev light--mul"></div>
+            <div class="light light--prev light--glow"></div>
+            <div class="light light--next light--mul"></div>
+            <div class="light light--next light--glow"></div>
+            <div class="plate-space" aria-hidden="true">
+              <div class="mini mini--chat" data-mini data-w="400" data-h="200" data-verdict="idle">
+                <p class="mini__status"><i class="dv__led"></i>EMERALD · Ethereum</p>
+                <p class="mini__verdict" data-mini-text>Ready.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg class="loupe" aria-hidden="true" data-loupe="how-panel"></svg>
+        <div class="sec__in how__in">
+          <div class="how__copy">
+            <h2 id="how-h2">How a check works</h2>
+            <ol class="steps">
+              <li><span class="steps__n">01</span><div><h3>You paste it</h3><p>A transaction, a signature request, an address or a token contract.</p></div></li>
+              <li><span class="steps__n">02</span><div><h3>Fixed rules set the color</h3><p>Five checks run on live data: what the call does, a simulation of the result, lookalike addresses, scam reports, and the token itself. The same input always gets the same color.</p></div></li>
+              <li><span class="steps__n">03</span><div><h3>An AI explains it</h3><p>A language model turns the result into plain words and says what it couldn’t verify.</p></div></li>
+            </ol>
+            <p class="how__foot">The AI can’t change the color. Only the rules set it.</p>
+          </div>
+          <section class="dv how__panel" id="how-panel" data-verdict="idle" aria-label="The five checks of the last verdict">
+            <p class="dv__status"><i class="dv__led"></i>EMERALD <small>· Ethereum</small></p>
+            <table class="dv__table dv__checks" data-checks></table>
+          </section>
+        </div>
+      </section>
+
+      <!-- S4 · board token-desktop-v3.png -->
+      <section class="sec sec--band token" id="token" aria-labelledby="token-h2">
+        <div class="sec__bg">
+          <div class="stage" data-stage data-plate="token-desktop">
+            <!--plate:token-desktop-->
+            <div class="plate-space" aria-hidden="true">
+              <div class="mini mini--total" data-mini data-w="400" data-h="200"><p>Total fee · 2 %</p></div>
+            </div>
+          </div>
+        </div>
+        <svg class="loupe" aria-hidden="true" data-loupe="token-receipt"></svg>
+        <div class="sec__in token__in">
+          <div class="token__copy">
+            <h2 id="token-h2">2 % fee per trade.<br />Half pays for the checks.</h2>
+            <div class="dv dv--receipt" id="token-receipt">
+              <table class="dv__table">
+                <thead><tr><th scope="col" colspan="2">Trade fee</th></tr></thead>
+                <tbody>
+                  <tr><td>Emerald checks</td><td class="num">1 %</td></tr>
+                  <tr><td>Stockereum</td><td class="num">1 %</td></tr>
+                  <tr class="is-total"><td>Total fee</td><td class="num">2 %</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <section class="dv counter" aria-label="Checks counter" data-compute>
+            <p class="counter__k">Spent on checks</p>
+            <p class="counter__v"><span data-compute-paid>0.000</span> ETH</p>
+            <p class="counter__k">Checks run</p>
+            <p class="counter__v" data-compute-checks>0</p>
+            <p class="counter__small">Claimable <span data-compute-claimable>0.000</span> ETH · AI cost <span data-compute-spend>$0.00</span></p>
+            <p class="counter__small counter__ca"><!--ca:label--></p>
+            <table class="dv__table counter__quotas">
+              <tbody>
+                <tr><td>Anyone: 5 free checks a day</td></tr>
+                <tr><td>Hold 100k $EMERALD: 100 a day</td></tr>
+                <tr><td>Hold 1M $EMERALD: no daily limit</td></tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </section>
+
+      <!-- S5 · board roadmap-footer-desktop-v2.png -->
+      <div class="sec sec--band roadmap" id="roadmap">
+        <div class="sec__bg">
+          <div class="stage" data-stage data-plate="roadmap-desktop">
+            <!--plate:roadmap-desktop-->
+            <div class="plate-space" aria-hidden="true">
+              <div class="mini mini--loan" data-mini data-w="440" data-h="280">
+                <p class="mini__head">Reputation-backed loan request <b>TESTNET</b></p>
+                <p>Work history: teaching assistant. Positive review from the professor and 5 students.</p>
+                <p>Nullifier: 0x18f4...60c5</p>
+                <p>Requested loan: 2773 zipcoins</p>
+                <p class="mini__btn">Submit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg class="loupe" aria-hidden="true" data-loupe="roadmap-loan"></svg>
+        <section class="sec__in roadmap__in" aria-labelledby="roadmap-h2">
+          <h2 id="roadmap-h2">What’s next</h2>
+          <div class="dial" aria-hidden="true"></div>
+          <ol class="hours">
+            <li class="is-now"><span class="hours__dot"></span><p class="hours__k">Now</p><p>Live: paste anything and get a verdict with the reasons.</p></li>
+            <li><span class="hours__dot"></span><p class="hours__k">Next</p><p>Testnet: the reputation-backed loan from chapter 6.</p></li>
+            <li><span class="hours__dot"></span><p class="hours__k">Then</p><p>Later: a version that runs fully in your browser, so nothing you paste leaves your device.</p></li>
+          </ol>
+          <div class="dv dv--loan" id="roadmap-loan">
+            <table class="dv__table">
+              <thead><tr><th scope="col">Reputation-backed loan request <span class="tag">TESTNET</span></th></tr></thead>
+              <tbody>
+                <tr><td>Work history: teaching assistant. Positive review from the professor and 5 students.</td></tr>
+                <tr><td>Nullifier: 0x18f4...60c5</td></tr>
+                <tr><td>Requested loan: 2773 zipcoins</td></tr>
+                <tr class="loan__reply" hidden data-loan-reply><td>Not live yet. Coming to testnet next.</td></tr>
+              </tbody>
+            </table>
+            <p class="loan__actions"><button type="button" class="dv__btn" data-loan-submit>Submit</button></p>
+          </div>
+        </section>
+        <footer class="sec__in foot">
+          <p class="foot__claim">Emerald never asks you to sign anything.</p>
+          <p class="foot__row"><span class="foot__ca"><!--ca:label--></span> <!--link:github--> <span class="foot__warn">Not audited. Emerald can be wrong, so always read the reasons.</span></p>
+          <p class="legal">Snowmoon is a novel by Vitalik Buterin, released under GPL v3. Emerald is not affiliated with Vitalik Buterin.</p>
+        </footer>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

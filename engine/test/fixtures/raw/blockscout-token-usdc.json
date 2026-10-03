@@ -1,0 +1,15 @@
+{
+  "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "circulating_market_cap": "74191680125.63536",
+  "circulating_supply": null,
+  "decimals": "6",
+  "exchange_rate": "0.99982",
+  "holders_count": "9401617",
+  "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+  "name": "USDC",
+  "reputation": "ok",
+  "symbol": "USDC",
+  "total_supply": "49324050826488960",
+  "type": "ERC-20",
+  "volume_24h": "17700092839.069504"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/chat.ts": { "maxDuration": 60 },
+    "api/check.ts": { "maxDuration": 60 }
+  },
+  "redirects": [
+    { "source": "/exe", "destination": "/", "statusCode": 301 },
+    { "source": "/exe/", "destination": "/", "statusCode": 301 }
+  ]
+}

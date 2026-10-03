@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "result": {
+    "function": {
+      "0x00000001": [
+        {
+          "name": "multicallN2M_001Taw5z(uint256,bytes[])",
+          "filtered": false,
+          "hasVerifiedContract": true
+        },
+        {
+          "name": "exec_606BaXt(bytes[])",
+          "filtered": false,
+          "hasVerifiedContract": true
+        },
+        {
+          "name": "initialize008joDSK(string,string,uint256,bytes32,bytes32,bytes)",
+          "filtered": false,
+          "hasVerifiedContract": true
+        },
+        {
+          "name": "selfCallExecutePay1395256087()",
+          "filtered": false,
+          "hasVerifiedContract": true
+        },
+        {
+          "name": "relay1GsWnfsIQROy()",
+          "filtered": false,
+          "hasVerifiedContract": true
+        },
+        {
+          "name": "f00000001_grffjzz()",
+          "filtered": false,
+          "hasVerifiedContract": false
+        },
+        {
+          "name": "f00000001__nlcyrcy()",
+          "filtered": false,
+          "hasVerifiedContract": false
+        },
+        {
+          "name": "f00000001_ydaggxvh()",
+          "filtered": false,
+          "hasVerifiedContract": false
+        },
+        {
+          "name": "f00000001_ekicjzwq()",
+          "filtered": false,
+          "hasVerifiedContract": false
+        },
+        {
+          "name": "f00000001_dccfvklc()",
+          "filtered": false,
+          "hasVerifiedContract": false
+        },
+        {
+          "name": "f00000001_cimxjhnx()",
+          "filtered": false,
+          "hasVerifiedContract": false
+        },
+        {
+          "name": "f00000001_bdmvamqo()",
+          "filtered": false,
+          "hasVerifiedContract": false
+        },
+        {
+          "name": "f562256263()",
+          "filtered": false,
+          "hasVerifiedContract": false
+        },
+        {
+          "name": "account_info_rotate_tine(uint256)",
+          "filtered": false,
+          "hasVerifiedContract": false
+        },
+        {
+          "name": "selfCallExecute328974934()",
+          "filtered": false,
+          "hasVerifiedContract": false
+        },
+        {
+          "name": "forwarded_2374103877(bytes32)",
+          "filtered": false,
+          "hasVerifiedContract": true
+        },
+        {
+          "name": "auto_mint2RIMXF1(address,address[],bytes,uint256)",
+          "filtered": false,
+          "hasVerifiedContract": true
+        }
+      ]
+    },
+    "event": {}
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "address-vitalik-eth-eip7702",
+  "input": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+  "expectedLevel": "yellow",
+  "expectedReasonCodes": ["POISONING_NO_USER", "EIP7702_DELEGATED"],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). Well-known clean address (vitalik.eth). NOTE: TODAY it is an EOA with an EIP-7702 delegation: eth_getCode = 0xef0100 + 5a7fc11397e9a8ad41bf10bf13f22b0a63f96f6d (AmbireAccount7702). That is why Blockscout returns is_contract=true, proxy_type='eip7702', is_verified=true, creator/creation null, and GoPlus address_security contract_address='1' (the rest '0'). No flags: Blockscout is_scam=false, reputation 'ok', ens 'vitalik.eth'. The AmbireAccount7702 delegate is verified (Sourcify exact_match) and was deployed on 2025-04-23 (> 7 days). Without userAddress: poisoning and first interaction do not apply (skipped). GREEN if the engine treats 7702 as an EOA (or evaluates the delegate); if it treats it as a 'contract with no creation date' it would wrongly drop to yellow. Do not use vitalik.eth in marketing (no-affiliation rule). Re-verified 2026-09-30 (engine rule, not a source change): a pasted address with no userAddress is a value recipient, so poisoning now emits POISONING_NO_USER (warn: it could not be compared with any history) instead of being skipped; the expected level is therefore YELLOW, and the EIP-7702 delegate is still treated as an EOA (EIP7702_DELEGATED, ok; no CONTRACT_NEW or CONTRACT_UNVERIFIED). The recorded responses show no flags from GoPlus or Blockscout.",
+  "sources": [
+    "https://eth.blockscout.com/address/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+    "https://api.gopluslabs.io/api/v1/address_security/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045?chain_id=1",
+    "https://sourcify.dev/server/v2/contract/1/0x5A7FC11397E9a8AD41BF10bf13F22B0a63f96f6d",
+    "https://eth.blockscout.com/address/0x5A7FC11397E9a8AD41BF10bf13F22B0a63f96f6d"
+  ]
+}

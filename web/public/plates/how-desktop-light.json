@@ -1,0 +1,74 @@
+{
+  "plate": "how-desktop.png",
+  "size": [
+    2688,
+    1520
+  ],
+  "screen_px": [
+    2048.0,
+    1100.0
+  ],
+  "css": {
+    "--sx": "76.19%",
+    "--sy": "72.37%",
+    "--wx": "48.4%",
+    "--wy": "42.9%"
+  },
+  "mask_size": [
+    672,
+    380
+  ],
+  "mask_coverage": 0.0546,
+  "params": {
+    "mode": "neutral",
+    "unlit": null,
+    "screen": [
+      2048.0,
+      1100.0
+    ],
+    "screen_box": [
+      1883.0,
+      1013.0,
+      2214.0,
+      1187.0
+    ],
+    "roi": [
+      2092.0,
+      1230.0,
+      1258.0,
+      522.0
+    ],
+    "exclude": null,
+    "open": 7,
+    "blur": 14.0,
+    "feather": 18.0,
+    "gamma": 0.5,
+    "lo_pct": 5.0,
+    "hi_pct": 90.0,
+    "scale": 0.25,
+    "name": "how-desktop",
+    "bake_neutral": null
+  },
+  "layers": {
+    "sky": {
+      "color": "#7fbcff",
+      "mul": 1.0,
+      "glow": 0.22
+    },
+    "amber": {
+      "color": "#FFB02E",
+      "mul": 1.0,
+      "glow": 0.3
+    },
+    "red": {
+      "color": "#FF3B2F",
+      "mul": 1.0,
+      "glow": 0.28
+    },
+    "emerald": {
+      "color": "#3CE68C",
+      "mul": 0.85,
+      "glow": 0.18
+    }
+  }
+}

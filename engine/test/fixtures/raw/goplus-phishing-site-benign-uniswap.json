@@ -1,0 +1,8 @@
+{
+  "code": 1,
+  "message": "OK",
+  "result": {
+    "website_contract_security": [],
+    "phishing_site": 0
+  }
+}

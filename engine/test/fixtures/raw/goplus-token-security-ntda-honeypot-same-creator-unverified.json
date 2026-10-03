@@ -1,0 +1,57 @@
+{
+  "code": 1,
+  "message": "OK",
+  "result": {
+    "0x210e1d56f822a631e09e6514393e6508cce4360b": {
+      "buy_tax": "",
+      "cannot_buy": "0",
+      "creator_address": "0xf420fce2b0a801af4cd482ebb7ef46cf03a1c8bd",
+      "creator_balance": "0",
+      "creator_percent": "0.000000",
+      "dex": [
+        {
+          "liquidity_type": "UniV2",
+          "name": "UniswapV2",
+          "liquidity": "2.22009984",
+          "pool_fee": "0.0030",
+          "pair": "0xc58e977526760fdfca08c12f59095b9f011964c7"
+        }
+      ],
+      "holder_count": "3",
+      "holders": [
+        {
+          "address": "0xc58e977526760fdfca08c12f59095b9f011964c7",
+          "tag": "UniswapV2",
+          "is_contract": 1,
+          "balance": "4838879.052774320881075037",
+          "percent": "0.483887905277432088",
+          "is_locked": 0
+        },
+        {
+          "address": "0xbc28564c2a5c50131814ad90830c35931a0e0972",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "4508749.921136446652740011",
+          "percent": "0.450874992113644665",
+          "is_locked": 0
+        },
+        {
+          "address": "0x7b4e9914c7f8189ce89f1e24a7f5729e936b01cb",
+          "tag": "",
+          "is_contract": 1,
+          "balance": "652371.026089232466184952",
+          "percent": "0.065237102608923246",
+          "is_locked": 0
+        }
+      ],
+      "honeypot_with_same_creator": "1",
+      "is_in_dex": "1",
+      "is_open_source": "0",
+      "owner_address": "",
+      "sell_tax": "",
+      "token_name": "NTDA",
+      "token_symbol": "NTDA",
+      "total_supply": "10000000"
+    }
+  }
+}

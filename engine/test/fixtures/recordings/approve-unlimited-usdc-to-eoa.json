@@ -1,0 +1,2085 @@
+{
+ "case": "approve-unlimited-usdc-to-eoa",
+ "recordedAt": "2026-09-30T20:51:40.153Z",
+ "entries": {
+  "GET https://eth.blockscout.com/api/v2/tokens/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+   "status": 200,
+   "body": {
+    "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "circulating_market_cap": "74191680125.63536",
+    "circulating_supply": null,
+    "decimals": "6",
+    "exchange_rate": "0.99982",
+    "holders_count": "9402146",
+    "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+    "name": "USDC",
+    "reputation": "ok",
+    "symbol": "USDC",
+    "total_supply": "49339297591731502",
+    "type": "ERC-20",
+    "volume_24h": "17700092839.069504"
+   }
+  },
+  "POST https://ethereum-rpc.publicnode.com {\"id\":1,\"jsonrpc\":\"2.0\",\"method\":\"eth_simulateV1\",\"params\":[{\"blockStateCalls\":[{\"calls\":[{\"data\":\"0x095ea7b30000000000000000000000003bfa437f9d5c0318ca78668836a15f528497d76fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\",\"from\":\"0x72fc85bab23e46c2434a91e7b5250c959e667e6f\",\"to\":\"0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48\",\"value\":\"0x0\"}]}],\"traceTransfers\":true,\"validation\":false},\"latest\"]}": {
+   "status": 200,
+   "body": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": [
+     {
+      "hash": "0x7d5fcf5a3a9b078e4c6f558b0bec2a02dd445fbc4ce5e0726a3f745b108e53da",
+      "parentHash": "0xe44e9ddb50e84f32f3c056fd1d7a3fcb0289686074d53e6e59ea201ab9db3af8",
+      "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+      "miner": "0x396343362be2a4da1ce0c1c210945346fb82aa49",
+      "stateRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "transactionsRoot": "0x44bfc79e3e847ca6125e53a94192717219ec581b94a9841885cc27c0fd023d9d",
+      "receiptsRoot": "0xf3e7a5b3fc9d00f888df5c92e530473a3c8325aaadb03677d1cae612e26112c1",
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000200000000000000000000008000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000001020000000000000000000000000000010000000000000000000000020000000000200000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000",
+      "difficulty": "0x0",
+      "number": "0x18e2502",
+      "gasLimit": "0x3938700",
+      "gasUsed": "0xda62",
+      "timestamp": "0x6abd7663",
+      "extraData": "0xe29ca82051756173617220287175617361722e77696e2920e29ca8",
+      "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "nonce": "0x0000000000000000",
+      "baseFeePerGas": "0x0",
+      "withdrawalsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+      "blobGasUsed": "0x0",
+      "excessBlobGas": "0xb8ea1b3",
+      "parentBeaconBlockRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "requestsHash": "0xe3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": "0x2f8",
+      "uncles": [],
+      "transactions": [
+       "0x5fed21fcae67e20d0493a91d851069aba1359851470a87d36cd0b26622dc7608"
+      ],
+      "withdrawals": [],
+      "calls": [
+       {
+        "returnData": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "logs": [
+         {
+          "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "topics": [
+           "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+           "0x00000000000000000000000072fc85bab23e46c2434a91e7b5250c959e667e6f",
+           "0x0000000000000000000000003bfa437f9d5c0318ca78668836a15f528497d76f"
+          ],
+          "data": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+          "blockHash": "0x7d5fcf5a3a9b078e4c6f558b0bec2a02dd445fbc4ce5e0726a3f745b108e53da",
+          "blockNumber": "0x18e2502",
+          "blockTimestamp": "0x6abd7663",
+          "transactionHash": "0x5fed21fcae67e20d0493a91d851069aba1359851470a87d36cd0b26622dc7608",
+          "transactionIndex": "0x0",
+          "logIndex": "0x0",
+          "removed": false
+         }
+        ],
+        "gasUsed": "0xda62",
+        "maxUsedGas": "0xda62",
+        "status": "0x1"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "GET https://metadata.services.blockscout.com/api/v1/metadata?addresses=0x3bfa437f9d5c0318ca78668836a15f528497d76f,0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&chainId=1": {
+   "status": 200,
+   "body": {
+    "addresses": {
+     "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48": {
+      "tags": [
+       {
+        "slug": "usdc-token-1",
+        "name": "USDC Token",
+        "tagType": "name",
+        "ordinal": 10,
+        "meta": "{\"projectName\":\"Circle\",\"tagIcon\":\"https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694\",\"tagIcon \":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"tagUrl\":\"https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390\",\"textColor\":\"#C163D4\",\"tokenAttributes\":\"{\\\"logo_url\\\":\\\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\\\",\\\"token_symbol\\\":\\\"USDC\\\",\\\"token_name\\\":\\\"USD Coin\\\",\\\"decimals\\\":6}\",\"tooltipAttribution\":\"https://www.openlabelsinitiative.org?utm_source=blockscout\",\"tooltipAttributionIcon\":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"tooltipDescription\":\"USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.\",\"tooltipUrl\":\"https://www.circle.com/en/usdc\"}"
+       },
+       {
+        "slug": "token-contract",
+        "name": "Token Contract",
+        "tagType": "generic",
+        "ordinal": 0,
+        "meta": "{}"
+       },
+       {
+        "slug": "stablecoin",
+        "name": "Stablecoin",
+        "tagType": "generic",
+        "ordinal": 0,
+        "meta": "{}"
+       },
+       {
+        "slug": "usdc",
+        "name": "USDC",
+        "tagType": "generic",
+        "ordinal": 0,
+        "meta": "{}"
+       },
+       {
+        "slug": "usd-coin",
+        "name": "USD Coin",
+        "tagType": "name",
+        "ordinal": 0,
+        "meta": "{\"tagIcon \":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"textColor\":\"#C163D4\",\"tooltipAttribution\":\"https://www.openlabelsinitiative.org?utm_source=blockscout\",\"tooltipAttributionIcon\":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg\",\"tooltipDescription\":\"Provided by OLI\"}"
+       },
+       {
+        "slug": "circle",
+        "name": "Circle",
+        "tagType": "protocol",
+        "ordinal": 0,
+        "meta": "{\"appID\":\"circle\",\"appMarketplaceURL\":\"https://app.circle.com/get-started\",\"bgColor\":\"#2775ca\",\"tagIcon\":\"https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png\",\"textColor\":\"#FFFFFF\",\"tooltipUrl\":\"https://www.circle.com/\"}"
+       },
+       {
+        "slug": "credible-token",
+        "name": "Credible token",
+        "tagType": "token_reputation",
+        "ordinal": 0,
+        "meta": "{\"data\":\"ok\"}"
+       }
+      ]
+     }
+    }
+   }
+  },
+  "GET https://eth.blockscout.com/api/v2/addresses/0x72fc85bab23e46c2434a91e7b5250c959e667e6f/transactions?filter=from": {
+   "status": 200,
+   "body": {
+    "items": [
+     {
+      "priority_fee": "2423872600247",
+      "raw_input": "0x3593564c000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000006abd6f8900000000000000000000000000000000000000000000000000000000000000020a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001c00000000000000000000000000000000000000000000000000000000000000160000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000ffffffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000000000006ae4f557000000000000000000000000000000000000000000000000000000000000000000000000000000000000000023617e59a5925b2a4bf75d73ff6711cd0b29de85000000000000000000000000000000000000000000000000000000006abd6f5f00000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000000416ace3eb7f20ff2551598b605467bcd491de3fdb92f6c5836b3cfa506995e92f91a28949fee4fa3ed6ac7f205aed829f99081db99e20cf85fb0b6f5a88d4c6ea41b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000000000000000000000000072fc85bab23e46c2434a91e7b5250c959e667e6f0000000000000000000000000000000000000000000000000000000020c8558000000000000000000000000000000000000000000000008438d4e737ed7fe2f100000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000000042a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000064c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2002710aea46a60368a7bd060eec7df8cba43b7ef41ad850000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000756e6978000001a0f3df933d80009a190000000c0100",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x020419afcdb33f575ba84361e3125b832c11a2d22fc187132a87a4b4baa02f8e",
+      "max_fee_per_gas": "444589122",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "89456887645160",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 293,
+      "position": 309,
+      "max_priority_fee_per_gas": "9921421",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "0",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "244307",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x23617e59A5925b2A4Bf75d73ff6711cD0b29De85",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": null,
+       "name": "UniversalRouter",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "execute",
+      "fee": {
+       "type": "actual",
+       "value": "91880760245407"
+      },
+      "gas_limit": "307227",
+      "gas_price": "376087301",
+      "decoded_input": {
+       "method_call": "execute(bytes commands, bytes[] inputs, uint256 deadline)",
+       "method_id": "3593564c",
+       "parameters": [
+        {
+         "name": "commands",
+         "type": "bytes",
+         "value": "0x0a00"
+        },
+        {
+         "name": "inputs",
+         "type": "bytes[]",
+         "value": [
+          "0x000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000ffffffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000000000006ae4f557000000000000000000000000000000000000000000000000000000000000000000000000000000000000000023617e59a5925b2a4bf75d73ff6711cd0b29de85000000000000000000000000000000000000000000000000000000006abd6f5f00000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000000416ace3eb7f20ff2551598b605467bcd491de3fdb92f6c5836b3cfa506995e92f91a28949fee4fa3ed6ac7f205aed829f99081db99e20cf85fb0b6f5a88d4c6ea41b00000000000000000000000000000000000000000000000000000000000000",
+          "0x00000000000000000000000072fc85bab23e46c2434a91e7b5250c959e667e6f0000000000000000000000000000000000000000000000000000000020c8558000000000000000000000000000000000000000000000008438d4e737ed7fe2f100000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000000042a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000064c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2002710aea46a60368a7bd060eec7df8cba43b7ef41ad850000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+         ]
+        },
+        {
+         "name": "deadline",
+         "type": "uint256",
+         "value": "1790799753"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "366165880",
+      "timestamp": "2026-09-30T19:52:47.000000Z",
+      "nonce": 5,
+      "historic_exchange_rate": null,
+      "transaction_types": [
+       "contract_call",
+       "token_transfer"
+      ],
+      "exchange_rate": "2679.43",
+      "block_number": 26092508,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "565146865920",
+      "raw_input": "0x095ea7b3000000000000000000000000000000000022d473030f116ddee9f6b43ac78ba30000000000000000000000000000000000000000000000000000000026c428ab",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0xe550952489961ca44bab854d44e546bbf770a224d486518618afe346d68b30e5",
+      "max_fee_per_gas": "401388283",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "20908232012850",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 295,
+      "position": 155,
+      "max_priority_fee_per_gas": "10180992",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "0",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "55510",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+       "implementations": [
+        {
+         "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+         "name": "FiatTokenV2_2"
+        }
+       ],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "Circle",
+           "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+           "textColor": "#C163D4",
+           "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.",
+           "tooltipUrl": "https://www.circle.com/en/usdc"
+          },
+          "name": "USDC Token",
+          "ordinal": 10,
+          "slug": "usdc-token-1",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Token Contract",
+          "ordinal": 0,
+          "slug": "token-contract",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "Stablecoin",
+          "ordinal": 0,
+          "slug": "stablecoin",
+          "tagType": "generic"
+         },
+         {
+          "meta": {},
+          "name": "USDC",
+          "ordinal": 0,
+          "slug": "usdc",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "USD Coin",
+          "ordinal": 0,
+          "slug": "usd-coin",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "appID": "circle",
+           "appMarketplaceURL": "https://app.circle.com/get-started",
+           "bgColor": "#2775ca",
+           "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+           "textColor": "#FFFFFF",
+           "tooltipUrl": "https://www.circle.com/"
+          },
+          "name": "Circle",
+          "ordinal": 0,
+          "slug": "circle",
+          "tagType": "protocol"
+         },
+         {
+          "meta": {
+           "data": "ok"
+          },
+          "name": "Credible token",
+          "ordinal": 0,
+          "slug": "credible-token",
+          "tagType": "token_reputation"
+         }
+        ]
+       },
+       "name": "USDC",
+       "private_tags": [],
+       "proxy_type": "eip1967_oz",
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "approve",
+      "fee": {
+       "type": "actual",
+       "value": "21473378878770"
+      },
+      "gas_limit": "65147",
+      "gas_price": "386838027",
+      "decoded_input": {
+       "method_call": "approve(address spender, uint256 value)",
+       "method_id": "095ea7b3",
+       "parameters": [
+        {
+         "name": "spender",
+         "type": "address",
+         "value": "0x000000000022D473030F116dDEE9F6B43aC78BA3"
+        },
+        {
+         "name": "value",
+         "type": "uint256",
+         "value": "650389675"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "376657035",
+      "timestamp": "2026-09-30T19:52:23.000000Z",
+      "nonce": 4,
+      "historic_exchange_rate": null,
+      "transaction_types": [
+       "contract_call"
+      ],
+      "exchange_rate": "2679.43",
+      "block_number": 26092506,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "597787291254",
+      "raw_input": "0x3593564c000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000006abd6c7800000000000000000000000000000000000000000000000000000000000000030b080400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000002400000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000071afd498d0000000000000000000000000000000000000000000000000000000000000000016000000000000000000000000072fc85bab23e46c2434a91e7b5250c959e667e6f80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014edf8bcad99df0df00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000000003000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000002e1e15c44ffe4df6a0cb7371cd00d5028e571d14000000000000000000000000aea46a60368a7bd060eec7df8cba43b7ef41ad8500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000000000000000aea46a60368a7bd060eec7df8cba43b7ef41ad8500000000000000000000000072fc85bab23e46c2434a91e7b5250c959e667e6f0000000000000000000000000000000000000000000000000000000000000000756e6978000001a0f3d430728000a30b0000000c0200",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x67cfee32f4471374d8308f02f045a78751079ece90090143630cd8a63512c49b",
+      "max_fee_per_gas": "371118850",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "51249824430838",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 356,
+      "position": 215,
+      "max_priority_fee_per_gas": "3495873",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "2000000000000000",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "170998",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x23617e59A5925b2A4Bf75d73ff6711cD0b29De85",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": null,
+       "name": "UniversalRouter",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "execute",
+      "fee": {
+       "type": "actual",
+       "value": "51847611722092"
+      },
+      "gas_limit": "227483",
+      "gas_price": "303205954",
+      "decoded_input": {
+       "method_call": "execute(bytes commands, bytes[] inputs, uint256 deadline)",
+       "method_id": "3593564c",
+       "parameters": [
+        {
+         "name": "commands",
+         "type": "bytes",
+         "value": "0x0b0804"
+        },
+        {
+         "name": "inputs",
+         "type": "bytes[]",
+         "value": [
+          "0x000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000071afd498d0000",
+          "0x00000000000000000000000072fc85bab23e46c2434a91e7b5250c959e667e6f80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014edf8bcad99df0df00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000000003000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000002e1e15c44ffe4df6a0cb7371cd00d5028e571d14000000000000000000000000aea46a60368a7bd060eec7df8cba43b7ef41ad850000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000aea46a60368a7bd060eec7df8cba43b7ef41ad8500000000000000000000000072fc85bab23e46c2434a91e7b5250c959e667e6f0000000000000000000000000000000000000000000000000000000000000000"
+         ]
+        },
+        {
+         "name": "deadline",
+         "type": "uint256",
+         "value": "1790798968"
+        }
+       ]
+      },
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "299710081",
+      "timestamp": "2026-09-30T19:39:59.000000Z",
+      "nonce": 3,
+      "historic_exchange_rate": null,
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call",
+       "token_transfer"
+      ],
+      "exchange_rate": "2679.43",
+      "block_number": 26092445,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "21000000000000",
+      "raw_input": "0x",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x1363817a9cde7da576f773007c762e5a43a0943cf3733333cb7f5c76766d4218",
+      "max_fee_per_gas": "1087083433",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "1354284120000",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 276503,
+      "position": 16,
+      "max_priority_fee_per_gas": "1000000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "102223748890860572",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "21000",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x31444E58112aC11494386f5fceC8c976AE6C787a",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": null,
+      "fee": {
+       "type": "actual",
+       "value": "22354284120000"
+      },
+      "gas_limit": "21000",
+      "gas_price": "1064489720",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "64489720",
+      "timestamp": "2026-08-23T07:15:47.000000Z",
+      "nonce": 2,
+      "historic_exchange_rate": "2462.403924751607",
+      "transaction_types": [
+       "coin_transfer"
+      ],
+      "exchange_rate": "2679.43",
+      "block_number": 25816298,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "186086000000000",
+      "raw_input": "0x2213bc0b0000000000000000000000000889e9327b98d7d1be3c301a4585ff3330502c9a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003c87b2db3e8b00000000000000000000000000889e9327b98d7d1be3c301a4585ff3330502c9a00000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000006c41fff991f00000000000000000000000072fc85bab23e46c2434a91e7b5250c959e667e6f000000000000000000000000aea46a60368a7bd060eec7df8cba43b7ef41ad85000000000000000000000000000000000000000000000000d97b5d74135b178000000000000000000000000000000000000000000000000000000000000000a099fb1d1bb882e696a65517ac0f15b10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000500000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001200000000000000000000000000000000000000000000000000000000000000220000000000000000000000000000000000000000000000000000000000000036000000000000000000000000000000000000000000000000000000000000005400000000000000000000000000000000000000000000000000000000000000044bd01c226000000000000000000000000000000000000000000000000000000006a8a9df40000000000000000000000000000000000000000000000000003c87b2db3e8b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c438c9c147000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000000000000000000000000000000000000000000000000046000000000000000000000000ad01c20d5886137e056775af56915de824c8fce5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010438c9c147000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000000000000000000000000000000000000000000000002710000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000024d0e30db00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a4d92aadfb0000000000000000000000000889e9327b98d7d1be3c301a4585ff3330502c9a000000000000000000000000aea46a60368a7bd060eec7df8cba43b7ef41ad85000000000000000000000000000000000000000000000000e28b2c0394298dd07f8059df618649e49c804b9858e5973b7bb4feb5889a08e7c3d65902e650348f000000000000000000000000000000000000000000000000000000006a8a9d04000000000000000000000000bee3211ab312a8d065c4fef0247448e17a8da0000000000000000000000000000000000000000000000000000000000000000120000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000003c1b3a907e5c70000000000000000000000000000000000000000000000000000000000000041b5d071a814f702e925fcd7757c8e8ecb93d1af4a2d757f7a850e0b4c8c887ec2302a903c6623b4634369919d973be2bcbb503268ac723bf01e0212530cd8d79d1b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008434ee90ca000000000000000000000000f5c4f3dc02c3fb9279495a8fef7b0741da956157000000000000000000000000aea46a60368a7bd060eec7df8cba43b7ef41ad85000000000000000000000000000000000000000000000000e2e9c6da7f32a37c00000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x2d659196627a9669f50e5ef007559d55f7d55de768b011cdfb7e38c2abcf1148",
+      "max_fee_per_gas": "1078066085",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "10939148690442",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 276530,
+      "position": 104,
+      "max_priority_fee_per_gas": "1000000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "1064856303429808",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "186086",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x0000000000001fF3684f28c67538d4D072C22734",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI",
+           "tooltipUrl": "https://0x.org/"
+          },
+          "name": "0x: Allowance Holder",
+          "ordinal": 10,
+          "slug": "0x-allowance-holder",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "0x Protocol",
+          "ordinal": 0,
+          "slug": "0x-protocol",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "0x",
+           "appID": "0x"
+          },
+          "name": "0x",
+          "ordinal": 0,
+          "slug": "0x",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "AllowanceHolder",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "0x2213bc0b",
+      "fee": {
+       "type": "actual",
+       "value": "197025148690442"
+      },
+      "gas_limit": "229243",
+      "gas_price": "1058785447",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "58785447",
+      "timestamp": "2026-08-23T07:10:11.000000Z",
+      "nonce": 1,
+      "historic_exchange_rate": "2462.403924751607",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call",
+       "token_transfer"
+      ],
+      "exchange_rate": "2679.43",
+      "block_number": 25816271,
+      "has_error_in_internal_transactions": false
+     },
+     {
+      "priority_fee": "183242000000000",
+      "raw_input": "0x2213bc0b0000000000000000000000007f54f05635d15cde17a49502fedb9d1803a3be8a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d529ae9e8600000000000000000000000000007f54f05635d15cde17a49502fedb9d1803a3be8a00000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000006c41fff991f00000000000000000000000072fc85bab23e46c2434a91e7b5250c959e667e6f000000000000000000000000aea46a60368a7bd060eec7df8cba43b7ef41ad8500000000000000000000000000000000000000000000001cf65f2c5a5512d47000000000000000000000000000000000000000000000000000000000000000a0856a4c7ac6ba3f97d4d67e2a0f15b10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000500000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001200000000000000000000000000000000000000000000000000000000000000220000000000000000000000000000000000000000000000000000000000000036000000000000000000000000000000000000000000000000000000000000005400000000000000000000000000000000000000000000000000000000000000044bd01c226000000000000000000000000000000000000000000000000000000006a45508c00000000000000000000000000000000000000000000000000d529ae9e8600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c438c9c147000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000000000000000000000000000000000000000000000000046000000000000000000000000ad01c20d5886137e056775af56915de824c8fce5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010438c9c147000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0000000000000000000000000000000000000000000000000000000000002710000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000024d0e30db00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a4d92aadfb0000000000000000000000007f54f05635d15cde17a49502fedb9d1803a3be8a000000000000000000000000aea46a60368a7bd060eec7df8cba43b7ef41ad8500000000000000000000000000000000000000000000001d4143b0adfe038140b955b0551779ca2ebc95f35b5447db2a2b20ea7b4df1674a551dfbcb2cdf9355000000000000000000000000000000000000000000000000000000006a454f9d000000000000000000000000bee3211ab312a8d065c4fef0247448e17a8da0000000000000000000000000000000000000000000000000000000000000000120000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000000d3abb1bfb7c000000000000000000000000000000000000000000000000000000000000000004110c426eeed7808bdfcbe21cdb76b6988297c0c71419d1788b1880063fd180f6061c2a4dc044e82111ce931477c1dccf6509205211311bbe75c28cfcb612852cf1b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008434ee90ca000000000000000000000000f5c4f3dc02c3fb9279495a8fef7b0741da956157000000000000000000000000aea46a60368a7bd060eec7df8cba43b7ef41ad8500000000000000000000000000000000000000000000001d4143b0adfe03814000000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "is_pending_update": false,
+      "result": "success",
+      "hash": "0x5949168426321629350c16f237b00f4f401c5739a63f97565661b78889328ca1",
+      "max_fee_per_gas": "2014701517",
+      "revert_reason": null,
+      "confirmation_duration": [
+       0,
+       12000
+      ],
+      "transaction_burnt_fee": "139627657019178",
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 653621,
+      "position": 136,
+      "max_priority_fee_per_gas": "1000000000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "60000000000000000",
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "gas_used": "183242",
+      "status": "ok",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x0000000000001fF3684f28c67538d4D072C22734",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI",
+           "tooltipUrl": "https://0x.org/"
+          },
+          "name": "0x: Allowance Holder",
+          "ordinal": 10,
+          "slug": "0x-allowance-holder",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "0x Protocol",
+          "ordinal": 0,
+          "slug": "0x-protocol",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "0x",
+           "appID": "0x"
+          },
+          "name": "0x",
+          "ordinal": 0,
+          "slug": "0x",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "AllowanceHolder",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "0x2213bc0b",
+      "fee": {
+       "type": "actual",
+       "value": "322869657019178"
+      },
+      "gas_limit": "248669",
+      "gas_price": "1761985009",
+      "decoded_input": null,
+      "fhe_operations_count": 0,
+      "token_transfers": null,
+      "base_fee_per_gas": "761985009",
+      "timestamp": "2026-07-01T17:33:23.000000Z",
+      "nonce": 0,
+      "historic_exchange_rate": "1608.254387223296",
+      "transaction_types": [
+       "coin_transfer",
+       "contract_call",
+       "token_transfer"
+      ],
+      "exchange_rate": "2679.43",
+      "block_number": 25439180,
+      "has_error_in_internal_transactions": false
+     }
+    ],
+    "next_page_params": null
+   }
+  },
+  "GET https://eth.blockscout.com/api/v2/addresses/0x72fc85bab23e46c2434a91e7b5250c959e667e6f/token-transfers?type=ERC-20": {
+   "status": 200,
+   "body": {
+    "items": [
+     {
+      "block_hash": "0x1697afd5bcf5f59652acf29e017d1a8d1b7655f22b6e18d31c3d7edf77263e62",
+      "block_number": 26092508,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x948b54A93f5aD1df6B8bFF6Dc249D99CA2EcA052",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipDescription": "Uniswap V3 pool to exchange between FET and WETH.",
+           "tooltipUrl": "https://info.uniswap.org/#/pools/0x948b54a93f5ad1df6b8bff6dc249d99ca2eca052"
+          },
+          "name": "Uniswap V3: FET 2",
+          "ordinal": 10,
+          "slug": "uniswap-v3-fet-2",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Liquidity Pool",
+          "ordinal": 0,
+          "slug": "liquidity-pool",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "UniswapV3Pool",
+          "ordinal": 0,
+          "slug": "uniswapv3pool",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Uniswap",
+           "appID": "uniswap",
+           "bgColor": "#FF007A",
+           "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+           "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+           "textColor": "#FFFFFF",
+           "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+           "tooltipTitle": "Uniswap",
+           "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+          },
+          "name": "Uniswap V3",
+          "ordinal": 0,
+          "slug": "uniswap-v3",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "UniswapV3Pool",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 687,
+      "method": "0x3593564c",
+      "timestamp": "2026-09-30T19:52:47.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xaea46A60368A7bD060eec7DF8CBa43b7EF41Ad85",
+       "circulating_market_cap": "513701365.1107253",
+       "circulating_supply": null,
+       "decimals": "18",
+       "exchange_rate": "0.222361",
+       "holders_count": "165233",
+       "icon_url": "https://assets.coingecko.com/coins/images/5681/small/ASI.png?1719827289",
+       "name": "Artificial Superintelligence Alliance",
+       "reputation": "ok",
+       "symbol": "FET",
+       "total_supply": "2714384546671999999999656122",
+       "type": "ERC-20",
+       "volume_24h": "155269827.84165937"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "18",
+       "value": "2441385022776743077841"
+      },
+      "transaction_hash": "0x020419afcdb33f575ba84361e3125b832c11a2d22fc187132a87a4b4baa02f8e",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0x1697afd5bcf5f59652acf29e017d1a8d1b7655f22b6e18d31c3d7edf77263e62",
+      "block_number": 26092508,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 685,
+      "method": "0x3593564c",
+      "timestamp": "2026-09-30T19:52:47.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0xE0554a476A092703abdB3Ef35c80e0D76d32939F",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipDescription": "Uniswap V3 pool to exchange between USDC and WETH.",
+           "tooltipUrl": "https://info.uniswap.org/#/pools/0xe0554a476a092703abdb3ef35c80e0d76d32939f"
+          },
+          "name": "Uniswap V3: USDC 4",
+          "ordinal": 10,
+          "slug": "uniswap-v3-usdc-4",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Liquidity Pool",
+          "ordinal": 0,
+          "slug": "liquidity-pool",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "UniswapV3Pool",
+          "ordinal": 0,
+          "slug": "uniswapv3pool",
+          "tagType": "name"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Uniswap",
+           "appID": "uniswap",
+           "bgColor": "#FF007A",
+           "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+           "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+           "textColor": "#FFFFFF",
+           "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+           "tooltipTitle": "Uniswap",
+           "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+          },
+          "name": "Uniswap V3",
+          "ordinal": 0,
+          "slug": "uniswap-v3",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "UniswapV3Pool",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+       "circulating_market_cap": "74191680125.63536",
+       "circulating_supply": null,
+       "decimals": "6",
+       "exchange_rate": "0.99982",
+       "holders_count": "9402146",
+       "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+       "name": "USDC",
+       "reputation": "ok",
+       "symbol": "USDC",
+       "total_supply": "49339297591731502",
+       "type": "ERC-20",
+       "volume_24h": "17700092839.069504"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "6",
+       "value": "550000000"
+      },
+      "transaction_hash": "0x020419afcdb33f575ba84361e3125b832c11a2d22fc187132a87a4b4baa02f8e",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0x5093d783bb47f09f315d83d26cb05f10e7f198ec942e9b77987dd273204bb531",
+      "block_number": 26092473,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0xEe7aE85f2Fe2239E27D9c1E23fFFe168D63b4055",
+       "implementations": [
+        {
+         "address_hash": "0xD206aC7fEf53d83ED4563E770b28Dba90D0D9eC8",
+         "name": "SingleOwnerMSCA"
+        }
+       ],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipUrl": "https://www.binance.com/en"
+          },
+          "name": "Binance: Hot Wallet 34",
+          "ordinal": 10,
+          "slug": "binance-hot-wallet-34",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Exchange",
+          "ordinal": 0,
+          "slug": "exchange",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "textColor": "#C163D4",
+           "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+           "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+           "tooltipDescription": "Provided by OLI"
+          },
+          "name": "StrategyExecutor",
+          "ordinal": 0,
+          "slug": "strategyexecutor",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Binance",
+          "ordinal": 0,
+          "slug": "binance",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": "ERC1967Proxy",
+       "private_tags": [],
+       "proxy_type": "eip1967",
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 447,
+      "method": "0xb61d27f6",
+      "timestamp": "2026-09-30T19:45:35.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+       "circulating_market_cap": "74191680125.63536",
+       "circulating_supply": null,
+       "decimals": "6",
+       "exchange_rate": "0.99982",
+       "holders_count": "9402146",
+       "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+       "name": "USDC",
+       "reputation": "ok",
+       "symbol": "USDC",
+       "total_supply": "49339297591731502",
+       "type": "ERC-20",
+       "volume_24h": "17700092839.069504"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "6",
+       "value": "650389675"
+      },
+      "transaction_hash": "0x7058c802f2b37d00cf59b44f28f8a092b8cbcdcaa098db952ed9c738bef33f53",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0x003a9aed2b49964e060ad8694bbd85325d54ae96122d4a203db7c85e986dc35e",
+      "block_number": 26092445,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x6C52b805A27e2bCf4E1DED6023904B5C7C53B8b9",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": null,
+       "name": "JamUniswapV2Pair",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 572,
+      "method": "0x3593564c",
+      "timestamp": "2026-09-30T19:39:59.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xaea46A60368A7bD060eec7DF8CBa43b7EF41Ad85",
+       "circulating_market_cap": "513701365.1107253",
+       "circulating_supply": null,
+       "decimals": "18",
+       "exchange_rate": "0.222361",
+       "holders_count": "165233",
+       "icon_url": "https://assets.coingecko.com/coins/images/5681/small/ASI.png?1719827289",
+       "name": "Artificial Superintelligence Alliance",
+       "reputation": "ok",
+       "symbol": "FET",
+       "total_supply": "2714384546671999999999656122",
+       "type": "ERC-20",
+       "volume_24h": "155269827.84165937"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "18",
+       "value": "24251416112387003263"
+      },
+      "transaction_hash": "0x67cfee32f4471374d8308f02f045a78751079ece90090143630cd8a63512c49b",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0xb45808f83eaa2cf9cab9a25c1cddfa83eb5ffffc3c3a09244662f950a73ddaa5",
+      "block_number": 25816271,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x0889e9327b98D7d1BE3C301A4585ff3330502c9A",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": null,
+       "name": "MainnetSettler",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 929,
+      "method": "0x2213bc0b",
+      "timestamp": "2026-08-23T07:10:11.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xaea46A60368A7bD060eec7DF8CBa43b7EF41Ad85",
+       "circulating_market_cap": "513701365.1107253",
+       "circulating_supply": null,
+       "decimals": "18",
+       "exchange_rate": "0.222361",
+       "holders_count": "165233",
+       "icon_url": "https://assets.coingecko.com/coins/images/5681/small/ASI.png?1719827289",
+       "name": "Artificial Superintelligence Alliance",
+       "reputation": "ok",
+       "symbol": "FET",
+       "total_supply": "2714384546671999999999656122",
+       "type": "ERC-20",
+       "volume_24h": "155269827.84165937"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "18",
+       "value": "16324189668216770000"
+      },
+      "transaction_hash": "0x2d659196627a9669f50e5ef007559d55f7d55de768b011cdfb7e38c2abcf1148",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0xa28c18829f07391fabe0dfd3c2cd3c05e88df3c3e20083c141cb132e1ab4acbd",
+      "block_number": 25710627,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x2a5d8F04dc38E0d4Ec145Ebc51D680547EA3AE2A",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": "Sphynx Cat",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 1079,
+      "method": "0x7a5ec28b",
+      "timestamp": "2026-08-08T13:45:35.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0x2a5d8F04dc38E0d4Ec145Ebc51D680547EA3AE2A",
+       "circulating_market_cap": null,
+       "circulating_supply": null,
+       "decimals": "18",
+       "exchange_rate": null,
+       "holders_count": "102520",
+       "icon_url": null,
+       "name": "Sphynx Cat",
+       "reputation": "ok",
+       "symbol": "CAT",
+       "total_supply": "5121494296000000000000000000",
+       "type": "ERC-20",
+       "volume_24h": null
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "18",
+       "value": "1000000000000000000"
+      },
+      "transaction_hash": "0xa6f43e350f40be90367347382b801c3e8c6e3e9b77804889abf874a85da7bec6",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0xe3f92196aedca7d022b3588f30528ed1a3010cf85ef4e745fed908ff8a142487",
+      "block_number": 25514382,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x16613999219F9b56BeDeDBf3722E44c4c2045300",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": "Bull Dog",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 1195,
+      "method": "0x3bd1df34",
+      "timestamp": "2026-07-12T05:14:47.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0x16613999219F9b56BeDeDBf3722E44c4c2045300",
+       "circulating_market_cap": null,
+       "circulating_supply": null,
+       "decimals": "18",
+       "exchange_rate": null,
+       "holders_count": "240094",
+       "icon_url": null,
+       "name": "Bull Dog",
+       "reputation": "ok",
+       "symbol": "DOG",
+       "total_supply": "5020390342000000000000000000",
+       "type": "ERC-20",
+       "volume_24h": null
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "18",
+       "value": "1000000000000000000"
+      },
+      "transaction_hash": "0xa7da1596d2180276309a7e14b97be11d849bc66fac7449897dc6abaf99d73ad7",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0x8bca9c35e4a920a52251d54bfe5df3f7411b5b00f7a65c01a500b94bb70604e4",
+      "block_number": 25500465,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0xf82d598Ce6fCe9F2d46f046FC46653e3284040Aa",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": "Crown Dog",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 1865,
+      "method": "0xe2496e77",
+      "timestamp": "2026-07-10T06:41:59.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xf82d598Ce6fCe9F2d46f046FC46653e3284040Aa",
+       "circulating_market_cap": null,
+       "circulating_supply": null,
+       "decimals": "18",
+       "exchange_rate": null,
+       "holders_count": "322898",
+       "icon_url": null,
+       "name": "Crown Dog",
+       "reputation": "ok",
+       "symbol": "DOG",
+       "total_supply": "5000592627000000000000000000",
+       "type": "ERC-20",
+       "volume_24h": null
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "18",
+       "value": "1000000000000000000"
+      },
+      "transaction_hash": "0x8c378e2f32eb1d74bd1e2a3ea4bd95b1c786526da532a4019cb8a45a1f9ecf2c",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0x65da1f29cb97c7f7ebfe8b4e5f7455e40589b4bb1b424935685d8184b51eb850",
+      "block_number": 25459300,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x379B526f2fF7B3f50C0B4F48EF6DDD224AdFbb90",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": "Cool Dog",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 1263,
+      "method": "0x90e181f1",
+      "timestamp": "2026-07-04T12:56:23.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0x379B526f2fF7B3f50C0B4F48EF6DDD224AdFbb90",
+       "circulating_market_cap": null,
+       "circulating_supply": null,
+       "decimals": "18",
+       "exchange_rate": null,
+       "holders_count": "86305",
+       "icon_url": null,
+       "name": "Cool Dog",
+       "reputation": "ok",
+       "symbol": "DOG",
+       "total_supply": "5001493336000000000000000000",
+       "type": "ERC-20",
+       "volume_24h": null
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "18",
+       "value": "1000000000000000000"
+      },
+      "transaction_hash": "0xcf67c0c1d3434e21753ec34631e66469ae7a122a3b999b61bb27c347868d79af",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0xae544a716cdfda03c82e1b3e3dc97b440b3690bacc718f397c6105c7b745b746",
+      "block_number": 25449966,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x53FdCa91fd33B9131B5CEADe42A3EdBd9B38edFf",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": "Royal Cat",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 2246,
+      "method": "0x2766ddda",
+      "timestamp": "2026-07-03T05:42:11.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0x53FdCa91fd33B9131B5CEADe42A3EdBd9B38edFf",
+       "circulating_market_cap": null,
+       "circulating_supply": null,
+       "decimals": "18",
+       "exchange_rate": null,
+       "holders_count": "1442189",
+       "icon_url": null,
+       "name": "Royal Cat",
+       "reputation": "ok",
+       "symbol": "CAT",
+       "total_supply": "5120308802000000000000000000",
+       "type": "ERC-20",
+       "volume_24h": null
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "18",
+       "value": "1000000000000000000"
+      },
+      "transaction_hash": "0x2472455c148fc6a7393626ae07a8906918afd984272dc7398bc1382f938c97de",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0xacf07f94582132adb8aef8f7fc22fa4e30764906f3f6db55606f9ae4159a4d41",
+      "block_number": 25439198,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x93228d328c9c74c2BFE9f97638bbb5ef322f2Bd5",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "tooltipUrl": "https://www.bybit.com/"
+          },
+          "name": "Bybit: Wallet 4",
+          "ordinal": 10,
+          "slug": "bybit-wallet-4",
+          "tagType": "name"
+         },
+         {
+          "meta": {},
+          "name": "Exchange",
+          "ordinal": 0,
+          "slug": "exchange",
+          "tagType": "generic"
+         },
+         {
+          "meta": {
+           "appActionButtonText": "Bybit Web3",
+           "appID": "bybit-web3"
+          },
+          "name": "Bybit",
+          "ordinal": 0,
+          "slug": "bybit",
+          "tagType": "protocol"
+         }
+        ]
+       },
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 132,
+      "method": "0xa9059cbb",
+      "timestamp": "2026-07-01T17:36:59.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+       "circulating_market_cap": "2697260271.64046",
+       "circulating_supply": null,
+       "decimals": "18",
+       "exchange_rate": "0.267346",
+       "holders_count": "101079",
+       "icon_url": "https://assets.coingecko.com/coins/images/36530/small/ethena.png?1711701436",
+       "name": "Ethena",
+       "reputation": "ok",
+       "symbol": "ENA",
+       "total_supply": "15000000000000000000000000000",
+       "type": "ERC-20",
+       "volume_24h": "760869559.0965704"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "18",
+       "value": "3215022250000000000000"
+      },
+      "transaction_hash": "0xdc29c46d2cd4932192a7bf76a30b42bd14b72d974e605fd2fae42767ee4b34cd",
+      "type": "token_transfer"
+     },
+     {
+      "block_hash": "0xb7251a796af5f6d42aa14210132576b8f40e2d22fccf63433ab0d9c34bbb75de",
+      "block_number": 25439180,
+      "from": {
+       "ens_domain_name": null,
+       "hash": "0x7f54F05635d15Cde17A49502fEdB9D1803A3Be8A",
+       "implementations": [],
+       "is_contract": true,
+       "is_scam": false,
+       "is_verified": true,
+       "metadata": {
+        "tags": [
+         {
+          "meta": {
+           "projectName": "0x v2",
+           "tagUrl": "https://scout-app.kleros.io/single-tags/0x996a267311a4f2eb67cf537fd209c71b2b456b4f04bdc7690f1c8069022515b9",
+           "tooltipDescription": "An official 0x v2's MainnetSettler(Matcha Taker) v1.12 contract on Ethereum",
+           "tooltipUrl": "https://0x.org/",
+           "verifiedDomains": [
+            "app.sumex.io"
+           ]
+          },
+          "name": "MainnetSettler(Matcha Taker) v1.12",
+          "ordinal": 10,
+          "slug": "mainnetsettlermatcha-taker-v112-1",
+          "tagType": "name"
+         }
+        ]
+       },
+       "name": "MainnetSettler",
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "log_index": 440,
+      "method": "0x2213bc0b",
+      "timestamp": "2026-07-01T17:33:23.000000Z",
+      "to": {
+       "ens_domain_name": null,
+       "hash": "0x72Fc85Bab23E46c2434A91e7B5250c959e667e6f",
+       "implementations": [],
+       "is_contract": false,
+       "is_scam": false,
+       "is_verified": false,
+       "metadata": null,
+       "name": null,
+       "private_tags": [],
+       "proxy_type": null,
+       "public_tags": [],
+       "reputation": "ok",
+       "watchlist_names": []
+      },
+      "token": {
+       "address_hash": "0xaea46A60368A7bD060eec7DF8CBa43b7EF41Ad85",
+       "circulating_market_cap": "513701365.1107253",
+       "circulating_supply": null,
+       "decimals": "18",
+       "exchange_rate": "0.222361",
+       "holders_count": "165233",
+       "icon_url": "https://assets.coingecko.com/coins/images/5681/small/ASI.png?1719827289",
+       "name": "Artificial Superintelligence Alliance",
+       "reputation": "ok",
+       "symbol": "FET",
+       "total_supply": "2714384546671999999999656122",
+       "type": "ERC-20",
+       "volume_24h": "155269827.84165937"
+      },
+      "token_type": "ERC-20",
+      "total": {
+       "decimals": "18",
+       "value": "539658374834819400000"
+      },
+      "transaction_hash": "0x5949168426321629350c16f237b00f4f401c5739a63f97565661b78889328ca1",
+      "type": "token_transfer"
+     }
+    ],
+    "next_page_params": null
+   }
+  },
+  "GET https://eth.blockscout.com/api/v2/addresses/0x3bfa437f9d5c0318ca78668836a15f528497d76f": {
+   "status": 200,
+   "body": {
+    "block_number_balance_updated_at": 26092781,
+    "coin_balance": "16186980942740567",
+    "creation_status": null,
+    "creation_transaction_hash": null,
+    "creator_address_hash": null,
+    "ens_domain_name": null,
+    "exchange_rate": "2679.03",
+    "has_beacon_chain_withdrawals": false,
+    "has_logs": false,
+    "has_token_transfers": true,
+    "has_tokens": true,
+    "has_validated_blocks": false,
+    "hash": "0x3BFA437F9d5c0318cA78668836a15F528497d76f",
+    "implementations": [],
+    "is_contract": false,
+    "is_scam": false,
+    "is_verified": false,
+    "metadata": null,
+    "name": null,
+    "private_tags": [],
+    "proxy_type": null,
+    "public_tags": [],
+    "reputation": "ok",
+    "token": null,
+    "watchlist_address_id": null,
+    "watchlist_names": []
+   }
+  },
+  "POST https://ethereum-rpc.publicnode.com {\"id\":1,\"jsonrpc\":\"2.0\",\"method\":\"eth_getCode\",\"params\":[\"0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48\",\"latest\"]}": {
+   "status": 200,
+   "body": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0x60806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633659cfe6146100775780634f1ef286146100ba5780635c60da1b146101085780638f2839701461015f578063f851a440146101a2575b6100756101f9565b005b34801561008357600080fd5b506100b8600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610213565b005b610106600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001908201803590602001919091929391929390505050610268565b005b34801561011457600080fd5b5061011d610308565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561016b57600080fd5b506101a0600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610360565b005b3480156101ae57600080fd5b506101b761051e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610201610576565b61021161020c610651565b610682565b565b61021b6106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561025c57610257816106d9565b610265565b6102646101f9565b5b50565b6102706106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156102fa576102ac836106d9565b3073ffffffffffffffffffffffffffffffffffffffff163483836040518083838082843782019150509250505060006040518083038185875af19250505015156102f557600080fd5b610303565b6103026101f9565b5b505050565b60006103126106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156103545761034d610651565b905061035d565b61035c6101f9565b5b90565b6103686106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561051257600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610466576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260368152602001807f43616e6e6f74206368616e6765207468652061646d696e206f6620612070726f81526020017f787920746f20746865207a65726f20616464726573730000000000000000000081525060400191505060405180910390fd5b7f7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f61048f6106a8565b82604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a161050d81610748565b61051b565b61051a6101f9565b5b50565b60006105286106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561056a576105636106a8565b9050610573565b6105726101f9565b5b90565b61057e6106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151515610647576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001807f43616e6e6f742063616c6c2066616c6c6261636b2066756e6374696f6e20667281526020017f6f6d207468652070726f78792061646d696e000000000000000000000000000081525060400191505060405180910390fd5b61064f610777565b565b6000807f7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c36001029050805491505090565b3660008037600080366000845af43d6000803e80600081146106a3573d6000f35b3d6000fd5b6000807f10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b6001029050805491505090565b6106e281610779565b7fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a150565b60007f10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b60010290508181555050565b565b60006107848261084b565b151561081e576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252603b8152602001807f43616e6e6f742073657420612070726f787920696d706c656d656e746174696f81526020017f6e20746f2061206e6f6e2d636f6e74726163742061646472657373000000000081525060400191505060405180910390fd5b7f7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c360010290508181555050565b600080823b9050600081119150509190505600a165627a7a72305820a4a547cfc7202c5acaaae74d428e988bc62ad5024eb0165532d3a8f91db4ed240029"
+   }
+  },
+  "POST https://ethereum-rpc.publicnode.com {\"id\":1,\"jsonrpc\":\"2.0\",\"method\":\"eth_getCode\",\"params\":[\"0x3bfa437f9d5c0318ca78668836a15f528497d76f\",\"latest\"]}": {
+   "status": 200,
+   "body": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": "0x"
+   }
+  },
+  "GET https://eth.blockscout.com/api/v2/addresses/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+   "status": 200,
+   "body": {
+    "block_number_balance_updated_at": 26092799,
+    "coin_balance": "0",
+    "creation_status": "success",
+    "creation_transaction_hash": "0xe7e0fe390354509cd08c9a0168536938600ddc552b3f7cb96030ebef62e75895",
+    "creator_address_hash": "0x95Ba4cF87D6723ad9C0Db21737D862bE80e93911",
+    "ens_domain_name": null,
+    "exchange_rate": "2679.43",
+    "has_beacon_chain_withdrawals": false,
+    "has_logs": true,
+    "has_token_transfers": true,
+    "has_tokens": true,
+    "has_validated_blocks": false,
+    "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "implementations": [
+     {
+      "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+      "name": "FiatTokenV2_2"
+     }
+    ],
+    "is_contract": true,
+    "is_scam": false,
+    "is_verified": true,
+    "metadata": null,
+    "name": "USDC",
+    "private_tags": [],
+    "proxy_type": "eip1967_oz",
+    "public_tags": [],
+    "reputation": "ok",
+    "token": {
+     "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+     "circulating_market_cap": "74191680125.63536",
+     "circulating_supply": null,
+     "decimals": "6",
+     "exchange_rate": "0.99982",
+     "holders_count": "9402146",
+     "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+     "name": "USDC",
+     "reputation": "ok",
+     "symbol": "USDC",
+     "total_supply": "49339297591731502",
+     "type": "ERC-20",
+     "volume_24h": "17700092839.069504"
+    },
+    "watchlist_address_id": null,
+    "watchlist_names": []
+   }
+  },
+  "GET https://api.gopluslabs.io/api/v1/address_security/0x3bfa437f9d5c0318ca78668836a15f528497d76f?chain_id=1": {
+   "status": 200,
+   "body": {
+    "code": 1,
+    "message": "ok",
+    "result": {
+     "cybercrime": "0",
+     "money_laundering": "0",
+     "number_of_malicious_contracts_created": "0",
+     "gas_abuse": "0",
+     "financial_crime": "0",
+     "darkweb_transactions": "0",
+     "reinit": "0",
+     "phishing_activities": "0",
+     "contract_address": "0",
+     "fake_kyc": "0",
+     "blacklist_doubt": "0",
+     "fake_standard_interface": "0",
+     "data_source": "",
+     "stealing_attack": "0",
+     "blackmail_activities": "0",
+     "sanctioned": "0",
+     "malicious_mining_activities": "0",
+     "mixer": "0",
+     "fake_token": "0",
+     "honeypot_related_address": "0"
+    }
+   }
+  },
+  "GET https://api.gopluslabs.io/api/v1/address_security/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48?chain_id=1": {
+   "status": 200,
+   "body": {
+    "code": 1,
+    "message": "ok",
+    "result": {
+     "cybercrime": "0",
+     "money_laundering": "0",
+     "number_of_malicious_contracts_created": "0",
+     "gas_abuse": "0",
+     "financial_crime": "0",
+     "darkweb_transactions": "0",
+     "reinit": "0",
+     "phishing_activities": "0",
+     "contract_address": "1",
+     "fake_kyc": "0",
+     "blacklist_doubt": "0",
+     "fake_standard_interface": "0",
+     "data_source": "",
+     "stealing_attack": "0",
+     "blackmail_activities": "0",
+     "sanctioned": "0",
+     "malicious_mining_activities": "0",
+     "mixer": "0",
+     "fake_token": "0",
+     "honeypot_related_address": "0"
+    }
+   }
+  },
+  "GET https://eth.blockscout.com/api/v2/transactions/0xe7e0fe390354509cd08c9a0168536938600ddc552b3f7cb96030ebef62e75895": {
+   "status": 200,
+   "body": {
+    "priority_fee": null,
+    "raw_input": "0x608060405234801561001057600080fd5b50604051602080610b2983398101806040528101908080519060200190929190505050808060405180807f6f72672e7a657070656c696e6f732e70726f78792e696d706c656d656e74617481526020017f696f6e000000000000000000000000000000000000000000000000000000000081525060230190506040518091039020600019167f7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c3600102600019161415156100c657fe5b6100de81610169640100000000026401000000009004565b5060405180807f6f72672e7a657070656c696e6f732e70726f78792e61646d696e000000000000815250601a0190506040518091039020600019167f10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b6001026000191614151561014a57fe5b6101623361024e640100000000026401000000009004565b5050610290565b60006101878261027d6401000000000261084b176401000000009004565b1515610221576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252603b8152602001807f43616e6e6f742073657420612070726f787920696d706c656d656e746174696f81526020017f6e20746f2061206e6f6e2d636f6e74726163742061646472657373000000000081525060400191505060405180910390fd5b7f7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c360010290508181555050565b60007f10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b60010290508181555050565b600080823b905060008111915050919050565b61088a8061029f6000396000f30060806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633659cfe6146100775780634f1ef286146100ba5780635c60da1b146101085780638f2839701461015f578063f851a440146101a2575b6100756101f9565b005b34801561008357600080fd5b506100b8600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610213565b005b610106600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001908201803590602001919091929391929390505050610268565b005b34801561011457600080fd5b5061011d610308565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561016b57600080fd5b506101a0600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610360565b005b3480156101ae57600080fd5b506101b761051e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610201610576565b61021161020c610651565b610682565b565b61021b6106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561025c57610257816106d9565b610265565b6102646101f9565b5b50565b6102706106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156102fa576102ac836106d9565b3073ffffffffffffffffffffffffffffffffffffffff163483836040518083838082843782019150509250505060006040518083038185875af19250505015156102f557600080fd5b610303565b6103026101f9565b5b505050565b60006103126106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156103545761034d610651565b905061035d565b61035c6101f9565b5b90565b6103686106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561051257600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610466576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260368152602001807f43616e6e6f74206368616e6765207468652061646d696e206f6620612070726f81526020017f787920746f20746865207a65726f20616464726573730000000000000000000081525060400191505060405180910390fd5b7f7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f61048f6106a8565b82604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a161050d81610748565b61051b565b61051a6101f9565b5b50565b60006105286106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561056a576105636106a8565b9050610573565b6105726101f9565b5b90565b61057e6106a8565b73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151515610647576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260328152602001807f43616e6e6f742063616c6c2066616c6c6261636b2066756e6374696f6e20667281526020017f6f6d207468652070726f78792061646d696e000000000000000000000000000081525060400191505060405180910390fd5b61064f610777565b565b6000807f7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c36001029050805491505090565b3660008037600080366000845af43d6000803e80600081146106a3573d6000f35b3d6000fd5b6000807f10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b6001029050805491505090565b6106e281610779565b7fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a150565b60007f10d6a54a4754c8869d6886b5f5d7fbfa5b4522237ea5c60d11bc4e7a1ff9390b60010290508181555050565b565b60006107848261084b565b151561081e576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252603b8152602001807f43616e6e6f742073657420612070726f787920696d706c656d656e746174696f81526020017f6e20746f2061206e6f6e2d636f6e74726163742061646472657373000000000081525060400191505060405180910390fd5b7f7050c9e0f4ca769c69bd3a8ef740bc37934f8e2c036e5a723fd8ee048ed3f8c360010290508181555050565b600080823b9050600081119150509190505600a165627a7a72305820a4a547cfc7202c5acaaae74d428e988bc62ad5024eb0165532d3a8f91db4ed2400290000000000000000000000000882477e7895bdc5cea7cb1552ed914ab157fe56",
+    "is_pending_update": false,
+    "result": "success",
+    "hash": "0xe7e0fe390354509cd08c9a0168536938600ddc552b3f7cb96030ebef62e75895",
+    "max_fee_per_gas": null,
+    "revert_reason": null,
+    "confirmation_duration": [
+     0,
+     12000
+    ],
+    "transaction_burnt_fee": null,
+    "type": null,
+    "token_transfers_overflow": false,
+    "confirmations": 20010337,
+    "position": 22,
+    "max_priority_fee_per_gas": null,
+    "transaction_tag": null,
+    "created_contract": {
+     "ens_domain_name": null,
+     "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+     "implementations": [
+      {
+       "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+       "name": "FiatTokenV2_2"
+      }
+     ],
+     "is_contract": true,
+     "is_scam": false,
+     "is_verified": true,
+     "metadata": {
+      "tags": [
+       {
+        "meta": {
+         "projectName": "Circle",
+         "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+         "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+         "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+         "textColor": "#C163D4",
+         "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+         "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+         "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+         "tooltipDescription": "USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.",
+         "tooltipUrl": "https://www.circle.com/en/usdc"
+        },
+        "name": "USDC Token",
+        "ordinal": 10,
+        "slug": "usdc-token-1",
+        "tagType": "name"
+       },
+       {
+        "meta": {},
+        "name": "Token Contract",
+        "ordinal": 0,
+        "slug": "token-contract",
+        "tagType": "generic"
+       },
+       {
+        "meta": {},
+        "name": "Stablecoin",
+        "ordinal": 0,
+        "slug": "stablecoin",
+        "tagType": "generic"
+       },
+       {
+        "meta": {},
+        "name": "USDC",
+        "ordinal": 0,
+        "slug": "usdc",
+        "tagType": "generic"
+       },
+       {
+        "meta": {
+         "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+         "textColor": "#C163D4",
+         "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+         "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+         "tooltipDescription": "Provided by OLI"
+        },
+        "name": "USD Coin",
+        "ordinal": 0,
+        "slug": "usd-coin",
+        "tagType": "name"
+       },
+       {
+        "meta": {
+         "appID": "circle",
+         "appMarketplaceURL": "https://app.circle.com/get-started",
+         "bgColor": "#2775ca",
+         "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+         "textColor": "#FFFFFF",
+         "tooltipUrl": "https://www.circle.com/"
+        },
+        "name": "Circle",
+        "ordinal": 0,
+        "slug": "circle",
+        "tagType": "protocol"
+       },
+       {
+        "meta": {
+         "data": "ok"
+        },
+        "name": "Credible token",
+        "ordinal": 0,
+        "slug": "credible-token",
+        "tagType": "token_reputation"
+       }
+      ]
+     },
+     "name": "USDC",
+     "private_tags": [],
+     "proxy_type": "eip1967_oz",
+     "public_tags": [],
+     "reputation": "ok",
+     "watchlist_names": []
+    },
+    "value": "0",
+    "from": {
+     "ens_domain_name": null,
+     "hash": "0x95Ba4cF87D6723ad9C0Db21737D862bE80e93911",
+     "implementations": [],
+     "is_contract": false,
+     "is_scam": false,
+     "is_verified": false,
+     "metadata": {
+      "tags": [
+       {
+        "meta": {
+         "tooltipDescription": "Deployer address for Circle.",
+         "tooltipUrl": "https://www.centre.io/"
+        },
+        "name": "Circle: Deployer",
+        "ordinal": 10,
+        "slug": "circle-deployer",
+        "tagType": "name"
+       },
+       {
+        "meta": {},
+        "name": "Contract Deployer",
+        "ordinal": 0,
+        "slug": "contract-deployer",
+        "tagType": "generic"
+       },
+       {
+        "meta": {
+         "appID": "circle",
+         "appMarketplaceURL": "https://app.circle.com/get-started",
+         "bgColor": "#2775ca",
+         "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+         "textColor": "#FFFFFF",
+         "tooltipUrl": "https://www.circle.com/"
+        },
+        "name": "Circle",
+        "ordinal": 0,
+        "slug": "circle",
+        "tagType": "protocol"
+       }
+      ]
+     },
+     "name": null,
+     "private_tags": [],
+     "proxy_type": null,
+     "public_tags": [],
+     "reputation": "ok",
+     "watchlist_names": []
+    },
+    "gas_used": "709614",
+    "status": "ok",
+    "to": null,
+    "authorization_list": [],
+    "method": null,
+    "fee": {
+     "type": "actual",
+     "value": "2838456000000000"
+    },
+    "gas_limit": "6721975",
+    "gas_price": "4000000000",
+    "decoded_input": null,
+    "fhe_operations_count": 0,
+    "token_transfers": [],
+    "base_fee_per_gas": null,
+    "timestamp": "2018-08-03T19:28:24.000000Z",
+    "nonce": 20,
+    "historic_exchange_rate": "417.62",
+    "transaction_types": [
+     "contract_creation",
+     "token_creation"
+    ],
+    "exchange_rate": "2679.03",
+    "block_number": 6082465,
+    "has_error_in_internal_transactions": null
+   }
+  }
+ }
+}

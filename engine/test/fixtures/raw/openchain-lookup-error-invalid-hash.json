@@ -1,0 +1,4 @@
+{
+  "ok": false,
+  "error": "Invalid hash '0xzz'. Hash must be 0x-prefixed and either be a 4 byte or 32 byte hex string."
+}

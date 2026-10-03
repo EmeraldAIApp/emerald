@@ -1,0 +1,22 @@
+{
+  "code": 1,
+  "message": "OK",
+  "result": {
+    "0x2e57249f1e5ac0bd3b9187d19120d54008b3d967": {
+      "buy_tax": "",
+      "cannot_buy": "0",
+      "creator_address": "0x95ca88561a74dac7d29b25eaa81f4e7d5aa336ff",
+      "creator_balance": "0",
+      "creator_percent": "0.000000",
+      "holder_count": "0",
+      "honeypot_with_same_creator": "0",
+      "is_in_dex": "0",
+      "is_open_source": "0",
+      "owner_address": "",
+      "sell_tax": "",
+      "token_name": "Wrappеd ВТC",
+      "token_symbol": "WВТC",
+      "total_supply": "210000000"
+    }
+  }
+}

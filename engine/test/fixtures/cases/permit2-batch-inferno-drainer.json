@@ -1,0 +1,21 @@
+{
+  "name": "permit2-batch-inferno-drainer",
+  "input": "{\"types\":{\"EIP712Domain\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"chainId\",\"type\":\"uint256\"},{\"name\":\"verifyingContract\",\"type\":\"address\"}],\"PermitBatch\":[{\"name\":\"details\",\"type\":\"PermitDetails[]\"},{\"name\":\"spender\",\"type\":\"address\"},{\"name\":\"sigDeadline\",\"type\":\"uint256\"}],\"PermitDetails\":[{\"name\":\"token\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint160\"},{\"name\":\"expiration\",\"type\":\"uint48\"},{\"name\":\"nonce\",\"type\":\"uint48\"}]},\"primaryType\":\"PermitBatch\",\"domain\":{\"name\":\"Permit2\",\"chainId\":1,\"verifyingContract\":\"0x000000000022D473030F116dDEE9F6B43aC78BA3\"},\"message\":{\"details\":[{\"token\":\"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\",\"amount\":\"1461501637330902918203684832716283019655932542975\",\"expiration\":\"2002758737\",\"nonce\":\"0\"}],\"spender\":\"0x00001f78189bE22C3498cFF1B8e02272C3220000\",\"sigDeadline\":\"2002758737\"}}",
+  "userAddress": "0x13C7c033175F000C931b718157894F2D0389DF4C",
+  "expectedLevel": "red",
+  "expectedReasonCodes": [
+    "PERMIT2_UNKNOWN_SPENDER",
+    "LABEL_FLAGGED_GOPLUS",
+    "LABEL_FLAGGED_BLOCKSCOUT"
+  ],
+  "why": "Verified live on 2026-09-30 ~20:00Z (use ctx.now = 2026-09-30T20:00:00Z). REAL Permit2 PermitBatch EIP-712 typed data: it is exactly the message the victim 0x13C7c033...9DF4C signed (the signature 0xe3206c27...8d7f1b sent in the permit tx 0x8a8823d2... recovers to that address with eth_account; the JSON was rebuilt from the on-chain args). details=[USDC, amount=max uint160, expiration=2002758737 (2033-06-19), nonce 0], spender=0x00001f78189bE22C3498cFF1B8e02272C3220000 (Inferno Drainer EOA), sigDeadline=2002758737. The drainer (msg.sender of the permit) sent it in block 17532019 and drained 10 USDC in the next block (tx 0x00693cda..., 8/2 split). Spec §2 rules that trigger RED: (1) 'Permit2 to an unknown spender': the spender is an EOA (Blockscout is_contract=false, eth_getCode=0x), not a verified contract or a known router; (2) 'GoPlus flag': address_security phishing_activities='1' and blacklist_doubt='1' (data_source SlowMist,ScamSniffer,BlockSec); (3) 'Blockscout flag': /api/v2/addresses is_scam=true, reputation='scam'; metadata.services.blockscout.com tags 'Inferno Drainer', 'Phish / Hack', 'SCAM'. Amount max uint160 + a 7-year expiration reinforce it but are not required. Candidate for the 'Try a real scam' button.",
+  "sources": [
+    "https://eth.blockscout.com/tx/0x8a8823d2476c20389d624535761862962524cc18a43fa65af2d4fcd93871c0c2",
+    "https://eth.blockscout.com/tx/0x00693cdac4fa8b0f4a30ffc9277ab42f3cfecbcaa3fa32cfb7b10add9a6a7730",
+    "https://eth.blockscout.com/address/0x00001f78189bE22C3498cFF1B8e02272C3220000",
+    "https://api.gopluslabs.io/api/v1/address_security/0x00001f78189bE22C3498cFF1B8e02272C3220000?chain_id=1",
+    "https://metadata.services.blockscout.com/api/v1/metadata?addresses=0x00001f78189bE22C3498cFF1B8e02272C3220000&chainId=1",
+    "https://etherscan.io/address/0x00001f78189be22c3498cff1b8e02272c3220000",
+    "https://cointelegraph.com/news/inferno-drainer-scam-as-a-service-has-stolen-5-9m-since-march-report"
+  ]
+}

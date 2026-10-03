@@ -1,0 +1,25 @@
+/* ---------- S3 HOW IT WORKS: steps on the left, tall device-view on the right ---------- */
+.how .stage { --fx: .84; --fy: .7; }
+/* Mobile: the photo band (.sec--band, base.css) fills only the bottom of the section, so the bracelet sits under the panel. */
+.how__in { display: grid; gap: 32px; padding-block: 88px 76vw; }
+.steps { margin-top: 2rem; display: grid; }
+.steps li { display: grid; grid-template-columns: 3.2rem 1fr; gap: 1rem; padding-block: 1.3rem; border-bottom: 1px solid color-mix(in srgb, var(--eth) 55%, transparent); }
+.steps li:last-child { border-bottom: 0; }
+.steps__n { font: 500 clamp(1.25rem, 1rem + .8vw, 1.75rem)/1.2 var(--font-display); color: var(--eth); }
+.steps h3 { font: 500 clamp(1.25rem, 1rem + .8vw, 1.75rem)/1.2 var(--font-body); }
+.steps p { margin-top: .35rem; font-size: var(--fs-sub); color: color-mix(in srgb, var(--moon) 80%, var(--lav)); text-wrap: balance; }
+.how__foot { margin-top: 1.4rem; font-size: var(--fs-sub); color: var(--lav); max-width: 26rem; text-wrap: balance; }
+.how__panel { align-self: start; font-size: .92em; }
+@media (min-width: 768px) and (orientation: landscape) {
+  .how { min-height: clamp(560px, calc(100vw / 1.7684), 1100px); }
+  .how .stage { --fx: .5; --fy: .5; }
+  .how__in { grid-template-columns: minmax(0, 36%) 1fr minmax(320px, 30%); padding-block: 7vw 4vw; }
+  .how__copy { grid-column: 1; }
+  /* The panel has to end above the bracelet screen (about 66 % of the way down the photo), like the board: one line per check. */
+  .how__panel { grid-column: 3; margin-top: -3vw; font-size: .84em; padding: clamp(12px, 1.3vw, 20px); --fs-dv-verdict: clamp(1.35rem, .6rem + 1.45vw, 2rem); }
+  .how__panel .dv__status { margin-bottom: .6em; }
+  .how__panel .dv__table th, .how__panel .dv__table td { padding: .44em .8em; }
+  .how__panel .dv__check td span { -webkit-line-clamp: 1; line-clamp: 1; }
+  /* The fingertips reach the left column: keep the last line short and legible over them. */
+  .how__foot { max-width: 22rem; text-shadow: 0 0 14px var(--night), 0 1px 2px var(--night); }
+}

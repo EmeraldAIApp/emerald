@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "result": {
+    "function": {
+      "0x3593564c": [
+        {
+          "name": "execute(bytes,bytes[],uint256)",
+          "filtered": false,
+          "hasVerifiedContract": true
+        }
+      ],
+      "0x9f8e7d6c": null,
+      "0xa9059cbb": [
+        {
+          "name": "transfer(address,uint256)",
+          "filtered": false,
+          "hasVerifiedContract": true
+        }
+      ]
+    },
+    "event": {}
+  }
+}
