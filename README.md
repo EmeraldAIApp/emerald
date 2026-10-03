@@ -21,7 +21,7 @@
   <img alt="Ethereum mainnet" src="https://img.shields.io/badge/chain-Ethereum%20mainnet-667eea">
   <img alt="License AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-3ce68c">
   <img alt="Not audited" src="https://img.shields.io/badge/audit-not%20audited-ffb02e">
-  <img alt="CA soon" src="https://img.shields.io/badge/CA-soon-302b63">
+  <img alt="CA 0xae4e…b669" src="https://img.shields.io/badge/CA-0xae4e…b669-302b63">
 </p>
 
 ---
@@ -91,16 +91,16 @@ Emerald never does. **Not affiliated with Vitalik Buterin.**
 
 ## The token
 
-$EMERALD launches on [Stockereum](https://stockereum.com) (Ethereum) with a **2 % fee per trade** and fees to holders off.
+$EMERALD launched on [Stockereum](https://stockereum.com) (Ethereum) on October 3, 2026, with a **2 % fee per trade** and fees to holders off. The pool pairs $EMERALD with **$ZC** (another Stockereum token), so buying with ETH goes ETH → ZC → EMERALD, and the trade fees are paid in ZC.
 
 | Where every trade fee goes | Share |
 |---|---|
-| Emerald checks: claimed by the creator wallet to pay for the AI and the data | **1 %** |
+| Emerald checks: claimed by the creator wallet (in ZC) to pay for the AI and the data | **1 %** |
 | Stockereum, the launch platform | **1 %** |
 | **Total** | **2 %** |
 
 During the first 20 seconds after launch, Stockereum's anti-snipe fee is higher. The creator share stays at 1 % and
-the rest goes to Stockereum. The site shows a live counter of the fees and of what the checks cost.
+the rest goes to Stockereum. The site shows a live counter of the fees (in ZC, valued in ETH at the ZC/WETH pool price) and of what the checks cost.
 
 | Checks per day | Who |
 |---|---|
@@ -114,16 +114,21 @@ When the daily spend cap is reached, the 5 free checks pause until the next day.
 
 | What | Address | Why it matters |
 |---|---|---|
-| **$EMERALD token** | **CA: soon** | Posted on [X](https://x.com/emeraldaieth) and on the site at launch. Paste it into Emerald: the real one answers "This is me." |
+| **$EMERALD token** | [`0xae4e…b669`](https://etherscan.io/token/0xae4ee0f4f2f684917ca5fd4cb8a9918fff46b669) | The token. Paste it into Emerald: the real one answers "This is me." |
+| Creator wallet | [`0xe13c…E181`](https://etherscan.io/address/0xe13cfd095387FF8a8Bee3023baDAB2Ce5d19E181) | Receives the 1 % for the checks. Burned 55,000,000 EMERALD ([tx](https://etherscan.io/tx/0x6e34b8b1993f74f2678cc735ee3146b2427297396d4246fd4c4e8f4435cf3fd5)) and sent 29,000,000 to the author of Snowmoon ([tx](https://etherscan.io/tx/0x9f640bf6950ff982aaf3dbed74d3fde59b830baab04b191f7428913666c97415)). |
+| $ZC (the pool's quote token) | [`0x4E67…8722`](https://etherscan.io/token/0x4E67DB19044549fF420860834c91b45BaD298722) | The other side of the pool. Fees are paid in it. |
 | Stockereum launch factory | [`0xc6B0…977B`](https://etherscan.io/address/0xc6B080DEd03C3382476A76345e79f82BD480977B) | Deploys the token and its pool. The verifier reads the launch hook from it (`hook()`). |
 | Stockereum fee escrow | [`0xAcef…24BA`](https://etherscan.io/address/0xAcefe251da006887dA41C063D06CC82A060824BA) | Holds the trade fees until the creator wallet claims them for the checks. |
-| WETH | [`0xC02a…6Cc2`](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) | The pool's quote token. |
+| WETH | [`0xC02a…6Cc2`](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) | The other side of the ZC pool, used to price ZC in ETH. |
 | Permit2 | [`0x0000…8BA3`](https://etherscan.io/address/0x000000000022D473030F116dDEE9F6B43aC78BA3) | Uniswap's signature-approval contract, used in the signature checks. |
 
 <details>
 <summary>Full addresses</summary>
 
 ```text
+$EMERALD token             0xae4ee0f4f2f684917ca5fd4cb8a9918fff46b669
+Creator wallet             0xe13cfd095387FF8a8Bee3023baDAB2Ce5d19E181
+$ZC (quote token)          0x4E67DB19044549fF420860834c91b45BaD298722
 Stockereum launch factory  0xc6B080DEd03C3382476A76345e79f82BD480977B
 Stockereum fee escrow      0xAcefe251da006887dA41C063D06CC82A060824BA
 WETH                       0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
@@ -138,7 +143,7 @@ The interfaces are in `launch/src/Stockereum.sol`, copied from the sources verif
 # the fee split, on a fork of mainnet (needs Foundry)
 cd launch && MAINNET_RPC_URL=https://ethereum-rpc.publicnode.com forge test -vv
 # the live token, read-only: never signs or sends anything
-npx tsx scripts/verify-launch.ts --token <CA> --creator <creator wallet>
+npx tsx scripts/verify-launch.ts --token 0xae4ee0f4f2f684917ca5fd4cb8a9918fff46b669 --creator 0xe13cfd095387FF8a8Bee3023baDAB2Ce5d19E181 --site https://aiemerald.app
 ```
 
 ## Real cases

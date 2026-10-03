@@ -36,6 +36,8 @@ export function mountCompute(computeEl: HTMLElement | null): () => Promise<void>
     const view = computeView(c)
     computeEl.querySelector('[data-compute-paid]')!.textContent = view.paid
     computeEl.querySelector('[data-compute-claimable]')!.textContent = view.claimable
+    const quote = computeEl.querySelector('[data-compute-quote]')
+    if (quote) quote.textContent = view.quote
     computeEl.querySelector('[data-compute-spend]')!.textContent = view.spend
     computeEl.querySelector('[data-compute-checks]')!.textContent = view.checks
   }

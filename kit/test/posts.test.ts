@@ -17,9 +17,9 @@ describe('xLength', () => {
 })
 
 describe('X kit posts', () => {
-  it('has 5 to 14 posts with unique ids (the pinned one, the pre-launch batches and the launch posts)', () => {
+  it('has 5 to 18 posts with unique ids (the pinned one, the pre-launch batches, the launch and post-launch posts)', () => {
     expect(POSTS.length).toBeGreaterThanOrEqual(5)
-    expect(POSTS.length).toBeLessThanOrEqual(14)
+    expect(POSTS.length).toBeLessThanOrEqual(18)
     expect(new Set(POSTS.map((p) => p.id)).size).toBe(POSTS.length)
   })
   for (const p of POSTS) {

@@ -21,11 +21,25 @@ export async function fetchCompute(fetchImpl: typeof fetch = fetch): Promise<Com
   return isComputeInfo(j) ? j : null
 }
 
+/** " (10,760 ZC)" after the claimable ETH when the fees accrue in another token; empty for WETH. */
+function quoteNote(c: ComputeInfo): string {
+  const sym = c.quoteSymbol?.trim()
+  if (!sym || sym === 'ETH' || c.feesClaimableQuote === undefined) return ''
+  let units = 0n
+  try {
+    units = BigInt(c.feesClaimableQuote) / 10n ** 18n
+  } catch {
+    return ''
+  }
+  return ` (${units.toLocaleString('en-US')} ${sym})`
+}
+
 /** What the S4 counter shows ("Spent on checks · 0.000 ETH", "Checks run · 0"). */
-export function computeView(c: ComputeInfo): { paid: string; claimable: string; spend: string; checks: string } {
+export function computeView(c: ComputeInfo): { paid: string; claimable: string; quote: string; spend: string; checks: string } {
   return {
     paid: ethFromWei(c.feesClaimedWei),
     claimable: ethFromWei(c.feesClaimableWei),
+    quote: quoteNote(c),
     spend: usd(c.llmUsd),
     checks: Math.max(0, Math.floor(c.checksRun)).toLocaleString('en-US'),
   }

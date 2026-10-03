@@ -38,7 +38,17 @@ export interface WireVerdict {
 export interface Usage { inputTokens: number; outputTokens: number; costUsd: number }
 export interface QuotaInfo { tier: Tier; limit: number | null; used: number; resetAt: string }
 export interface Quota429 { error: 'quota' | 'paused'; tier: Tier; limit: number | null; resetAt: string }
-export interface ComputeInfo { llmUsd: number; checksRun: number; feesClaimableWei: string; feesClaimedWei: string; updatedAt: string }
+export interface ComputeInfo {
+  llmUsd: number
+  checksRun: number
+  feesClaimableWei: string
+  feesClaimedWei: string
+  updatedAt: string
+  /** Present when the fees accrue in a token other than WETH ($ZC): the raw amount and its symbol. */
+  feesClaimableQuote?: string
+  feesClaimedQuote?: string
+  quoteSymbol?: string
+}
 export interface SignInResult { address: Hex; tier: Tier; limit: number | null }
 
 export const CHECKS: readonly CheckName[] = ['decode', 'simulate', 'poisoning', 'labels', 'token']

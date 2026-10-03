@@ -6,7 +6,17 @@
 // Demo facts: engine/test/fixtures/cases/permit2-batch-inferno-drainer.json ("why").
 
 export type Phase = 'pre' | 'launch' | 'post'
-export type VarName = 'SITE' | 'REPO' | 'CA' | 'CLAIM_ETH' | 'CLAIM_TX_URL'
+export type VarName =
+  | 'SITE'
+  | 'REPO'
+  | 'CA'
+  | 'CLAIM_ETH'
+  | 'CLAIM_TX_URL'
+  | 'LOCK_AMOUNT'
+  | 'LOCK_UNTIL'
+  | 'LOCK_URL'
+  | 'AUTHOR_AMOUNT'
+  | 'AUTHOR_TX_URL'
 export type Vars = Partial<Record<VarName, string>>
 
 export interface Post {
@@ -195,6 +205,47 @@ The counter on the site shows the fees and what the checks cost.
 CA: {CA}
 {SITE}`,
   },
+  // After launch (2026-10-03). The burn happened: tx 0x6e34b8b1…3fd5, 55,000,000 EMERALD from the creator wallet to
+  // 0x…dEaD (5.5 % of the 1,000,000,000 supply). Author share: tx 0x9f640bf6…7415, 29,000,000 EMERALD (2.9 %) to
+  // 0xd8dA…6045. The lock post names no amount (team decision); post it once the lock tx exists.
+  {
+    id: 'burn',
+    phase: 'post',
+    media: 'card-burn.jpg',
+    text: `55,000,000 $EMERALD burned.
+
+That's 5.5 % of the supply, from the dev buy, sent to the dead address. Nobody can move it again.
+
+Tx: https://etherscan.io/tx/0x6e34b8b1993f74f2678cc735ee3146b2427297396d4246fd4c4e8f4435cf3fd5
+
+CA: {CA}
+{SITE}`,
+  },
+  {
+    id: 'lock',
+    phase: 'post',
+    media: 'card-lock.jpg',
+    text: `The dev tokens are locked.
+
+The lock is on-chain: {LOCK_URL}
+
+Liquidity was already locked forever by Stockereum at launch.
+
+CA: {CA}
+{SITE}`,
+  },
+  {
+    id: 'author',
+    phase: 'post',
+    media: 'card-author.jpg',
+    text: `29,000,000 $EMERALD (2.9 % of supply) went to Vitalik Buterin, author of Snowmoon, the novel Emerald comes from.
+
+His to keep, sell or give away. He isn't involved.
+
+Tx: https://etherscan.io/tx/0x9f640bf6950ff982aaf3dbed74d3fde59b830baab04b191f7428913666c97415
+${NOT_AFFILIATED}
+CA: {CA}`,
+  },
 ]
 
 /** Worst-case values used to check the 280 limit before the real ones exist. */
@@ -204,6 +255,11 @@ export const WORST_CASE: Required<Vars> = {
   CA: '0x' + 'f'.repeat(40),
   CLAIM_ETH: '1234.5678',
   CLAIM_TX_URL: 'https://etherscan.io/tx/0x' + 'f'.repeat(64),
+  LOCK_AMOUNT: '58,312,710',
+  LOCK_UNTIL: 'September 30, 2027',
+  LOCK_URL: 'https://app.uncx.network/lockers/token/chain/1/address/0x' + 'f'.repeat(40),
+  AUTHOR_AMOUNT: '10,000,000',
+  AUTHOR_TX_URL: 'https://etherscan.io/tx/0x' + 'f'.repeat(64),
 }
 
 export function renderPost(p: Post, vars: Vars): string {

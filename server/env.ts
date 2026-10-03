@@ -14,6 +14,12 @@ export interface Env {
   CREATOR_ADDRESS: Hex | undefined
   FEE_ESCROW: Hex
   WETH: Hex
+  /** The pool's quote token: the creator's fees accrue in it. $EMERALD launched against $ZC, not WETH. */
+  QUOTE_TOKEN: Hex
+  /** Short name of QUOTE_TOKEN for the counter ("ZC"). */
+  QUOTE_SYMBOL: string
+  /** Stockereum's launch hook: the QUOTE_TOKEN/WETH pool (fee 0, tick spacing 200) prices the fees in ETH. */
+  STOCKEREUM_HOOK: Hex
   DAILY_SPEND_CAP_USD: number
   /** Optional override of the public host (SIWE domain, same-origin check) when the Host header is not the public one. */
   PUBLIC_HOST: string | undefined
@@ -42,6 +48,8 @@ export function readEnv(e: NodeJS.ProcessEnv = process.env): Env {
     if (!e.UPSTASH_REDIS_REST_URL || !e.UPSTASH_REDIS_REST_TOKEN) throw new EnvError('UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN are required on Vercel')
     if ((e.SESSION_SECRET ?? '').length < 32) throw new EnvError('SESSION_SECRET (>= 32 chars) is required on Vercel')
   }
+  const weth = optionalAddress('WETH', e.WETH) ?? '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+  const quote = optionalAddress('QUOTE_TOKEN', e.QUOTE_TOKEN) ?? weth
   return {
     ANTHROPIC_API_KEY: e.ANTHROPIC_API_KEY || undefined,
     ANTHROPIC_WORKSPACE_ID: e.ANTHROPIC_WORKSPACE_ID?.trim() || undefined,
@@ -53,7 +61,10 @@ export function readEnv(e: NodeJS.ProcessEnv = process.env): Env {
     EMERALD_TOKEN_ADDRESS: optionalAddress('EMERALD_TOKEN_ADDRESS', e.EMERALD_TOKEN_ADDRESS),
     CREATOR_ADDRESS: optionalAddress('CREATOR_ADDRESS', e.CREATOR_ADDRESS),
     FEE_ESCROW: optionalAddress('FEE_ESCROW', e.FEE_ESCROW) ?? '0xAcefe251da006887dA41C063D06CC82A060824BA',
-    WETH: optionalAddress('WETH', e.WETH) ?? '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+    WETH: weth,
+    QUOTE_TOKEN: quote,
+    QUOTE_SYMBOL: e.QUOTE_SYMBOL?.trim() || (quote === weth ? 'ETH' : 'TOKEN'),
+    STOCKEREUM_HOOK: optionalAddress('STOCKEREUM_HOOK', e.STOCKEREUM_HOOK) ?? '0x322dcEc4958C14e021A9F1cD49DF11b9457968cC',
     DAILY_SPEND_CAP_USD: cap,
     PUBLIC_HOST: publicHost(e.PUBLIC_HOST),
   }

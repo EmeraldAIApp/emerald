@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { checkLaunch, checkSite, poolIdFor, readSite, type LaunchReads } from '../launch/verify.js'
+import { checkLaunch, checkSite, poolIdFor, readSite, ZC, type LaunchReads } from '../launch/verify.js'
 
 const HOOK = '0x322dcEc4958C14e021A9F1cD49DF11b9457968cC'
 const CREATOR = '0xabcdefabcdefabcdefabcdefabcdefabcdefabcd'
@@ -25,6 +25,9 @@ describe('poolIdFor', () => {
   it('matches the poolId the real factory returned on the mainnet fork', () => {
     // token and poolId logged by launch/test/StockereumLaunch.t.sol (forge asserts keccak256(abi.encode(key)) == poolId)
     expect(poolIdFor(TOKEN, HOOK)).toBe('0x1fbda688caf7d730778a7b0220948e45f5b3e53e958d613699d7439c4440c543')
+  })
+  it('matches the real $EMERALD/$ZC pool (LaunchOpened of tx 0x2719cc61…84fb, 2026-10-03)', () => {
+    expect(poolIdFor('0xaE4eE0f4f2F684917CA5Fd4CB8A9918FfF46b669', HOOK, ZC)).toBe('0x75e19c37f257d7be8766c1a199a5d89ead129ca2eb61c5d4747eb2953f907251')
   })
 })
 
@@ -58,7 +61,7 @@ describe('checkLaunch', () => {
   it('fails when nothing is claimable yet', () => {
     const r = goodReads()
     r.claimableWei = 0n
-    expect(failed(r)).toEqual(['creator claimable WETH > 0'])
+    expect(failed(r)).toEqual(['creator claimable fees > 0 (in the quote token)'])
   })
   it('fails each of the other six checks on its own mutation', () => {
     const OTHER = '0x2222222222222222222222222222222222222222'

@@ -12,6 +12,8 @@ import {
 export const FACTORY = '0xc6B080DEd03C3382476A76345e79f82BD480977B' as const
 export const FEE_ESCROW = '0xAcefe251da006887dA41C063D06CC82A060824BA' as const
 export const WETH = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2' as const
+// $EMERALD launched against $ZC (Zip coin, another Stockereum token), not WETH: the pool and the creator fees use it.
+export const ZC = '0x4E67DB19044549fF420860834c91b45BaD298722' as const
 // The launch page's "2%" preset: Stockereum keeps platformFeeFor(20000) = 10000 ppm (1 %), the creator the other 1 %.
 export const FEE_PPM = 20_000
 export const PLATFORM_PPM = 10_000n
@@ -32,9 +34,9 @@ const tokenAbi = parseAbi([
 ])
 const escrowAbi = parseAbi(['function claimable(address account, address currency) view returns (uint256)'])
 
-/** PoolId = keccak256(abi.encode(PoolKey{WETH/token sorted, fee 0, tickSpacing 200, hooks})). */
-export function poolIdFor(token: Hex, hook: Hex): Hex {
-  const [c0, c1] = BigInt(WETH) < BigInt(token) ? [WETH, token] : [token, WETH]
+/** PoolId = keccak256(abi.encode(PoolKey{quote/token sorted, fee 0, tickSpacing 200, hooks})). */
+export function poolIdFor(token: Hex, hook: Hex, quote: Hex = WETH): Hex {
+  const [c0, c1] = BigInt(quote) < BigInt(token) ? [quote, token] : [token, quote]
   return keccak256(
     encodeAbiParameters(
       [{ type: 'address' }, { type: 'address' }, { type: 'uint24' }, { type: 'int24' }, { type: 'address' }],
@@ -75,11 +77,11 @@ export function checkLaunch(r: LaunchReads): CheckResult[] {
     { name: 'token has no holder distributor', ok: eq(r.tokenDistributor, zeroAddress), detail: r.tokenDistributor },
     { name: 'hook escrow is the FeeEscrow', ok: eq(r.hookEscrow, FEE_ESCROW), detail: r.hookEscrow },
     { name: 'platform takes 1 % (creator keeps 1 %)', ok: r.platformFeePpm === PLATFORM_PPM, detail: `${r.platformFeePpm} ppm` },
-    { name: 'creator claimable WETH > 0', ok: r.claimableWei > 0n, detail: `${r.claimableWei} wei` },
+    { name: 'creator claimable fees > 0 (in the quote token)', ok: r.claimableWei > 0n, detail: `${r.claimableWei} wei` },
   ]
 }
 
-export async function readLaunch(client: PublicClient, token: Hex, creator: Hex): Promise<LaunchReads> {
+export async function readLaunch(client: PublicClient, token: Hex, creator: Hex, quote: Hex = WETH): Promise<LaunchReads> {
   const hook = await client.readContract({ address: FACTORY, abi: factoryAbi, functionName: 'hook' })
   const [tokenSymbol, tokenCreator, tokenDistributor, tokenFactory, hookEscrow, platformFeePpm, launch, claimableWei] =
     await Promise.all([
@@ -89,8 +91,8 @@ export async function readLaunch(client: PublicClient, token: Hex, creator: Hex)
       client.readContract({ address: token, abi: tokenAbi, functionName: 'factory' }),
       client.readContract({ address: hook, abi: hookAbi, functionName: 'escrow' }),
       client.readContract({ address: hook, abi: hookAbi, functionName: 'platformFeeFor', args: [FEE_PPM] }),
-      client.readContract({ address: hook, abi: hookAbi, functionName: 'getLaunch', args: [poolIdFor(token, hook)] }),
-      client.readContract({ address: FEE_ESCROW, abi: escrowAbi, functionName: 'claimable', args: [creator, WETH] }),
+      client.readContract({ address: hook, abi: hookAbi, functionName: 'getLaunch', args: [poolIdFor(token, hook, quote)] }),
+      client.readContract({ address: FEE_ESCROW, abi: escrowAbi, functionName: 'claimable', args: [creator, quote] }),
     ])
   return {
     token,

@@ -19,7 +19,16 @@ describe('readCompute', () => {
     const deps = fakeDeps()
     await addSpend(deps.store, 0.0112, NOW.getTime())
     await deps.store.incrExpireAt(STATS_CHECKS, FOREVER)
-    expect(await readCompute(deps)).toEqual({ llmUsd: 0.0112, checksRun: 1, feesClaimableWei: '0', feesClaimedWei: '0', updatedAt: '2026-09-30T20:00:00.000Z' })
+    expect(await readCompute(deps)).toEqual({
+      llmUsd: 0.0112,
+      checksRun: 1,
+      feesClaimableWei: '0',
+      feesClaimedWei: '0',
+      feesClaimableQuote: '0',
+      feesClaimedQuote: '0',
+      quoteSymbol: 'ETH',
+      updatedAt: '2026-09-30T20:00:00.000Z',
+    })
   })
 
   it('reads FeeEscrow.claimable(creator, WETH) and sums WETH claimed out of FeeEscrow', async () => {
@@ -39,6 +48,35 @@ describe('readCompute', () => {
     expect(s.feesClaimedWei).toBe('18446744073709551')
     // selector of claimable(address,address) = 0xd4570c1c (keccak verified with viem in Step 1 of this task)
     expect(callData.startsWith(`${ESCROW}:0xd4570c1c`)).toBe(true)
+  })
+
+  it('with a quote token other than WETH (the $ZC pair): reads fees in it and values them at the quote/WETH pool price', async () => {
+    const ZC = '0x4E67DB19044549fF420860834c91b45BaD298722'
+    // sqrtPriceX96 of the ZC/WETH pool on 2026-10-03 (ZC is currency0): about 9.55e-6 WETH per ZC
+    const SQRT_P = 244889867929910403513807829n
+    const calls: string[] = []
+    const deps = fakeDeps({
+      env: { CREATOR_ADDRESS: CREATOR, QUOTE_TOKEN: ZC, QUOTE_SYMBOL: 'ZC' },
+      sources: {
+        rpc: {
+          call: async (to, data) => {
+            calls.push(`${to}:${data.slice(0, 10)}`)
+            const v = to.toLowerCase() === ESCROW.toLowerCase() ? 10_000n * 10n ** 18n : (7n << 200n) | SQRT_P // high bits: tick etc.
+            return `0x${v.toString(16).padStart(64, '0')}`
+          },
+        },
+        blockscout: { getTransactions: async () => ({ items: [], truncated: false }), getTransaction: async () => null },
+      },
+    })
+    const s = await readCompute(deps)
+    expect(s.quoteSymbol).toBe('ZC')
+    expect(s.feesClaimableQuote).toBe('10000000000000000000000')
+    const expected = (10_000n * 10n ** 18n * ((SQRT_P * SQRT_P * 10n ** 18n) >> 192n)) / 10n ** 18n
+    expect(s.feesClaimableWei).toBe(expected.toString())
+    expect(Number(s.feesClaimableWei) / 1e18).toBeCloseTo(0.0955, 3)
+    // claimable(creator, ZC) on the escrow, extsload on the v4 PoolManager
+    expect(calls).toContain(`${ESCROW}:0xd4570c1c`)
+    expect(calls.some((c) => c.toLowerCase().startsWith('0x000000000004444c5dc75cb358380d2e3de08a90:'))).toBe(true)
   })
 
   it('handler: 200 with cache headers; 503 when sources fail and nothing is cached', async () => {

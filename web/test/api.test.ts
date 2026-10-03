@@ -19,8 +19,21 @@ describe('GET /api/quota and /api/compute', () => {
 
   it('computeView formats the S4 counter', () => {
     expect(computeView({ llmUsd: 0.0112, checksRun: 12345, feesClaimableWei: '250000000000000000', feesClaimedWei: '1500000000000000000', updatedAt: '' }))
-      .toEqual({ paid: '1.500', claimable: '0.250', spend: '$0.01', checks: '12,345' })
+      .toEqual({ paid: '1.500', claimable: '0.250', quote: '', spend: '$0.01', checks: '12,345' })
     expect(computeView({ llmUsd: 0, checksRun: 0, feesClaimableWei: '0', feesClaimedWei: '0', updatedAt: '' }))
-      .toEqual({ paid: '0.000', claimable: '0.000', spend: '$0.00', checks: '0' })
+      .toEqual({ paid: '0.000', claimable: '0.000', quote: '', spend: '$0.00', checks: '0' })
+    // fees in $ZC: the ETH value stays the headline, the ZC amount goes next to it
+    expect(
+      computeView({
+        llmUsd: 0,
+        checksRun: 0,
+        feesClaimableWei: '102800000000000000',
+        feesClaimedWei: '0',
+        feesClaimableQuote: '10759889555980033000000',
+        feesClaimedQuote: '0',
+        quoteSymbol: 'ZC',
+        updatedAt: '',
+      }).quote,
+    ).toBe(' (10,759 ZC)')
   })
 })
