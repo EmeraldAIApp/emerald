@@ -100,7 +100,7 @@
 
 /* our X, on a post-it stuck to the side of the monitor (like "Meldan, Veridia" on the front): a real link */
 .room__note {
-  position: absolute; left: 61.4%; top: 21%; width: 7.4%; aspect-ratio: 1 / .95; rotate: 5deg; container-type: inline-size;
+  position: absolute; left: 53.6%; top: 61%; width: 6.6%; aspect-ratio: 1 / .95; rotate: 4deg; container-type: inline-size;
   display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; padding: 0;
   background: linear-gradient(160deg, #fff59a, #f1dc62); color: #14123a; text-decoration: none; text-align: center;
   box-shadow: 1px 2px 0 rgb(0 0 0 / .18), 4px 8px 14px rgb(0 0 0 / .35); transform-origin: 30% 10%;
