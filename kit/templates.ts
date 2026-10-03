@@ -116,8 +116,8 @@ body { position: relative; font: 500 26px/1.5 var(--mono); color: var(--ink); -w
 `
 }
 
-const ICON_DOC = `<svg viewBox="0 0 48 48"><path d="M10 4h20l9 9v31H10z" fill="#f4f4f8" stroke="#3b3a4a" stroke-width="2"/><path d="M30 4v9h9" fill="#d8d8e2" stroke="#3b3a4a" stroke-width="2"/><path d="M15 20h18M15 25h18M15 30h18M15 35h12" stroke="#8a8aa0" stroke-width="2"/></svg>`
-const ICON_WALLET = `<svg viewBox="0 0 48 48"><path d="M20 14l8-10 8 10z" fill="#3ce68c" stroke="#1d6b44" stroke-width="1.5"/><rect x="5" y="13" width="36" height="28" rx="5" fill="#7a5fd6" stroke="#2c2370" stroke-width="2"/><rect x="30" y="22" width="13" height="10" rx="3" fill="#5b45b8" stroke="#2c2370" stroke-width="2"/><circle cx="35" cy="27" r="2" fill="#e6e3fb"/></svg>`
+export const ICON_DOC = `<svg viewBox="0 0 48 48"><path d="M10 4h20l9 9v31H10z" fill="#f4f4f8" stroke="#3b3a4a" stroke-width="2"/><path d="M30 4v9h9" fill="#d8d8e2" stroke="#3b3a4a" stroke-width="2"/><path d="M15 20h18M15 25h18M15 30h18M15 35h12" stroke="#8a8aa0" stroke-width="2"/></svg>`
+export const ICON_WALLET = `<svg viewBox="0 0 48 48"><path d="M20 14l8-10 8 10z" fill="#3ce68c" stroke="#1d6b44" stroke-width="1.5"/><rect x="5" y="13" width="36" height="28" rx="5" fill="#7a5fd6" stroke="#2c2370" stroke-width="2"/><rect x="30" y="22" width="13" height="10" rx="3" fill="#5b45b8" stroke="#2c2370" stroke-width="2"/><circle cx="35" cy="27" r="2" fill="#e6e3fb"/></svg>`
 const ICON_CALC = `<svg viewBox="0 0 20 20"><rect x="3" y="1" width="14" height="18" fill="#e6e5ef" stroke="#2a283c" stroke-width="1.4"/><rect x="5" y="3" width="10" height="4" fill="#b6c7a3"/><path d="M5 10h2v2H5zm4 0h2v2H9zm4 0h2v2h-2zM5 14h2v2H5zm4 0h2v2H9zm4 0h2v2h-2z" fill="#4a4862"/></svg>`
 const ICON_WARN = `<svg viewBox="0 0 100 88"><path d="M50 4 96 84H4z" fill="#fff" stroke="#c4161c" stroke-width="9" stroke-linejoin="round"/><rect x="44" y="30" width="12" height="30" fill="#1d1b33"/><rect x="44" y="66" width="12" height="10" fill="#1d1b33"/></svg>`
 const ICON_MOON_PC = `<svg viewBox="0 0 48 48"><rect x="5" y="8" width="38" height="26" rx="2" fill="#0f0c29" stroke="#3b3a4a" stroke-width="2"/><path d="M9 12h30v18H9z" fill="#302b63"/><circle cx="33" cy="17" r="3" fill="#eef0fa"/><path d="M17 40h14M24 34v6" stroke="#3b3a4a" stroke-width="3"/></svg>`
@@ -141,7 +141,7 @@ export function taskbar(tasks: string[], active: string, tray: string): string {
   return `<footer class="taskbar"><span class="btn">${gem(1.75)}Start</span>${items}<span class="tray"><i class="led"></i>${esc(tray)}</span></footer>`
 }
 
-const ICONS = `<nav class="icons">
+export const ICONS = `<nav class="icons">
 <div class="icon">${gem(4)}<span>Emerald.exe</span></div>
 <div class="icon">${ICON_DOC}<span>Snowmoon.txt</span></div>
 <div class="icon">${ICON_WALLET}<span>Wallet</span></div>
@@ -154,11 +154,11 @@ function verdictPanel(v: VerdictMini): string {
 <ul class="reasons">${v.reasons.map((r) => `<li>${esc(r)}</li>`).join('')}</ul></div>`
 }
 
-function page(f: KitFonts, w: number, h: number, wallUri: string, css: string, body: string): string {
+export function page(f: KitFonts, w: number, h: number, wallUri: string, css: string, body: string): string {
   return `<!doctype html><html><head><meta charset="utf-8"><style>${base(f, w, h, wallUri)}${css}</style></head><body>${body}<div class="crt"></div></body></html>`
 }
 
-const TASKS = ['Emerald.exe', 'Snowmoon.txt', 'How a check works', 'Token']
+export const TASKS = ['Emerald.exe', 'Snowmoon.txt', 'How a check works', 'Token']
 
 /** Card size for X (16:9). */
 export const CARD = { w: 1600, h: 900 }

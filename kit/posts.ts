@@ -88,6 +88,74 @@ Emerald does the same for your wallet. Red: don't sign. Yellow: check before you
 ${NOT_AFFILIATED}
 ${CA_SOON}`,
   },
+  // Batch 2 (2026-10-03): more pre-launch posts. Nothing red, no warning stamps (team rule for pre-launch posts).
+  // Facts: fixtures swap-uniswap-universal-router-txhash, approve-exact-usdc-to-permit2, poisoning-wbtc-68m-*.
+  {
+    id: 'room',
+    phase: 'pre',
+    media: 'room-boot.mp4',
+    text: `An old PC in a snowy room. Press power.
+
+Inside is Emerald: paste what your wallet asks you to sign, and it tells you what it really does before you sign it.
+
+{SITE}
+${CA_SOON}`,
+  },
+  {
+    id: 'green',
+    phase: 'pre',
+    media: 'demo-swap.mp4',
+    text: `Not every check ends in a warning.
+
+A real Uniswap swap from September 30: 550 USDC out, 2,441 FET in, a verified router, no scam reports. Five checks, all green.
+
+Emerald tells you when things look fine, and why.
+
+{SITE}
+${CA_SOON}`,
+  },
+  {
+    id: 'paste',
+    phase: 'pre',
+    media: 'card-paste.jpg',
+    text: `What you can paste into Emerald:
+
+- a transaction (hash or raw call)
+- a signature request (Permit, Permit2, approvals)
+- an address, before you send to it
+- a token contract, before you buy it
+
+5 free checks a day. No wallet, no sign-up.
+
+{SITE}
+${CA_SOON}`,
+  },
+  {
+    id: 'lookalike',
+    phase: 'pre',
+    media: 'card-lookalike.jpg',
+    text: `Same first 4, same last 4, different address.
+
+On May 3, 2024 a lookalike was planted in a wallet's history, and 1,155 WBTC (about $68M) went to it.
+
+Connect your wallet and Emerald compares each address with your own history.
+
+{SITE}
+${CA_SOON}`,
+  },
+  {
+    id: 'approval',
+    phase: 'pre',
+    media: 'card-green.jpg',
+    text: `Approvals have a size.
+
+This real one gives Uniswap's Permit2 exactly 650.39 USDC, not unlimited. Emerald reads the amount, the spender and its history, and says it looks fine.
+
+Paste yours before you sign.
+
+{SITE}
+${CA_SOON}`,
+  },
   {
     // The launch moment, first post once scripts/verify-launch.ts passes. Pasting the CA gives the green "This is me."
     id: 'launch',

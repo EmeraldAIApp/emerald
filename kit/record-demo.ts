@@ -1,7 +1,7 @@
 // Records the red verdict on the real Permit2 drainer case in Emerald.exe (CDP screencast), then encodes
 // kit/out/demo.mp4 (H.264, for X) and kit/out/demo.gif. Against production it consumes ONE /api/chat check from the
 // anon quota; against `npm run dev:mock` it uses the mock API (web/mock), built from the same real case.
-// Usage: npx tsx kit/record-demo.ts --url https://<site>/?noboot [--case "Permit2 drainer"]
+// Usage: npx tsx kit/record-demo.ts --url https://<site>/?noboot [--case "Permit2 drainer"] [--expect red|green] [--name demo]
 import { execFileSync } from 'node:child_process'
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
@@ -9,14 +9,17 @@ import { parseArgs } from 'node:util'
 import { chromium } from 'playwright'
 import { concatList, verdictFromSse, type Frame } from './demo.js'
 
-const { values } = parseArgs({ options: { url: { type: 'string' }, case: { type: 'string' } } })
+const { values } = parseArgs({ options: { url: { type: 'string' }, case: { type: 'string' }, expect: { type: 'string' }, name: { type: 'string' } } })
 if (!values.url) {
   console.error('usage: npx tsx kit/record-demo.ts --url https://<site>/?noboot [--case "Permit2 drainer"]')
   process.exit(2)
 }
 const CASE = values.case ?? 'Permit2 drainer'
+const EXPECT = values.expect === 'green' ? 'green' : 'red'
+const NAME = values.name ?? 'demo'
+const HEADLINE = EXPECT === 'green' ? /Looks fine\./ : /Don['’]t sign\./
 const OUT = 'kit/out'
-const FRAMES = join(OUT, 'demo-frames')
+const FRAMES = join(OUT, `${NAME}-frames`)
 const VIEW = { width: 1280, height: 720 }
 rmSync(FRAMES, { recursive: true, force: true })
 mkdirSync(FRAMES, { recursive: true })
@@ -66,14 +69,14 @@ try {
   await page.waitForTimeout(400)
   await chip.click()
   if (!(await started)) await page.getByRole('button', { name: 'Check', exact: true }).click() // chip only filled the input
-  await page.getByText(/Don['’]t sign\./).first().waitFor({ timeout: 90_000 })
+  await page.getByText(HEADLINE).first().waitFor({ timeout: 90_000 })
   const verdict = verdictFromSse(await (await chat).text())
-  await page.waitForTimeout(4500) // the red wave crosses the wallpaper, the explanation finishes streaming
+  await page.waitForTimeout(4500) // the verdict wave crosses the wallpaper, the explanation finishes streaming
   await page.waitForTimeout(2000) // hold on the verdict, red title bar in frame
   await cdp.send('Page.stopScreencast')
 
-  if (verdict.level !== 'red' || verdict.input.kind !== 'typedData') {
-    throw new Error(`expected a red verdict on typed data, got ${verdict.level} on ${verdict.input.kind}`)
+  if (verdict.level !== EXPECT || (EXPECT === 'red' && verdict.input.kind !== 'typedData')) {
+    throw new Error(`expected a ${EXPECT} verdict, got ${verdict.level} on ${verdict.input.kind}`)
   }
   const last = frames.at(-1)
   if (!last) throw new Error('no frames captured')
@@ -85,8 +88,8 @@ try {
 
 execFileSync('ffmpeg', ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', join(FRAMES, 'frames.txt'),
   '-vf', 'fps=30,scale=in_range=pc:out_range=tv,format=yuv420p', '-c:v', 'libx264', '-crf', '18', '-preset', 'slow', '-movflags', '+faststart',
-  join(OUT, 'demo.mp4')])
-execFileSync('ffmpeg', ['-y', '-v', 'error', '-i', join(OUT, 'demo.mp4'), '-vf',
+  join(OUT, `${NAME}.mp4`)])
+execFileSync('ffmpeg', ['-y', '-v', 'error', '-i', join(OUT, `${NAME}.mp4`), '-vf',
   'fps=15,scale=960:-1:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4',
-  join(OUT, 'demo.gif')])
-console.log(`${join(OUT, 'demo.mp4')}\n${join(OUT, 'demo.gif')}`)
+  join(OUT, `${NAME}.gif`)])
+console.log(`${join(OUT, `${NAME}.mp4`)}\n${join(OUT, `${NAME}.gif`)}`)
